@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'erector'
 
-
 class Index < Erector::Widget
 
   def content
@@ -47,3 +46,6 @@ class Index < Erector::Widget
   end
 end
 
+if __FILE__ == $0
+  system "erector --to-html #{__FILE__}"
+end

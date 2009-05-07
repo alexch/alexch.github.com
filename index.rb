@@ -10,50 +10,40 @@ class Index < Erector::Widget
 
     h2 "Personality"
     ul do
-      
-      li do
-        url "http://www.google.com/profiles/alexch"
-      end
-      li do
-        url "http://www.twitter.com/alexch"
-      end
-      li do
-        url "http://www.tumblr.com/alexch"
-      end
-      li do
-        url "http://github.com/alexch"
-      end
-      li do
-        url "http://pivotallabs.com/users/alex/blog"
-      end
-      li do
-        url "http://friendfeed.com/alexch"
-      end
-      li do
-        url "http://www.new.facebook.com/profile.php?id=668119049"
-      end
-      li do
-        url "http://www.google.com/reader/shared/15504357426492542506"
-      end
-      li do
-        url "http://www.flickr.com/photos/alexchaffee/"
+      [
+        "http://www.google.com/profiles/alexch",
+        "http://www.twitter.com/alexch",
+        "http://www.tumblr.com/alexch",
+        "http://github.com/alexch",
+        "http://pivotallabs.com/users/alex/blog",
+        "http://friendfeed.com/alexch",
+        "http://www.new.facebook.com/profile.php?id=668119049",
+        "http://www.google.com/reader/shared/15504357426492542506",
+        "http://www.flickr.com/photos/alexchaffee/"
+      ].each do |u|
+        li do
+          url u
+        end
       end
     end
     
     h2 "Projects"
     ul do
+      [
+        ["Moodlog", "http://moodlog.org"],
+        ["Erector", "http://erector.rubyforge.org"],
+      ].each do |site|
+        li do
+          a site[0], :href => site[1]
+        end
+      end
       
     end
 
-    h2 "Pals"
-    ul do
-      
-    end
-
-    h2 "Professional"
-    ul do
-      
-    end
+    # h2 "Professional"
+    # ul do
+    #   
+    # end
   end
 end
 

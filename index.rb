@@ -6,6 +6,7 @@ class Index < Erector::Widget
   def content
 
     h1 "Alex Chaffee"
+    a "alex@stinky.com", :href => "mailto:alex@stinky.com"
 
     h2 "Personality"
     ul do

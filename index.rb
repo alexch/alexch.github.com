@@ -8,9 +8,39 @@ class Index < Page
     body {
       font-family: Tahoma, Geneva, sans-serif;	
     }
+    
+    .tweet {
+      float: right;
+      font-size: 10pt;
+      width: 20%;
+    }
   STYLE
 
+  js "http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"
+  js "tweet/jquery.tweet.js"
+  css "tweet/jquery.tweet.css"
+  
+  script <<-SCRIPT
+  $(document).ready(function(){
+      $(".tweet").tweet({
+          username: "alexch",
+          join_text: "auto",
+          avatar_size: 32,
+          count: 3,
+          auto_join_text_default: "I said,",
+          auto_join_text_ed: "I",
+          auto_join_text_ing: "I were",
+          auto_join_text_reply: "I replied to",
+          auto_join_text_url: "I was checking out",
+          loading_text: "loading tweets..."
+      });
+  });
+  SCRIPT
+  
+
   def body_content
+
+    div :class => "tweet"
 
     h1 "Alex Chaffee"
     a "alex@stinky.com", :href => "mailto:alex@stinky.com"

@@ -1,0 +1,8 @@
+--- 
+tweet: 
+  squashed: true
+  url: git://github.com/seaofclouds/tweet.git
+  type: git
+  revision: 9110f7f58756f898e45dca5bc953dc533776f5fe
+  branch: master
+  remote: braid/tweet

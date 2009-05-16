@@ -45,6 +45,8 @@ class Index < Page
         ["Erector", "http://erector.rubyforge.org"],
         ["Stinky Art Collective", "http://stinky.com"],
         ["Purple Technology", "http://purpletech.com"],
+        ["Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms"],
+        ["Deep Test", "http://github.com/qxjit/deep-test"],
       ].each do |site|
         li do
           a site[0], :href => site[1]

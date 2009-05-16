@@ -9,10 +9,18 @@ class Index < Page
       font-family: Tahoma, Geneva, sans-serif;	
     }
     
-    .tweet {
+    .right-side {
       float: right;
       font-size: 10pt;
-      width: 20%;
+      width: 30%;
+    }
+    .tweet {
+      font-size: 10pt;
+    }
+    .reader {
+    }
+    .tumblr {
+      
     }
   STYLE
 
@@ -26,7 +34,7 @@ class Index < Page
           username: "alexch",
           join_text: "auto",
           avatar_size: 32,
-          count: 3,
+          count: 6,
           auto_join_text_default: "I said,",
           auto_join_text_ed: "I",
           auto_join_text_ing: "I were",
@@ -36,11 +44,28 @@ class Index < Page
       });
   });
   SCRIPT
-  
 
+  
+  def reader
+    div :class => "reader" do
+      javascript :src => "http://www.google.com/reader/ui/publisher-en.js"
+      javascript :src =>  "http://www.google.com/reader/public/javascript/user/15504357426492542506/state/com.google/broadcast?n=8&callback=GRC_p(%7Bc%3A%22khaki%22%2Ct%3A%22Alex%20Chaffee%5C's%20shared%20items%22%2Cs%3A%22true%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"
+      
+    end
+  end
+  
   def body_content
 
-    div :class => "tweet"
+    div :class => "right-side" do
+      h3 "Twitter"
+      div :class => "tweet"
+
+      div :class => "reader" do
+        h3 "Google Reader"
+        reader
+      end
+      
+    end
 
     h1 "Alex Chaffee"
     a "alex@stinky.com", :href => "mailto:alex@stinky.com"
@@ -128,6 +153,12 @@ class Index < Page
     # ul do
     #   
     # end
+
+    div :class => "tumblr" do
+      h3 "Tumblr"        
+      javascript :src=>"http://alexch.tumblr.com/js"
+    end
+
   end
   
 end

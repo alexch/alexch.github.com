@@ -20,6 +20,12 @@ class Index < Page
     .reader {
     }
     .tumblr {
+      padding: .5em;
+      border: 2px solid gray;
+      -webkit-border-bottom-left-radius: 5px 5px;
+      -webkit-border-bottom-right-radius: 5px 5px;
+      -webkit-border-top-left-radius: 5px 5px;
+      -webkit-border-top-right-radius: 5px 5px;
       
     }
   STYLE
@@ -45,7 +51,10 @@ class Index < Page
   });
   SCRIPT
 
-  
+  def page_title
+    "Alex Chaffee"
+  end
+
   def reader
     div :class => "reader" do
       javascript :src => "http://www.google.com/reader/ui/publisher-en.js"
@@ -79,8 +88,8 @@ class Index < Page
         "http://github.com/alexch",
         "http://pivotallabs.com/users/alex/blog",
         "http://friendfeed.com/alexch",
-        "http://facebook.com/people/Alex-Chaffee/668119049",
-        "http://google.com/reader/shared/15504357426492542506",
+        "http://facebook.com/daycha",
+        "http://www.google.com/reader/shared/alexch",
         "http://flickr.com/photos/alexchaffee/",
         "http://stinky.com/alex",
       ].each do |u|

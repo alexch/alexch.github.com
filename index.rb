@@ -105,15 +105,21 @@ class Index < Page
     h2 "Projects"
     ul do
       [
-        ["Moodlog", "http://moodlog.org"],
-        ["Erector", "http://erector.rubyforge.org"],
+        ["Moodlog", "http://moodlog.org", "how do you feel?"],
+        ["Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"],
+        ["Vegas", "http://github.com/alexch/vegas", "the un-framework"],
         ["Stinky Art Collective", "http://stinky.com"],
-        ["Purple Technology", "http://purpletech.com"],
-        ["Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms"],
-        ["Deep Test", "http://github.com/qxjit/deep-test"],
+        ["Purple Technology", "http://purpletech.com", "Java lore"],
+        ["Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"],
+        ["Deep Test", "http://github.com/qxjit/deep-test", "we put the *use* in 'CPUs'"],
       ].each do |site|
         li do
-          a site[0], :href => site[1]
+          title, url, description = site
+          a title, :href => url
+          if description
+            text " - "
+            text description
+          end
         end
       end      
     end
@@ -154,6 +160,12 @@ class Index < Page
         text "Director of Engineering at "
         a "EarthWeb", :href => "http://web.archive.org/web/19961103131307/http://www.earthweb.com/"
         text " (1995-1998)"
+      end
+      
+      li do
+        text "Student of Cognitive Psychology at "
+        a "Reed College", :href => "http://reed.edu"
+        text " (1989-1992)"
       end
     end
       

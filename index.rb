@@ -6,7 +6,15 @@ class Index < Page
   
   style <<-STYLE
     body {
-      font-family: Tahoma, Geneva, sans-serif;	
+      font-family: Gill Sans, Tahoma, Geneva, sans-serif;	
+    }
+
+    ul.personality {
+      list-style-type: none;
+    }
+    ul.personality img {
+      margin: .25em;
+      vertical-align: text-bottom;
     }
     
     .right-side {
@@ -19,14 +27,40 @@ class Index < Page
     }
     .reader {
     }
+
+
+
     .tumblr {
       padding: .5em;
       border: 2px solid gray;
       -webkit-border-bottom-left-radius: 5px 5px;
       -webkit-border-bottom-right-radius: 5px 5px;
       -webkit-border-top-left-radius: 5px 5px;
-      -webkit-border-top-right-radius: 5px 5px;
+      -webkit-border-top-right-radius: 5px 5px;      
+    }
+    
+    .tumblr_posts {
+      list-style-type: none;
+      list-style-position: outside;
+    }
+    
+    .tumblr_post {
+      display: block;
+      list-style-type: none;
+      list-style-position: outside;
+      border: 8px solid #c0c0c0;
+      background: #f5f5f5;
+      font-size: 10pt;
+      padding: 1em;
+      margin: 0em;
+      margin-bottom: 1em;
       
+    }
+    .tumblr_photo_post img {
+      margin: auto;
+    }
+    .tumblr_source {
+      font-style: italic;
     }
   STYLE
 
@@ -43,7 +77,7 @@ class Index < Page
           count: 6,
           auto_join_text_default: "I said,",
           auto_join_text_ed: "I",
-          auto_join_text_ing: "I were",
+          auto_join_text_ing: "I was",
           auto_join_text_reply: "I replied to",
           auto_join_text_url: "I was checking out",
           loading_text: "loading tweets..."
@@ -80,7 +114,7 @@ class Index < Page
     a "alex@stinky.com", :href => "mailto:alex@stinky.com"
 
     h2 "Personality"
-    ul do
+    ul :class => "personality" do
       [
         "http://google.com/profiles/alexch",
         "http://twitter.com/alexch",
@@ -89,13 +123,13 @@ class Index < Page
         "http://pivotallabs.com/users/alex/blog",
         "http://friendfeed.com/alexch",
         "http://facebook.com/daycha",
-        "http://www.google.com/reader/shared/alexch",
+        "http://google.com/reader/shared/alexch",
         "http://flickr.com/photos/alexchaffee/",
         "http://stinky.com/alex",
       ].each do |u|
         domain = u.match(/http:\/\/([^.]*)\./)[1]
         li do
-          img :src => "icons/#{domain}.png"
+          img :src => "icons/#{domain}.png", :height => 16, :width => 16
           text nbsp(" ")
           url u
         end
@@ -112,6 +146,7 @@ class Index < Page
         ["Purple Technology", "http://purpletech.com", "Java lore"],
         ["Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"],
         ["Deep Test", "http://github.com/qxjit/deep-test", "we put the *use* in 'CPUs'"],
+        ["Mission: Implausible", "http://wiki.github.com/alexch/mission", "calling all ruby noobies!"],
       ].each do |site|
         li do
           title, url, description = site
@@ -167,8 +202,20 @@ class Index < Page
         a "Reed College", :href => "http://reed.edu"
         text " (1989-1992)"
       end
+    end      
+    
+    h2 "Prose"
+    ul do
+      li do
+        text "Courting Demeter, on three blogs: "
+        a "Purple", :href => "http://www.purpletech.com/blog/index.php?itemid=25"
+        text ", "
+        a "Pivotal", :href => "http://pivots.pivotallabs.com/users/alex/blog/articles/273-lovely-demeter-meter-maid"
+        text " and "
+        a "haacked", :href => "http://haacked.com/archive/2009/07/14/law-of-demeter-dot-counting.aspx#72846"
+        text "."
+      end
     end
-      
 
     # h2 "Professional"
     # ul do
@@ -176,7 +223,9 @@ class Index < Page
     # end
 
     div :class => "tumblr" do
-      h3 "Tumblr"        
+      a :href => "http://alexch.tumblr.com/" do
+        h3 "Tumblr"
+      end
       javascript :src=>"http://alexch.tumblr.com/js"
     end
 

@@ -7,6 +7,7 @@ class Index < Page
   style <<-STYLE
     body {
       font-family: Gill Sans, Tahoma, Geneva, sans-serif;	
+      margin: 0px;
     }
 
     ul.personality {
@@ -17,10 +18,23 @@ class Index < Page
       vertical-align: text-bottom;
     }
     
+    .alex-badge {
+      float: left;
+    }
+    
     .right-side {
       float: right;
       font-size: 10pt;
       width: 30%;
+      border-left: 4px solid gray;
+      border-bottom: 4px solid gray;
+    }
+    h3 {
+      background-color: gray;
+      margin: 0px;
+      padding-top: 1em;
+      padding-left: 1em;
+      padding-bottom: .25em;
     }
     .tweet {
       font-size: 10pt;
@@ -100,18 +114,30 @@ class Index < Page
   def body_content
 
     div :class => "right-side" do
+      h3 "Flickr"
+      center { flickr }
+      
       h3 "Twitter"
-      div :class => "tweet"
+      center { div :class => "tweet" }
 
-      div :class => "reader" do
-        h3 "Google Reader"
-        reader
+      h3 "Google Reader"
+      center do
+        div :class => "reader" do
+          reader
+        end
       end
       
     end
+    
+    div :class => "alex-badge" do
+      alex_pic
+    end
 
+    br
     h1 "Alex Chaffee"
     a "alex@stinky.com", :href => "mailto:alex@stinky.com"
+
+    br :style => 'clear: left'
 
     h2 "Personality"
     ul :class => "personality" do
@@ -231,6 +257,69 @@ class Index < Page
 
   end
   
+  def alex_pic
+    rawtext <<-HTML
+    <!-- Start of Flickr Badge -->
+    <style type="text/css">
+    #flickr_badge_source_txt {padding:0; font: 11px Arial, Helvetica, Sans serif; color:#666666;}
+    #flickr_badge_icon {display:block !important; margin:0 !important; border: 1px solid rgb(0, 0, 0) !important;}
+    #flickr_icon_td {padding:0 5px 0 0 !important;}
+    .flickr_badge_image {text-align:center !important;}
+    .flickr_badge_image img {border: 1px solid black !important;}
+    #flickr_www {display:block; padding:0 10px 0 10px !important; font: 11px Arial, Helvetica, Sans serif !important; color:#3993ff !important;}
+    #flickr_badge_uber_wrapper a:hover,
+    #flickr_badge_uber_wrapper a:link,
+    #flickr_badge_uber_wrapper a:active,
+    #flickr_badge_uber_wrapper a:visited {text-decoration:none !important; background:inherit !important;color:#3993ff;}
+    #flickr_badge_wrapper {background-color:#ffffff;border: solid 1px #000000}
+    #flickr_badge_source {padding:0 !important; font: 11px Arial, Helvetica, Sans serif !important; color:#666666 !important;}
+    </style>
+    <table id="flickr_badge_uber_wrapper" cellpadding="0" cellspacing="10" border="0"><tr><td>
+      
+<!--      <a href="http://www.flickr.com" id="flickr_www">www.<strong style="color:#3993ff">flick<span style="color:#ff1c92">r</span></strong>.com</a>
+    -->
+      
+      <table cellpadding="0" cellspacing="10" border="0" id="flickr_badge_wrapper">
+    <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=1&display=random&size=m&layout=v&source=user_tag&user=88815727%40N00&tag=alex"></script>
+    </table>
+    </td></tr></table>
+    <!-- End of Flickr Badge -->
+    HTML
+  end
+  
+  def flickr
+    rawtext <<-HTML
+    <!-- Start of Flickr Badge -->
+    <style type="text/css">
+    #flickr_badge_source_txt {padding:0; font: 11px Arial, Helvetica, Sans serif; color:#666666;}
+    #flickr_badge_icon {display:block !important; margin:0 !important; border: 1px solid rgb(0, 0, 0) !important;}
+    #flickr_icon_td {padding:0 5px 0 0 !important;}
+    .flickr_badge_image {text-align:center !important;}
+    .flickr_badge_image img {border: 1px solid black !important;}
+    #flickr_badge_uber_wrapper {width:150px;}
+    #flickr_www {display:block; text-align:center; padding:0 10px 0 10px !important; font: 11px Arial, Helvetica, Sans serif !important; color:#3993ff !important;}
+    #flickr_badge_uber_wrapper a:hover,
+    #flickr_badge_uber_wrapper a:link,
+    #flickr_badge_uber_wrapper a:active,
+    #flickr_badge_uber_wrapper a:visited {text-decoration:none !important; background:inherit !important;color:#3993ff;}
+    #flickr_badge_wrapper {background-color:#CCCCFF;border: solid 1px #000000}
+    #flickr_badge_source {padding:0 !important; font: 11px Arial, Helvetica, Sans serif !important; color:#666666 !important;}
+    </style>
+    <table id="flickr_badge_uber_wrapper" cellpadding="0" cellspacing="10" border="0"><tr><td><a href="http://www.flickr.com" id="flickr_www">www.<strong style="color:#3993ff">flick<span style="color:#ff1c92">r</span></strong>.com</a><table cellpadding="0" cellspacing="10" border="0" id="flickr_badge_wrapper">
+    <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?show_name=1&count=3&display=random&size=t&layout=v&source=user&user=88815727%40N00"></script>
+    <tr>
+    <td id="flickr_badge_source" valign="center" align="center">
+    <table cellpadding="0" cellspacing="0" border="0"><tr>
+    <td width="10" id="flickr_icon_td"><a href="http://www.flickr.com/photos/alexchaffee/"><img id="flickr_badge_icon" alt="purplepix's items" src="http://farm1.static.flickr.com/42/buddyicons/88815727@N00.jpg?1137351419#88815727@N00" align="left" width="48" height="48"></a></td>
+    <td id="flickr_badge_source_txt"><nobr>Go to</nobr> <a href="http://www.flickr.com/photos/alexchaffee/">purplepix's photostream</a></td>
+    </tr></table>
+    </td>
+    </tr>
+    </table>
+    </td></tr></table>
+    <!-- End of Flickr Badge -->
+    HTML
+  end
 end
 
 if __FILE__ == $0

@@ -12,7 +12,8 @@ class Index < Erector::Widgets::Page
     sides = %w{top bottom} if sides.empty?
     sides.collect do |v|
       %w{left right}.collect do |h|
-        "-webkit-border-#{v}-#{h}-radius: #{radius}px #{radius}px"
+        ["-webkit-border-#{v}-#{h}-radius: #{radius}px #{radius}px",
+        "-moz-border-radius-#{v}#{h}: #{radius}px"]
       end
     end.flatten.join("; ")
   end
@@ -37,13 +38,14 @@ body {
 
 div.bullets { margin-left: 1em; clear: left;}
 
+h1 { margin: 0; }
 h2 {margin-bottom: .5em;}
 
 ul {margin-top: .5em;}
 
-div.presence ul {list-style-type: none;}
-div.presence li { clear: left; }
-div.presence a { text-decoration: none; }
+div.iconistan ul {list-style-type: none; -webkit-padding-start: 0px; padding:0}
+div.iconistan li { clear: left; }
+div.iconistan a { text-decoration: none; }
 .icon { margin: 4px; }
 .icon_border { 
   float: left; 
@@ -51,8 +53,10 @@ div.presence a { text-decoration: none; }
   margin: 2px; padding: 1px;}
 .icon img { margin: 0px; }
 
+.footer { border-top: 1px solid black; background: #e8e8e8; font-size: 10pt; text-align: center; padding: .5em; }
 
-.flickr, .twitter, .reader {
+.flickr, .twitter, .reader, .tumblr {
+  float: left;
   border: 2px solid #a3a3a3; margin: 1em; #{rounded}
 }
 
@@ -62,11 +66,11 @@ h3 {
   #{rounded(:top)}
 }
 .tweet {font-size: 10pt;}
-
+h3 a { text-decoration: none; }
 
 
 .tumblr {
-  padding: 0; margin-left: 1em;
+  padding: 0; margin: 1em;
   border: 2px solid gray;
   #{rounded}
 }
@@ -75,6 +79,7 @@ h3 {
   list-style-position: outside;
   background: #f5f5f5;
   margin: 0; padding: 1em;
+  #{rounded}
 }
 .tumblr_post {
   display: block;
@@ -129,21 +134,21 @@ h3 {
   
   def flickr
     div :class => "flickr" do
-      h3 "Flickr"
+      h3 { a "Flickr", :href=> "http://www.flickr.com/photos/alexchaffee/" }
       center { flickr_widget }
     end
   end
   
   def twitter
     div :class => "twitter" do
-      h3 "Twitter"
+      h3 { a "Twitter", :href=> "http://twitter.com/alexch" }
       div :class => "tweet"
     end
   end    
   
   def reader
     div :class => "reader" do
-      h3 "Google Reader"
+      h3 { a "Google Reader", :href => "http://google.com/reader/shared/alexch" }
       center do
         div :class => "reader_widget" do
           reader_widget
@@ -153,12 +158,11 @@ h3 {
   end
  
   def body_content
-    div :id => "right_side" do
-      
-      twitter
-      flickr
-      reader
-    end
+    # div :id => "right_side" do
+    #   twitter
+    #   flickr
+    #   reader
+    # end
     
     div :id => "alex_pic" do
       alex_pic
@@ -168,24 +172,43 @@ h3 {
     h1 "Alex Chaffee"
     a "alex@stinky.com", :href => "mailto:alex@stinky.com"
 
+    iconistan
+
     div :class => :bullets do
-      presence
       projects
       past
       prose
       professional
     end
 
-    div :class => "tumblr" do
-      a :href => "http://alexch.tumblr.com/" do
-        h3 "Tumblr"
+    table do
+      tr do
+        td(:valign => :top) { flickr }
+        td(:valign => :top) { twitter; reader; tumblr }
       end
-      javascript :src=>"http://alexch.tumblr.com/js"
     end
+    
+    footer
 
   end
+
+  def footer
+    div :class => "footer" do
+      text "This site produced with "
+      a "Erector", :href => "http://erector.rubyforge.org"
+      text " - source code at "
+      a "Github", :href => "http://github.com/alexch/alexch.github.com"
+    end
+  end
   
-  def presence
+  def tumblr
+    div :class => "tumblr" do
+      h3 { a "Tumblr", :href => "http://alexch.tumblr.com/" }
+      javascript :src=>"http://alexch.tumblr.com/js"
+    end
+  end
+  
+  def iconistan
     sites =
     [
       "http://google.com/profiles/alexch",
@@ -201,8 +224,7 @@ h3 {
       "http://stinky.com/alex",
     ]
 
-    div :class => "presence" do
-      h2 "Presence"
+    div :class => "iconistan" do
       table do
         tr do
           td { icon_list(sites[0..4]) }
@@ -293,13 +315,14 @@ h3 {
     ul do
       [
         ["Moodlog", "http://moodlog.org", "how do you feel?"],
-        ["Wrong", "http://github.com/alexch/wrong", "the Wrong way to assert"],
+        ["Wrong", "http://github.com/alexch/wrong", "the right way to assert"],
         ["Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"],
         ["Vegas", "http://github.com/alexch/vegas", "the un-framework"],
         ["Stinky Art Collective", "http://stinky.com"],
         ["Purple Technology", "http://purpletech.com", "Java lore"],
         ["Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"],
         ["Deep Test", "http://github.com/qxjit/deep-test", "we put the *use* in 'CPUs'"],
+        ["Test-First Teaching", "http://testfirst.org", "learn by doing"],
         ["Mission: Implausible", "http://wiki.github.com/alexch/mission", "calling all ruby noobies!"],
       ].each do |site|
         li do

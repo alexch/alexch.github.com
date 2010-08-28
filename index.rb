@@ -29,6 +29,8 @@ class Index < Erector::Widgets::Page
   background: white;
 }
 
+#feeds { clear: both; }
+
 /* styling */
   
 body { 
@@ -36,7 +38,7 @@ body {
   margin: 0px;
 }
 
-div.bullets { margin-left: 1em; clear: left;}
+#bullets { margin-left: 1em; clear: left;}
 
 h1 { margin: 0; }
 h2 {margin-bottom: .5em;}
@@ -55,9 +57,14 @@ div.iconistan a { text-decoration: none; }
 
 .footer { border-top: 1px solid black; background: #e8e8e8; font-size: 10pt; text-align: center; padding: .5em; }
 
-.flickr, .twitter, .reader, .tumblr {
+.twitter, .reader, .tumblr {
   float: left;
   border: 2px solid #a3a3a3; margin: 1em; #{rounded}
+}
+
+.flickr {
+  float: right;
+  border: 2px solid #a3a3a3; margin: 0 1em; #{rounded}
 }
 
 h3 {
@@ -174,17 +181,24 @@ h3 a { text-decoration: none; }
 
     iconistan
 
-    div :class => :bullets do
+
+    div :id => :bullets do
+      flickr      
       projects
       past
       prose
       professional
     end
 
-    table do
-      tr do
-        td(:valign => :top) { flickr }
-        td(:valign => :top) { twitter; reader; tumblr }
+    div :id => :feeds do
+      table do
+        tr do
+          td(:valign => :top, :width => "50%") { twitter }
+          td(:valign => :top, :width => "50%") { reader }
+        end
+        tr do
+          td(:valign => :top, :colspan => 2) { tumblr }
+        end
       end
     end
     
@@ -196,8 +210,9 @@ h3 a { text-decoration: none; }
     div :class => "footer" do
       text "This site produced with "
       a "Erector", :href => "http://erector.rubyforge.org"
-      text " - source code at "
+      text ". Source code at "
       a "Github", :href => "http://github.com/alexch/alexch.github.com"
+      text "."
     end
   end
   
@@ -252,7 +267,6 @@ h3 a { text-decoration: none; }
       end
     end
   end
-    
   
   def past
     div :class => "past" do
@@ -411,7 +425,7 @@ h3 a { text-decoration: none; }
     #flickr_badge_source {padding:0 !important; font: 11px Arial, Helvetica, Sans serif !important; color:#666666 !important;}
     </style>
     <table id="flickr_badge_uber_wrapper" cellpadding="0" cellspacing="10" border="0"><tr><td><a href="http://www.flickr.com" id="flickr_www">www.<strong style="color:#3993ff">flick<span style="color:#ff1c92">r</span></strong>.com</a><table cellpadding="0" cellspacing="10" border="0" id="flickr_badge_wrapper">
-    <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?show_name=1&count=6&display=random&size=t&layout=v&source=user&user=88815727%40N00"></script>
+    <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?show_name=1&count=4&display=random&size=t&layout=v&source=user&user=88815727%40N00"></script>
     <tr>
     <td id="flickr_badge_source" valign="center" align="center">
     <table cellpadding="0" cellspacing="0" border="0"><tr>

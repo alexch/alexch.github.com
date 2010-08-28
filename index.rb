@@ -1,89 +1,105 @@
 require 'rubygems'
 require 'erector'
-require 'page'
 
-class Index < Page
+class Index < Erector::Widgets::Page
   
-  style <<-STYLE
-    body {
-      font-family: Gill Sans, Tahoma, Geneva, sans-serif;	
-      margin: 0px;
-    }
-
-    ul.personality {
-      list-style-type: none;
-    }
-    ul.personality img {
-      margin: .25em;
-      vertical-align: text-bottom;
-    }
+  def self.rounded(*sides)
+    radius = if sides.first.is_a? Fixnum
+      sides.shift
+    else
+      5
+    end
+    sides = %w{top bottom} if sides.empty?
+    sides.collect do |v|
+      %w{left right}.collect do |h|
+        "-webkit-border-#{v}-#{h}-radius: #{radius}px #{radius}px"
+      end
+    end.flatten.join("; ")
+  end
     
-    .alex-badge {
-      float: left;
-    }
-    
-    .right-side {
-      float: right;
-      font-size: 10pt;
-      width: 30%;
-      border-left: 4px solid gray;
-      border-bottom: 4px solid gray;
-      background: white;
-    }
-    h3 {
-      background-color: gray;
-      margin: 0px;
-      padding-top: 1em;
-      padding-left: 1em;
-      padding-bottom: .25em;
-    }
-    .tweet {
-      font-size: 10pt;
-    }
-    .reader {
-    }
+  external :style, <<-STYLE
+/* layout */
+#alex_pic {float: left;}
+
+#right_side {
+  float: right;
+  font-size: 10pt;
+  width: 30%;
+  background: white;
+}
+
+/* styling */
+  
+body { 
+  font-family: Gill Sans, Tahoma, Geneva, sans-serif;	
+  margin: 0px;
+}
+
+div.bullets { margin-left: 1em; clear: left;}
+
+h2 {margin-bottom: .5em;}
+
+ul {margin-top: .5em;}
+
+div.presence ul {list-style-type: none;}
+div.presence li { clear: left; }
+div.presence a { text-decoration: none; }
+.icon { margin: 4px; }
+.icon_border { 
+  float: left; 
+  border: 2px solid #a3a3a3; #{rounded(2)}; 
+  margin: 2px; padding: 1px;}
+.icon img { margin: 0px; }
+
+
+.flickr, .twitter, .reader {
+  border: 2px solid #a3a3a3; margin: 1em; #{rounded}
+}
+
+h3 {
+  background-color: #e8e8e8; border-bottom: 1px solid #9d9d9d;
+  margin: 0px; padding: .25em 1em;
+  #{rounded(:top)}
+}
+.tweet {font-size: 10pt;}
 
 
 
-    .tumblr {
-      padding: .5em;
-      border: 2px solid gray;
-      -webkit-border-bottom-left-radius: 5px 5px;
-      -webkit-border-bottom-right-radius: 5px 5px;
-      -webkit-border-top-left-radius: 5px 5px;
-      -webkit-border-top-right-radius: 5px 5px;      
-    }
-    
-    .tumblr_posts {
-      list-style-type: none;
-      list-style-position: outside;
-    }
-    
-    .tumblr_post {
-      display: block;
-      list-style-type: none;
-      list-style-position: outside;
-      border: 8px solid #c0c0c0;
-      background: #f5f5f5;
-      font-size: 10pt;
-      padding: 1em;
-      margin: 0em;
-      margin-bottom: 1em;
-      
-    }
-    .tumblr_photo_post img {
-      margin: auto;
-    }
-    .tumblr_source {
-      font-style: italic;
-    }
+.tumblr {
+  padding: 0; margin-left: 1em;
+  border: 2px solid gray;
+  #{rounded}
+}
+.tumblr_posts {
+  list-style-type: none;
+  list-style-position: outside;
+  background: #f5f5f5;
+  margin: 0; padding: 1em;
+}
+.tumblr_post {
+  display: block;
+  list-style-type: none;
+  list-style-position: outside;
+  background: #ffffff;
+  border: 4px solid #c0c0c0;
+  font-size: 10pt;
+  padding: 1em;
+  margin: 0em;
+  margin-bottom: 1em; 
+}
+.tumblr_photo_post img {
+  margin: auto;
+}
+.tumblr_source {
+  font-style: italic;
+}
   STYLE
 
-  js "http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"
-  js "tweet/jquery.tweet.js"
-  css "tweet/jquery.tweet.css"
+  external :js, "http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"
+  external :js, "tweet/jquery.tweet.js"
+  external :css, "tweet/jquery.tweet.css"
   
-  script <<-SCRIPT
+  external :script, <<-SCRIPT
   $(document).ready(function(){
       $(".tweet").tweet({
           username: "alexch",
@@ -104,33 +120,47 @@ class Index < Page
     "Alex Chaffee"
   end
 
-  def reader
-    div :class => "reader" do
+  def reader_widget
+    div :class => "reader_widget" do
       javascript :src => "http://www.google.com/reader/ui/publisher-en.js"
       javascript :src =>  "http://www.google.com/reader/public/javascript/user/15504357426492542506/state/com.google/broadcast?n=8&callback=GRC_p(%7Bc%3A%22khaki%22%2Ct%3A%22Alex%20Chaffee%5C's%20shared%20items%22%2Cs%3A%22true%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"
-      
     end
   end
   
-  def body_content
-
-    div :class => "right-side" do
+  def flickr
+    div :class => "flickr" do
       h3 "Flickr"
-      center { flickr }
-      
+      center { flickr_widget }
+    end
+  end
+  
+  def twitter
+    div :class => "twitter" do
       h3 "Twitter"
-      center { div :class => "tweet" }
-
+      div :class => "tweet"
+    end
+  end    
+  
+  def reader
+    div :class => "reader" do
       h3 "Google Reader"
       center do
-        div :class => "reader" do
-          reader
+        div :class => "reader_widget" do
+          reader_widget
         end
       end
+    end 
+  end
+ 
+  def body_content
+    div :id => "right_side" do
       
+      twitter
+      flickr
+      reader
     end
     
-    div :class => "alex-badge" do
+    div :id => "alex_pic" do
       alex_pic
     end
 
@@ -138,35 +168,132 @@ class Index < Page
     h1 "Alex Chaffee"
     a "alex@stinky.com", :href => "mailto:alex@stinky.com"
 
-    br :style => 'clear: left'
+    div :class => :bullets do
+      presence
+      projects
+      past
+      prose
+      professional
+    end
 
-    h2 "Personality"
-    ul :class => "personality" do
-      [
-        "http://google.com/profiles/alexch",
-        "http://twitter.com/alexch",
-        "http://tumblr.com/alexch",
-        "http://github.com/alexch",
-        "http://pivotallabs.com/users/alex/blog",
-        "http://friendfeed.com/alexch",
-        "http://facebook.com/daycha",
-        "http://google.com/reader/shared/alexch",
-        "http://flickr.com/photos/alexchaffee/",
-        "http://stinky.com/alex",
-      ].each do |u|
-        domain = u.match(/http:\/\/([^.]*)\./)[1]
-        li do
-          img :src => "icons/#{domain}.png", :height => 16, :width => 16
-          text nbsp(" ")
-          url u
+    div :class => "tumblr" do
+      a :href => "http://alexch.tumblr.com/" do
+        h3 "Tumblr"
+      end
+      javascript :src=>"http://alexch.tumblr.com/js"
+    end
+
+  end
+  
+  def presence
+    sites =
+    [
+      "http://google.com/profiles/alexch",
+      "http://twitter.com/alexch",
+      "http://tumblr.com/alexch",
+      "http://github.com/alexch",
+      "http://friendfeed.com/alexch",
+      
+      "http://facebook.com/daycha",
+      "http://flickr.com/photos/alexchaffee/",
+      "http://pivotallabs.com/users/alex/blog",
+      "http://google.com/reader/shared/alexch",
+      "http://stinky.com/alex",
+    ]
+
+    div :class => "presence" do
+      h2 "Presence"
+      table do
+        tr do
+          td { icon_list(sites[0..4]) }
+          td { icon_list(sites[5..10]) }
         end
       end
     end
+  end
+
+  def icon_list sites
+    ul do
+      sites.each do |u|
+        domain = u.match(/http:\/\/([^.]*)\./)[1]
+        li do
+          div :class => "icon" do
+            div :class => "icon_border" do
+              a :href => u do
+                img :src => "icons/#{domain}.png", :height => 16, :width => 16
+              end
+            end
+            text nbsp(" ")
+            url u
+          end
+        end
+      end
+    end
+  end
     
+  
+  def past
+    div :class => "past" do
+      h2 "Past"
+      ul do
+        li do
+          text "CTO and Co-founder at "
+          a "Cohuman", :href => "http://cohuman.com"
+          text " (2009-2010)"
+        end
+
+        li do
+          text "Architect and Lead Developer on "
+          a "Pivotal Tracker", :href => "http://www.pivotaltracker.com"
+          text " (2006-2008)"
+        end
+      
+        li do
+          text "Principal, Senior Coach, Director of Systems, and Mad Scientist at "
+          a "Pivotal Labs", :href => "http://www.pivotallabs.com"
+          text " (2004-2008)"
+        end
+      
+        li do
+          text "Teacher/Coder/Mentor at "
+          a "jGuru", :href => "http://www.jguru.com"
+          text " (1999-2001)"
+        end
+      
+        li do
+          text "Founder and Principal Consultant at "
+          a "Purple Technology", :href => "http://www.purpletech.com"
+          text " (1998-2004)"
+        end
+      
+        li do
+          text "Creator and Dalang of "
+          a "Gamelan", :href => "http://web.archive.org/web/19961220054020/http://www.gamelan.com/"
+          text " (1995-1998)"
+        end
+      
+        li do
+          text "Director of Engineering at "
+          a "EarthWeb", :href => "http://web.archive.org/web/19961103131307/http://www.earthweb.com/"
+          text " (1995-1998)"
+        end
+      
+        li do
+          text "Student of Cognitive Psychology at "
+          a "Reed College", :href => "http://reed.edu"
+          text " (1989-1992)"
+        end
+      end      
+    end
+  end
+  
+  def projects
+    div :class => "projects" do
     h2 "Projects"
     ul do
       [
         ["Moodlog", "http://moodlog.org", "how do you feel?"],
+        ["Wrong", "http://github.com/alexch/wrong", "the Wrong way to assert"],
         ["Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"],
         ["Vegas", "http://github.com/alexch/vegas", "the un-framework"],
         ["Stinky Art Collective", "http://stinky.com"],
@@ -185,52 +312,11 @@ class Index < Page
         end
       end      
     end
-    
-    h2 "Past"
-    ul do
-      li do
-        text "Architect and Lead Developer on "
-        a "Pivotal Tracker", :href => "http://www.pivotaltracker.com"
-        text " (2006-2008)"
-      end
-      
-      li do
-        text "Principal, Senior Coach, Director of Systems, and Mad Scientist at "
-        a "Pivotal Labs", :href => "http://www.pivotallabs.com"
-        text " (2004-2008)"
-      end
-      
-      li do
-        text "Teacher/Coder/Mentor at "
-        a "jGuru", :href => "http://www.jguru.com"
-        text " (1999-2001)"
-      end
-      
-      li do
-        text "Founder and Principal Consultant at "
-        a "Purple Technology", :href => "http://www.purpletech.com"
-        text " (1998-2004)"
-      end
-      
-      li do
-        text "Creator and Dalang of "
-        a "Gamelan", :href => "http://web.archive.org/web/19961220054020/http://www.gamelan.com/"
-        text " (1995-1998)"
-      end
-      
-      li do
-        text "Director of Engineering at "
-        a "EarthWeb", :href => "http://web.archive.org/web/19961103131307/http://www.earthweb.com/"
-        text " (1995-1998)"
-      end
-      
-      li do
-        text "Student of Cognitive Psychology at "
-        a "Reed College", :href => "http://reed.edu"
-        text " (1989-1992)"
-      end
-    end      
-    
+    end
+  end
+  
+  def prose
+    div :class => "prose" do
     h2 "Prose"
     ul do
       li do
@@ -243,19 +329,14 @@ class Index < Page
         text "."
       end
     end
-
+    end
+  end
+  
+  def professional
     # h2 "Professional"
     # ul do
     #   
     # end
-
-    div :class => "tumblr" do
-      a :href => "http://alexch.tumblr.com/" do
-        h3 "Tumblr"
-      end
-      javascript :src=>"http://alexch.tumblr.com/js"
-    end
-
   end
   
   def alex_pic
@@ -288,7 +369,7 @@ class Index < Page
     HTML
   end
   
-  def flickr
+  def flickr_widget
     rawtext <<-HTML
     <!-- Start of Flickr Badge -->
     <style type="text/css">

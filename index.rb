@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'erector'
 
+# http://fontdeck.com/project/1443
+
 class Index < Erector::Widgets::Page
   
   def self.rounded(*sides)
@@ -34,7 +36,7 @@ class Index < Erector::Widgets::Page
 /* styling */
   
 body { 
-  font-family: Gill Sans, Tahoma, Geneva, sans-serif;	
+  font-family: 'Trebuchet MS', Gill Sans, Tahoma, Geneva, sans-serif;	
   margin: 0px;
 }
 
@@ -43,11 +45,15 @@ body {
 h1 { margin: 0; }
 h2 {margin-bottom: .5em;}
 
+h1,h2,h3 { 
+  font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif; font-size-adjust:0.532; font-weight:800; font-style:normal;
+}
+
 ul {margin-top: .5em;}
 
 div.iconistan ul {list-style-type: none; -webkit-padding-start: 0px; padding:0}
 div.iconistan li { clear: left; }
-div.iconistan a { text-decoration: none; }
+div.iconistan a { text-decoration: none; font-size: 10pt; }
 .icon { margin: 4px; }
 .icon_border { 
   float: left; 
@@ -130,6 +136,11 @@ h3 a { text-decoration: none; }
 
   def page_title
     "Alex Chaffee"
+  end
+  
+  def head_content
+    super
+    link :rel=>"stylesheet", :href=>"http://f.fontdeck.com/s/css/u5mYSdgdXljzmDHdstX1xDoEPik/alexch.github.com/1443.css", :type=>"text/css"
   end
 
   def reader_widget

@@ -1,0 +1,48 @@
+<head>
+  <title>New Twitter RSS Bookmarklet</title>
+  <style>
+  body { 
+    background: rgba(207, 207, 207, 0.898438); 
+    font: normal normal normal 13px/1.5 'Helvetica Neue', Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
+  }
+  .main { margin: 2em; padding: 1em; 
+    background: white;
+
+    border-bottom-left-radius: 8px 8px;
+    border-bottom-right-radius: 8px 8px;
+    border-top-left-radius: 8px 8px;
+    border-top-right-radius: 8px 8px;
+  }
+  h1 { margin-top: 0px;}
+  a { text-decoration: none;}
+  blockquote a { border: 1px solid gray; background: #DDD; padding: .25em; }
+  </style>
+</head>
+
+<body>
+
+  <div class="main">  
+    <h1>New Twitter RSS Bookmarklet</h1>
+
+    <p>
+      The New Twitter UI doesn't show an RSS feed for the user you're looking at anymore. Instead, it only shows you an RSS feed for your own tweets, which seems sort of vainglorious to me.
+    </p>
+
+    <p>
+      Here's a bookmarklet, written by <a href="http://twitter.com/jacobrothstein">@jacobrothstein</a>  
+      and converted by <a href="http://twitter.com/alexch">@alexch</a>
+      using Gruber's <a href="http://daringfireball.net/2007/03/javascript_bookmarklet_builder">Bookmarklet Builder</a> script. 
+    </p>
+
+    Drag this little dude to your bookmarks bar and click it when you're on someone's timeline. It'll put an "RSS" link right under the user's bio, for you to click or copy.
+    <blockquote>
+      <a href="javascript:$(%27.profile-details%27).append(%27<a%20href=\%22/statuses/user_timeline/%27+$(%27[data-user-id]%27).attr(%27data-user-id%27)+%27.rss\%22>RSS</a>%27)">Twitter RSS</a>
+    </blockquote>
+
+    <hr>
+    <p>
+      Embookmarked and ensited by <a href="http://alexch.github.com">Alex</a>
+    </p>
+  </div>
+
+</body>

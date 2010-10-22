@@ -339,6 +339,7 @@ h3 a { text-decoration: none; }
     h2 "Projects"
     ul do
       [
+        ["New Twitter RSS Bookmarklet", "http://alexch.github.com/twitter-rss-bookmarklet.html", "RSS feed link for the user you're looking at"],
         ["Moodlog", "http://moodlog.org", "how do you feel?"],
         ["Wrong", "http://github.com/alexch/wrong", "the right way to assert"],
         ["Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"],

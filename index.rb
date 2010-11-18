@@ -36,7 +36,7 @@ class Index < Erector::Widgets::Page
 /* styling */
   
 body { 
-  font-family: 'Trebuchet MS', Gill Sans, Tahoma, Geneva, sans-serif;	
+  font-family: 'Optima', 'Trebuchet MS', Gill Sans, Tahoma, Geneva, sans-serif;	
   margin: 0px;
 }
 

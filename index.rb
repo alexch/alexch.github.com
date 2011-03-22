@@ -18,6 +18,7 @@ class Index < Erector::Widgets::Page
   background: white;
 }
 
+.clear { clear: both; }
 #feeds { clear: both; }
 
 #headline { padding: 2em .25em; float: left; }
@@ -170,6 +171,7 @@ a:hover { color: red; }
       h1 "Alex Chaffee"
       a "alex@stinky.com", :class => "email", :href => "mailto:alex@stinky.com"
       iconistan
+      br :class => "clear"
     end
 
     div :id => :bullets do
@@ -216,8 +218,8 @@ a:hover { color: red; }
   def iconistan
     widget Iconistan, :sites =>
     [
-      "http://google.com/profiles/alexch",
       "http://twitter.com/alexch",
+      "http://google.com/profiles/alexch",
       "http://tumblr.com/alexch",
       "http://github.com/alexch",
       "http://friendfeed.com/alexch",

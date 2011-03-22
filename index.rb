@@ -9,8 +9,9 @@ class Index < Erector::Widgets::Page
   extend Rounded
   external :style, <<-STYLE
 /* layout */
-#alex_pic {float: left;}
+#alex_pic {float: right; clear: right;}
 
+div.iconistan { float: right;}
 #right_side {
   float: right;
   font-size: 10pt;
@@ -21,8 +22,16 @@ class Index < Erector::Widgets::Page
 .clear { clear: both; }
 #feeds { clear: both; }
 
-#headline { padding: 2em .25em; float: left; }
-#headline .email { padding-left: 2px;}
+#headline { 
+    border-bottom: 1px solid black; 
+    font-size: 11pt;
+    background: #EFFEFF;
+    padding: .15em .25em .1em;
+    min-height: 26px;    
+}
+#headline .email { margin-left: 2em;}
+#headline b { font-size: 18pt;}
+
 
 /* styling */
   
@@ -31,16 +40,18 @@ body {
   margin: 0px;
 }
 
-#bullets { margin-left: 1em; clear: left;}
+#bullets { margin-left: 2em; }
+#bullets ul { list-style-position: inside; }
 
 h1 { margin: 0; }
 h2 {margin-bottom: .5em;}
 
-h1,h2,h3 { 
+h1,h2,h3,#headline b { 
   font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif; font-size-adjust:0.532; font-weight:800; font-style:normal;
 }
 
 ul {margin-top: .5em;}
+img { border-style: none; }
 
 .footer { border-top: 1px solid black; background: #e8e8e8; font-size: 10pt; text-align: center; padding: .5em; }
 
@@ -50,7 +61,7 @@ ul {margin-top: .5em;}
 }
 
 .flickr {
-  float: right;
+  float: left;
   border: 2px solid #a3a3a3; margin: 0 1em; #{rounded}
 }
 
@@ -123,6 +134,49 @@ a:hover { color: red; }
     super
     link :rel=>"stylesheet", :href=>"http://f.fontdeck.com/s/css/u5mYSdgdXljzmDHdstX1xDoEPik/alexch.github.com/1443.css", :type=>"text/css"
   end
+  
+  def body_content
+    # div :id => "right_side" do
+    #   twitter
+    #   flickr
+    #   reader
+    # end
+    
+
+    div :id => "headline" do
+      b "Alex Chaffee"
+      a "alex@stinky.com", :class => "email", :href => "mailto:alex@stinky.com"
+      iconistan
+    end
+
+    div :id => "alex_pic" do
+      alex_pic
+    end
+
+    flickr      
+    div :id => :bullets do
+      projects
+      past
+      prose
+      professional
+    end
+
+    div :id => :feeds do
+      table do
+        tr do
+          td(:valign => :top, :width => "50%") { twitter }
+          td(:valign => :top, :width => "50%") { reader }
+        end
+        tr do
+          td(:valign => :top, :colspan => 2) { tumblr }
+        end
+      end
+    end
+    
+    footer
+
+  end
+  
 
   def reader_widget
     div :class => "reader_widget" do
@@ -156,47 +210,6 @@ a:hover { color: red; }
     end 
   end
  
-  def body_content
-    # div :id => "right_side" do
-    #   twitter
-    #   flickr
-    #   reader
-    # end
-    
-    div :id => "alex_pic" do
-      alex_pic
-    end
-
-    div :id => "headline" do
-      h1 "Alex Chaffee"
-      a "alex@stinky.com", :class => "email", :href => "mailto:alex@stinky.com"
-      iconistan
-      br :class => "clear"
-    end
-
-    div :id => :bullets do
-      flickr      
-      projects
-      past
-      prose
-      professional
-    end
-
-    div :id => :feeds do
-      table do
-        tr do
-          td(:valign => :top, :width => "50%") { twitter }
-          td(:valign => :top, :width => "50%") { reader }
-        end
-        tr do
-          td(:valign => :top, :colspan => 2) { tumblr }
-        end
-      end
-    end
-    
-    footer
-
-  end
 
   def footer
     div :class => "footer" do

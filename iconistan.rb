@@ -16,7 +16,7 @@ class Iconistan < Erector::Widget
 
   div.iconistan div.icon img { margin: 0px; }  
   div.iconistan div.icon div.url { position: absolute; top: 28px; left: 2px; /* must sync url's left and iconistan's padding */
-   background: #EFFEFF; border: 1px solid black; border-top: 0px; padding: 2px 8px; }
+   background: #EFFEFF; border: 1px solid black; padding: 2px 8px; }
   div.iconistan div.icon div.url { visibility: hidden; }
   div.iconistan div.icon:hover div.url { visibility: visible; }
   CSS

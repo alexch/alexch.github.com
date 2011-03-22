@@ -62,7 +62,7 @@ img { border-style: none; }
 
 .flickr {
   float: left;
-  border: 2px solid #a3a3a3; margin: 0 1em; #{rounded}
+  border: 2px solid #a3a3a3; margin: 1em 1em 0em; #{rounded}
 }
 
 h3 {
@@ -153,7 +153,6 @@ a:hover { color: red; }
       alex_pic
     end
 
-    flickr      
     div :id => :bullets do
       projects
       past
@@ -162,6 +161,7 @@ a:hover { color: red; }
     end
 
     div :id => :feeds do
+      flickr      
       table do
         tr do
           td(:valign => :top, :width => "50%") { twitter }

@@ -1,25 +1,12 @@
 require 'rubygems'
 require 'erector'
+require './rounded'
+require './iconistan'
 
 # http://fontdeck.com/project/1443
 
 class Index < Erector::Widgets::Page
-  
-  def self.rounded(*sides)
-    radius = if sides.first.is_a? Fixnum
-      sides.shift
-    else
-      5
-    end
-    sides = %w{top bottom} if sides.empty?
-    sides.collect do |v|
-      %w{left right}.collect do |h|
-        ["-webkit-border-#{v}-#{h}-radius: #{radius}px #{radius}px",
-        "-moz-border-radius-#{v}#{h}: #{radius}px"]
-      end
-    end.flatten.join("; ")
-  end
-    
+  extend Rounded
   external :style, <<-STYLE
 /* layout */
 #alex_pic {float: left;}
@@ -32,6 +19,9 @@ class Index < Erector::Widgets::Page
 }
 
 #feeds { clear: both; }
+
+#headline { padding: 2em .25em; float: left; }
+#headline .email { padding-left: 2px;}
 
 /* styling */
   
@@ -50,16 +40,6 @@ h1,h2,h3 {
 }
 
 ul {margin-top: .5em;}
-
-div.iconistan ul {list-style-type: none; -webkit-padding-start: 0px; padding:0}
-div.iconistan li { clear: left; }
-div.iconistan a { text-decoration: none; font-size: 10pt; }
-.icon { margin: 4px; }
-.icon_border { 
-  float: left; 
-  border: 2px solid #a3a3a3; #{rounded(2)}; 
-  margin: 2px; padding: 1px;}
-.icon img { margin: 0px; }
 
 .footer { border-top: 1px solid black; background: #e8e8e8; font-size: 10pt; text-align: center; padding: .5em; }
 
@@ -80,7 +60,7 @@ h3 {
 }
 .tweet {font-size: 10pt;}
 h3 a { text-decoration: none; }
-
+a:hover { color: red; }
 
 .tumblr {
   padding: 0; margin: 1em;
@@ -186,12 +166,11 @@ h3 a { text-decoration: none; }
       alex_pic
     end
 
-    br
-    h1 "Alex Chaffee"
-    a "alex@stinky.com", :href => "mailto:alex@stinky.com"
-
-    iconistan
-
+    div :id => "headline" do
+      h1 "Alex Chaffee"
+      a "alex@stinky.com", :class => "email", :href => "mailto:alex@stinky.com"
+      iconistan
+    end
 
     div :id => :bullets do
       flickr      
@@ -235,7 +214,7 @@ h3 a { text-decoration: none; }
   end
   
   def iconistan
-    sites =
+    widget Iconistan, :sites =>
     [
       "http://google.com/profiles/alexch",
       "http://twitter.com/alexch",
@@ -249,34 +228,6 @@ h3 a { text-decoration: none; }
       "http://google.com/reader/shared/alexch",
       "http://stinky.com/alex",
     ]
-
-    div :class => "iconistan" do
-      table do
-        tr do
-          td { icon_list(sites[0..4]) }
-          td { icon_list(sites[5..10]) }
-        end
-      end
-    end
-  end
-
-  def icon_list sites
-    ul do
-      sites.each do |u|
-        domain = u.match(/http:\/\/([^.]*)\./)[1]
-        li do
-          div :class => "icon" do
-            div :class => "icon_border" do
-              a :href => u do
-                img :src => "icons/#{domain}.png", :height => 16, :width => 16
-              end
-            end
-            text nbsp(" ")
-            url u
-          end
-        end
-      end
-    end
   end
   
   def past

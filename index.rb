@@ -221,7 +221,7 @@ a:hover { color: red; }
       "http://tumblr.com/alexch",
       "http://github.com/alexch",
       "http://friendfeed.com/alexch",
-      
+      "http://linkedin.com/in/alexchaffee",  
       "http://facebook.com/daycha",
       "http://flickr.com/photos/alexchaffee/",
       "http://pivotallabs.com/users/alex/blog",

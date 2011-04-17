@@ -20,6 +20,8 @@ class Iconistan < Erector::Widget
   div.iconistan div.icon div.url { visibility: hidden; }
   div.iconistan div.icon:hover div.url { visibility: visible; }
   CSS
+  
+  needs :sites
 
   def content
     div :class => "iconistan" do

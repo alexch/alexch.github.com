@@ -12,6 +12,8 @@ class Index < Erector::Widgets::Page
 #alex_pic {float: right; clear: right;}
 
 div.iconistan { float: right;}
+div.prefix { float: right; padding-top: 5px;}
+
 #right_side {
   float: right;
   font-size: 10pt;
@@ -146,6 +148,7 @@ a:hover { color: red; }
     div :id => "headline" do
       b "Alex Chaffee"
       a "alex@stinky.com", :class => "email", :href => "mailto:alex@stinky.com"
+      
       iconistan
     end
 
@@ -229,6 +232,7 @@ a:hover { color: red; }
   end
   
   def iconistan
+    
     widget Iconistan, :sites =>
     [
       "http://twitter.com/alexch",
@@ -243,6 +247,7 @@ a:hover { color: red; }
       "http://google.com/reader/shared/alexch",
       "http://stinky.com/alex",
     ]
+    div "More Alex:", :class => "prefix"
   end
   
   def past
@@ -305,6 +310,7 @@ a:hover { color: red; }
     h2 "Projects"
     ul do
       [
+        ["Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"],
         ["New Twitter RSS Bookmarklet", "http://alexch.github.com/twitter-rss-bookmarklet.html", "RSS feed link for the user you're looking at"],
         ["Moodlog", "http://moodlog.org", "how do you feel?"],
         ["Wrong", "http://github.com/alexch/wrong", "the right way to assert"],

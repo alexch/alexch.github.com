@@ -4,8 +4,11 @@
   body { 
     background: rgba(207, 207, 207, 0.898438); 
     font: normal normal normal 13px/1.5 'Helvetica Neue', Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
+    margin: 0px;
   }
-  .main { margin: 2em; padding: 1em; 
+  .main { 
+  margin: 1em 2em; 
+  padding: 1em; 
     background: white;
 
     border-bottom-left-radius: 8px 8px;
@@ -16,10 +19,53 @@
   h1 { margin-top: 0px;}
   a { text-decoration: none;}
   blockquote a { border: 1px solid gray; background: #DDD; padding: .25em; }
+  img { border-style: none; }
+  
+  
+  div.top { 
+      border-bottom: 1px solid black; 
+      font-size: 9pt;
+      background: #EFFEFF;
+      padding: .15em .25em .1em;
+      min-height: 26px;
+      
+  }  
+  
+  div.creation {
+      padding: .25em;
+      float:left;
+  }
+  div.creation a {  border: 2px solid #a3a3a3; -webkit-border-top-left-radius: 2px 2px; -moz-border-radius-topleft: 2px; -webkit-border-top-right-radius: 2px 2px; -moz-border-radius-topright: 2px; -webkit-border-bottom-left-radius: 2px 2px; -moz-border-radius-bottomleft: 2px; -webkit-border-bottom-right-radius: 2px 2px; -moz-border-radius-bottomright: 2px; margin: 0px; padding: 1px; }
+  div.creation a:hover { border-color: red;}
+  br.clear { clear: both;}
+  
+  div.iconistan { float: right;}
+  </style>
+  
+  <style>
+    div.iconistan { position: relative; padding: 0px; margin: 0px 4px; }
+    div.iconistan a { text-decoration: none; font-size: 10pt; }
+
+    div.iconistan div.icon { margin: 2px; float: left; height: 36px; }
+    div.iconistan div.icon:nth-child(1) { margin-left: 0px; }
+
+    div.iconistan div.icon div.icon_border { float: left; border: 2px solid #a3a3a3; -webkit-border-top-left-radius: 2px 2px; -moz-border-radius-topleft: 2px; -webkit-border-top-right-radius: 2px 2px; -moz-border-radius-topright: 2px; -webkit-border-bottom-left-radius: 2px 2px; -moz-border-radius-bottomleft: 2px; -webkit-border-bottom-right-radius: 2px 2px; -moz-border-radius-bottomright: 2px; margin: 0px; padding: 1px;}
+    div.iconistan div.icon:hover div.icon_border { border: 2px solid red; }
+
+    div.iconistan div.icon img { margin: 0px; }  
+    div.iconistan div.icon div.url { position: absolute; top: 27px; left: 2px; }  /* must sync url's left and iconistan's padding */
+    div.iconistan div.icon div.url { visibility: hidden; }
+    div.iconistan div.icon:hover div.url { visibility: visible; background: #EFFEFF; border: 1px solid black; padding: 2px 8px; }
   </style>
 </head>
 
 <body>
+
+  <div class="top">
+      <div class="creation">An <a href="http://alexch.github.com/">Alex Chaffee</a> creation.</div>      
+      <div class="iconistan"><div class="icon"><div class="icon_border"><a href="http://twitter.com/alexch"><img height="16" src="icons/twitter.png" width="16" /></a></div>&#160;<div class="url"><a href="http://twitter.com/alexch">http://twitter.com/alexch</a></div></div><div class="icon"><div class="icon_border"><a href="http://google.com/profiles/alexch"><img height="16" src="icons/google.png" width="16" /></a></div>&#160;<div class="url"><a href="http://google.com/profiles/alexch">http://google.com/profiles/alexch</a></div></div><div class="icon"><div class="icon_border"><a href="http://tumblr.com/alexch"><img height="16" src="icons/tumblr.png" width="16" /></a></div>&#160;<div class="url"><a href="http://tumblr.com/alexch">http://tumblr.com/alexch</a></div></div><div class="icon"><div class="icon_border"><a href="http://github.com/alexch"><img height="16" src="icons/github.png" width="16" /></a></div>&#160;<div class="url"><a href="http://github.com/alexch">http://github.com/alexch</a></div></div><div class="icon"><div class="icon_border"><a href="http://friendfeed.com/alexch"><img height="16" src="icons/friendfeed.png" width="16" /></a></div>&#160;<div class="url"><a href="http://friendfeed.com/alexch">http://friendfeed.com/alexch</a></div></div><div class="icon"><div class="icon_border"><a href="http://linkedin.com/in/alexchaffee"><img height="16" src="icons/linkedin.png" width="16" /></a></div>&#160;<div class="url"><a href="http://linkedin.com/in/alexchaffee">http://linkedin.com/in/alexchaffee</a></div></div><div class="icon"><div class="icon_border"><a href="http://facebook.com/daycha"><img height="16" src="icons/facebook.png" width="16" /></a></div>&#160;<div class="url"><a href="http://facebook.com/daycha">http://facebook.com/daycha</a></div></div><div class="icon"><div class="icon_border"><a href="http://flickr.com/photos/alexchaffee/"><img height="16" src="icons/flickr.png" width="16" /></a></div>&#160;<div class="url"><a href="http://flickr.com/photos/alexchaffee/">http://flickr.com/photos/alexchaffee/</a></div></div><div class="icon"><div class="icon_border"><a href="http://pivotallabs.com/users/alex/blog"><img height="16" src="icons/pivotallabs.png" width="16" /></a></div>&#160;<div class="url"><a href="http://pivotallabs.com/users/alex/blog">http://pivotallabs.com/users/alex/blog</a></div></div><div class="icon"><div class="icon_border"><a href="http://google.com/reader/shared/alexch"><img height="16" src="icons/google.png" width="16" /></a></div>&#160;<div class="url"><a href="http://google.com/reader/shared/alexch">http://google.com/reader/shared/alexch</a></div></div><div class="icon"><div class="icon_border"><a href="http://stinky.com/alex"><img height="16" src="icons/stinky.png" width="16" /></a></div>&#160;<div class="url"><a href="http://stinky.com/alex">http://stinky.com/alex</a></div></div></div>
+      &nbsp;
+  </div>
 
   <div class="main">  
     <h1>New Twitter RSS Bookmarklet</h1>
@@ -34,11 +80,15 @@
       using Gruber's <a href="http://daringfireball.net/2007/03/javascript_bookmarklet_builder">Bookmarklet Builder</a> script. 
     </p>
 
+    <p>
     Drag this little dude to your bookmarks bar and click it when you're on someone's timeline. It'll put an "RSS" link right under the user's bio, for you to click or copy.
     <blockquote>
-      <a href="javascript:$(%27.profile-details%27).append(%27<a%20href=\%22/statuses/user_timeline/%27+$(%27[data-user-id]%27).attr(%27data-user-id%27)+%27.rss\%22>RSS</a>%27)">Twitter RSS</a>
+      <a href="javascript:(function(){$(%27.profile-details%27).append(%27<a%20href=\%22/statuses/user_timeline/%27+$(%27[data-user-id]%27).attr(%27data-user-id%27)+%27.rss\%22>RSS</a>%27);})()">Twitter RSS</a>
     </blockquote>
-
+    </p>
+    
+    <p><b>Update:</b> fixed to work in Firefox (thanks to Adam Curry for bug report)</p>
+    
     <hr>
     <p>
       Embookmarked and ensited by <a href="http://alexch.github.com">Alex</a>

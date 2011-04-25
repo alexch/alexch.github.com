@@ -1,28 +1,18 @@
 require 'rubygems'
 require 'erector'
+require './rounded'
+require './iconistan'
 
 # http://fontdeck.com/project/1443
 
 class Index < Erector::Widgets::Page
-  
-  def self.rounded(*sides)
-    radius = if sides.first.is_a? Fixnum
-      sides.shift
-    else
-      5
-    end
-    sides = %w{top bottom} if sides.empty?
-    sides.collect do |v|
-      %w{left right}.collect do |h|
-        ["-webkit-border-#{v}-#{h}-radius: #{radius}px #{radius}px",
-        "-moz-border-radius-#{v}#{h}: #{radius}px"]
-      end
-    end.flatten.join("; ")
-  end
-    
+  extend Rounded
   external :style, <<-STYLE
 /* layout */
-#alex_pic {float: left;}
+#alex_pic {float: right; clear: right;}
+
+div.iconistan { float: right;}
+div.prefix { float: right; padding-top: 5px;}
 
 #right_side {
   float: right;
@@ -31,7 +21,19 @@ class Index < Erector::Widgets::Page
   background: white;
 }
 
+.clear { clear: both; }
 #feeds { clear: both; }
+
+#headline { 
+    border-bottom: 1px solid black; 
+    font-size: 11pt;
+    background: #EFFEFF;
+    padding: .15em .25em .1em;
+    min-height: 26px;    
+}
+#headline .email { margin-left: 2em;}
+#headline b { font-size: 18pt;}
+
 
 /* styling */
   
@@ -40,26 +42,18 @@ body {
   margin: 0px;
 }
 
-#bullets { margin-left: 1em; clear: left;}
+#bullets { margin-left: 2em; }
+#bullets ul { list-style-position: inside; }
 
 h1 { margin: 0; }
 h2 {margin-bottom: .5em;}
 
-h1,h2,h3 { 
+h1,h2,h3,#headline b { 
   font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif; font-size-adjust:0.532; font-weight:800; font-style:normal;
 }
 
 ul {margin-top: .5em;}
-
-div.iconistan ul {list-style-type: none; -webkit-padding-start: 0px; padding:0}
-div.iconistan li { clear: left; }
-div.iconistan a { text-decoration: none; font-size: 10pt; }
-.icon { margin: 4px; }
-.icon_border { 
-  float: left; 
-  border: 2px solid #a3a3a3; #{rounded(2)}; 
-  margin: 2px; padding: 1px;}
-.icon img { margin: 0px; }
+img { border-style: none; }
 
 .footer { border-top: 1px solid black; background: #e8e8e8; font-size: 10pt; text-align: center; padding: .5em; }
 
@@ -69,8 +63,8 @@ div.iconistan a { text-decoration: none; font-size: 10pt; }
 }
 
 .flickr {
-  float: right;
-  border: 2px solid #a3a3a3; margin: 0 1em; #{rounded}
+  float: left;
+  border: 2px solid #a3a3a3; margin: 1em 1em 0em; #{rounded}
 }
 
 h3 {
@@ -80,7 +74,7 @@ h3 {
 }
 .tweet {font-size: 10pt;}
 h3 a { text-decoration: none; }
-
+a:hover { color: red; }
 
 .tumblr {
   padding: 0; margin: 1em;
@@ -142,6 +136,50 @@ h3 a { text-decoration: none; }
     super
     link :rel=>"stylesheet", :href=>"http://f.fontdeck.com/s/css/u5mYSdgdXljzmDHdstX1xDoEPik/alexch.github.com/1443.css", :type=>"text/css"
   end
+  
+  def body_content
+    # div :id => "right_side" do
+    #   twitter
+    #   flickr
+    #   reader
+    # end
+    
+
+    div :id => "headline" do
+      b "Alex Chaffee"
+      a "alex@stinky.com", :class => "email", :href => "mailto:alex@stinky.com"
+      
+      iconistan
+    end
+
+    div :id => "alex_pic" do
+      alex_pic
+    end
+
+    div :id => :bullets do
+      projects
+      past
+      prose
+      professional
+    end
+
+    div :id => :feeds do
+      flickr      
+      table do
+        tr do
+          td(:valign => :top, :width => "50%") { twitter }
+          td(:valign => :top, :width => "50%") { reader }
+        end
+        tr do
+          td(:valign => :top, :colspan => 2) { tumblr }
+        end
+      end
+    end
+    
+    footer
+
+  end
+  
 
   def reader_widget
     div :class => "reader_widget" do
@@ -175,47 +213,6 @@ h3 a { text-decoration: none; }
     end 
   end
  
-  def body_content
-    # div :id => "right_side" do
-    #   twitter
-    #   flickr
-    #   reader
-    # end
-    
-    div :id => "alex_pic" do
-      alex_pic
-    end
-
-    br
-    h1 "Alex Chaffee"
-    a "alex@stinky.com", :href => "mailto:alex@stinky.com"
-
-    iconistan
-
-
-    div :id => :bullets do
-      flickr      
-      projects
-      past
-      prose
-      professional
-    end
-
-    div :id => :feeds do
-      table do
-        tr do
-          td(:valign => :top, :width => "50%") { twitter }
-          td(:valign => :top, :width => "50%") { reader }
-        end
-        tr do
-          td(:valign => :top, :colspan => 2) { tumblr }
-        end
-      end
-    end
-    
-    footer
-
-  end
 
   def footer
     div :class => "footer" do
@@ -235,48 +232,22 @@ h3 a { text-decoration: none; }
   end
   
   def iconistan
-    sites =
+    
+    widget Iconistan, :sites =>
     [
-      "http://google.com/profiles/alexch",
       "http://twitter.com/alexch",
+      "http://google.com/profiles/alexch",
       "http://tumblr.com/alexch",
       "http://github.com/alexch",
       "http://friendfeed.com/alexch",
-      
+      "http://linkedin.com/in/alexchaffee",  
       "http://facebook.com/daycha",
       "http://flickr.com/photos/alexchaffee/",
       "http://pivotallabs.com/users/alex/blog",
       "http://google.com/reader/shared/alexch",
       "http://stinky.com/alex",
     ]
-
-    div :class => "iconistan" do
-      table do
-        tr do
-          td { icon_list(sites[0..4]) }
-          td { icon_list(sites[5..10]) }
-        end
-      end
-    end
-  end
-
-  def icon_list sites
-    ul do
-      sites.each do |u|
-        domain = u.match(/http:\/\/([^.]*)\./)[1]
-        li do
-          div :class => "icon" do
-            div :class => "icon_border" do
-              a :href => u do
-                img :src => "icons/#{domain}.png", :height => 16, :width => 16
-              end
-            end
-            text nbsp(" ")
-            url u
-          end
-        end
-      end
-    end
+    div "More Alex:", :class => "prefix"
   end
   
   def past
@@ -339,6 +310,7 @@ h3 a { text-decoration: none; }
     h2 "Projects"
     ul do
       [
+        ["Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"],
         ["New Twitter RSS Bookmarklet", "http://alexch.github.com/twitter-rss-bookmarklet.html", "RSS feed link for the user you're looking at"],
         ["Moodlog", "http://moodlog.org", "how do you feel?"],
         ["Wrong", "http://github.com/alexch/wrong", "the right way to assert"],

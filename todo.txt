@@ -1,1 +1,2 @@
 more like http://mbleigh.com/about.html ?
+make bookmarkets page use Erector

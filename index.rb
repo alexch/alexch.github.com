@@ -311,7 +311,9 @@ a:hover { color: red; }
     ul do
       [
         ["Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"],
-        ["New Twitter RSS Bookmarklet", "http://alexch.github.com/twitter-rss-bookmarklet.html", "RSS feed link for the user you're looking at"],
+        ["Bookmarklet: New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss", "creates a link to the RSS feed for the Twitter user you're looking at"],
+        ["Bookmarklet: Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"],
+        
         ["Moodlog", "http://moodlog.org", "how do you feel?"],
         ["Wrong", "http://github.com/alexch/wrong", "the right way to assert"],
         ["Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"],

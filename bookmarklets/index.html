@@ -1,5 +1,5 @@
 <head>
-  <title>New Twitter RSS Bookmarklet</title>
+  <title>Alex's Bookmarklets</title>
   <style>
   body { 
     background: rgba(207, 207, 207, 0.898438); 
@@ -67,7 +67,24 @@
       &nbsp;
   </div>
 
-  <div class="main" id="twitterrss">  
+  <a name="fonzie">
+  <div class="main">
+    <h1>Fonzie</h1>
+    <p><b>Install: </b> Drag the link below to your bookmarks bar.</p>
+    <blockquote>
+      <a href="javascript:var%20msg%20=%20%22Fonzie%20says:%20\%22Ayy!%20%22;var%20sel%20=%20window.getSelection();var%20n%20=%20sel.anchorNode;if%20(n)%20{msg%20+=%20sel%20+%20%27%22\n%27;var%20s%20=%20getComputedStyle(n.parentNode);atts%20=%20[%22font-family%22,%22font-size%22,%22font-style%22,%22font-variant%22,%22font-weight%22,%22line-height%22,%22text-align%22,%22text-decoration%22,%22text-indent%22,%22text-rendering%22,%22text-shadow%22,%22text-overflow%22,%22text-transform%22,%22outline-color%22,%22outline-style%22,%22outline-width%22,%22color%22,%22background-color%22];for%20(var%20i=0;i<atts.length;++i)%20{var%20a=atts[i];msg%20+=%20a%20+%20%22:%20%22%20+%20s.getPropertyValue(a)%20+%20%22\n%22;}}%20else%20{msg%20+=%20%22If%20you%20select%20some%20text,%20I%27ll%20tell%20you%20what%20font%20it%20is.\%22%22;}alert(msg);">Fonzie</a>
+    </blockquote>
+
+    <p><b>Usage:</b> 
+
+    Select some text on the page. Click the "Fonzie" bookmark link. See the font.
+    </p>
+    
+    <p><b>Source:</b> <a href="http://github.com/alexch/fonzie">hosted on GitHub</a></p>
+  </div>      
+
+  <a name="twitterrss">
+  <div class="main">
     <h1>New Twitter RSS Bookmarklet</h1>
 
     <p>
@@ -89,10 +106,13 @@
     
     <p><b>Update:</b> fixed to work in Firefox (thanks to Adam Curry for bug report)</p>
     
+    </div>
+    
     <hr>
-    <p>
-      Embookmarked and ensited by <a href="http://alexch.github.com">Alex</a>
-    </p>
+      <p>All bookmarklets on this page were written (or improved) by <a href="http://alexch.github.com">Alex Chaffee</a> and are in the public domain. If you like them, drop me a line.</p>
+
+      <p>Built using <a href="http://daringfireball.net/2007/03/javascript_bookmarklet_builder">Bookmarklet Builder</a> by John Gruber.</p>
+      
   </div>
 
 </body>

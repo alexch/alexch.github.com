@@ -1,2 +1,5 @@
-more like http://mbleigh.com/about.html ?
-make bookmarkets page use Erector
+make it look more like
+	http://mbleigh.com/about.html
+	http://orderedlist.com/
+make bookmarklets page use Erector
+add Google Analytics

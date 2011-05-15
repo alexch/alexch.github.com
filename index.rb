@@ -310,6 +310,7 @@ a:hover { color: red; }
     h2 "Projects"
     ul do
       [
+        ["JesusPAC", "http://JesusPAC.com/", "kicking ass for the Lord"],        
         ["Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"],
         ["Bookmarklet: New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss", "creates a link to the RSS feed for the Twitter user you're looking at"],
         ["Bookmarklet: Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"],

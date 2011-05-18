@@ -6,10 +6,13 @@
     font: normal normal normal 13px/1.5 'Helvetica Neue', Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
     margin: 0px;
   }
+  
+  .main > h1 { margin-left: 1em;}
   .main { 
-  margin: 1em 2em; 
+  margin: 1em auto; 
   padding: 1em; 
     background: white;
+    max-width: 42em;
 
     border-bottom-left-radius: 8px 8px;
     border-bottom-right-radius: 8px 8px;
@@ -30,6 +33,14 @@
       min-height: 26px;
       
   }  
+  div.footer {
+    text-align: center;
+    background: #EFFEFF;
+    padding: 0 0 2em;
+  }
+  .footer p {
+    margin: .5em;
+  }
   
   div.creation {
       padding: .25em;
@@ -84,6 +95,8 @@
       &nbsp;
   </div>
 
+  <h1>Alex's Bookmarklets</h1>
+
   <a name="fonzie">
   <div class="main">
     <h1>Fonzie</h1>
@@ -126,12 +139,13 @@
     <p><b>Update:</b> fixed to work in Firefox (thanks to Adam Curry for bug report)</p>
     
     </div>
+  </div>
     
+  <div class="footer">
     <hr>
       <p>All bookmarklets on this page were written (or improved) by <a href="http://alexch.github.com">Alex Chaffee</a> and are in the public domain. If you like them, drop me a line.</p>
 
       <p>Built using <a href="http://daringfireball.net/2007/03/javascript_bookmarklet_builder">Bookmarklet Builder</a> by John Gruber.</p>
-      
-  </div>
+    </div>
 
 </body>

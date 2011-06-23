@@ -132,11 +132,12 @@
     <p>
     Drag this little dude to your bookmarks bar and click it when you're on someone's timeline. It'll put an "RSS" link right under the user's bio, for you to click or copy.
     <blockquote>
-      <a href="javascript:(function(){$(%27.profile-details%27).append(%27<a%20href=\%22/statuses/user_timeline/%27+$(%27[data-user-id]%27).attr(%27data-user-id%27)+%27.rss\%22>RSS</a>%27);})()">Twitter RSS</a>
+      <a href="javascript:(function(){$(%27.profile-details%27).append(%27<a%20href=\%22/statuses/user_timeline/%27+$(%27span.screen-name%27).text().replace(%27@%27,%27%27)+%27.rss\%22>RSS</a>%27);})()">Twitter RSS</a>
     </blockquote>
     </p>
     
     <p><b>Update:</b> fixed to work in Firefox (thanks to Adam Curry for bug report)</p>
+    <p><b>Update (2011-06-23):</b> now uses twitter screen name, not user id, in RSS URL</p>
     
     </div>
   </div>

@@ -137,6 +137,24 @@ a:hover { color: red; }
     link :rel=>"stylesheet", :href=>"http://f.fontdeck.com/s/css/u5mYSdgdXljzmDHdstX1xDoEPik/alexch.github.com/1443.css", :type=>"text/css"
   end
   
+  def self.google_analytics_code account_id
+    <<-JAVASCRIPT
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '#{account_id}']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    JAVASCRIPT
+  end
+
+  external :script, google_analytics_code('UA-23417120-1')
+  
   def body_content
     # div :id => "right_side" do
     #   twitter
@@ -310,8 +328,11 @@ a:hover { color: red; }
     h2 "Projects"
     ul do
       [
+        ["JesusPAC", "http://JesusPAC.com/", "kicking ass for the Lord"],        
         ["Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"],
-        ["New Twitter RSS Bookmarklet", "http://alexch.github.com/twitter-rss-bookmarklet.html", "RSS feed link for the user you're looking at"],
+        ["Bookmarklet: New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss", "creates a link to the RSS feed for the Twitter user you're looking at"],
+        ["Bookmarklet: Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"],
+        
         ["Moodlog", "http://moodlog.org", "how do you feel?"],
         ["Wrong", "http://github.com/alexch/wrong", "the right way to assert"],
         ["Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"],

@@ -1,0 +1,1 @@
+gem "erector", :path => "../erector"

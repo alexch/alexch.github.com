@@ -52,6 +52,17 @@ h1,h2,h3,#headline b {
   font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif; font-size-adjust:0.532; font-weight:800; font-style:normal;
 }
 
+.section 
+  h2.title {
+    float: left;
+    width: 8em;
+  }
+
+.section
+  .items {
+    padding-left: 10em;
+  }
+
 ul {margin-top: .5em;}
 img { border-style: none; }
 
@@ -175,10 +186,27 @@ a:hover { color: red; }
     end
 
     div :id => :bullets do
-      projects
+      section "Teaching" do
+        item "Test-First Teaching", "http://testfirst.org", "learn by doing"
+        item "Ruby Notes", "http://github.com/alexch/ruby_notes"
+        item "JavaScript Notes", "http://github.com/alexch/javascript_notes"
+      end
+
+      section "Apps" do
+        item "JesusPAC", "http://JesusPAC.com/", "kicking ass for the Lord"
+        item "Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"
+        item "Bookmarklet: New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss", "creates a link to the RSS feed for the Twitter user you're looking at"
+        item "Bookmarklet: Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"
+        item "Moodlog", "http://moodlog.org", "how do you feel?"
+        item "Wrong", "http://github.com/alexch/wrong", "the right way to assert"
+        item "Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"
+        item "Vegas", "http://github.com/alexch/vegas", "the un-framework"
+        item "Stinky Art Collective", "http://stinky.com"
+        item "Purple Technology", "http://purpletech.com", "Java lore"
+        item "Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"
+        item "Deep Test", "http://github.com/qxjit/deep-test", "we put the *use* in 'CPUs'"
+      end
       past
-      prose
-      professional
     end
 
     div :id => :feeds do
@@ -250,7 +278,6 @@ a:hover { color: red; }
   end
   
   def iconistan
-    
     widget Iconistan, :sites =>
     [
       "http://twitter.com/alexch",
@@ -268,100 +295,88 @@ a:hover { color: red; }
     div "More Alex:", :class => "prefix"
   end
   
-  def past
-    div :class => "past" do
-      h2 "Past"
-      ul do
-        li do
-          text "CTO and Co-founder at "
-          a "Cohuman", :href => "http://cohuman.com"
-          text " (2009-2010)"
+  def section name
+    div.section do
+      h2.title name
+      div.items do
+        ul do
+          yield
         end
-
-        li do
-          text "Architect and Lead Developer on "
-          a "Pivotal Tracker", :href => "http://www.pivotaltracker.com"
-          text " (2006-2008)"
-        end
-      
-        li do
-          text "Principal, Senior Coach, Director of Systems, and Mad Scientist at "
-          a "Pivotal Labs", :href => "http://www.pivotallabs.com"
-          text " (2004-2008)"
-        end
-      
-        li do
-          text "Teacher/Coder/Mentor at "
-          a "jGuru", :href => "http://www.jguru.com"
-          text " (1999-2001)"
-        end
-      
-        li do
-          text "Founder and Principal Consultant at "
-          a "Purple Technology", :href => "http://www.purpletech.com"
-          text " (1998-2004)"
-        end
-      
-        li do
-          text "Creator and Dalang of "
-          a "Gamelan", :href => "http://web.archive.org/web/19961220054020/http://www.gamelan.com/"
-          text " (1995-1998)"
-        end
-      
-        li do
-          text "Director of Engineering at "
-          a "EarthWeb", :href => "http://web.archive.org/web/19961103131307/http://www.earthweb.com/"
-          text " (1995-1998)"
-        end
-      
-        li do
-          text "Student of Cognitive Psychology at "
-          a "Reed College", :href => "http://reed.edu"
-          text " (1989-1992)"
-        end
-      end      
+      end
     end
   end
   
-  def projects
-    div :class => "projects" do
-    h2 "Projects"
-    ul do
-      [
-        ["JesusPAC", "http://JesusPAC.com/", "kicking ass for the Lord"],        
-        ["Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"],
-        ["Bookmarklet: New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss", "creates a link to the RSS feed for the Twitter user you're looking at"],
-        ["Bookmarklet: Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"],
-        
-        ["Moodlog", "http://moodlog.org", "how do you feel?"],
-        ["Wrong", "http://github.com/alexch/wrong", "the right way to assert"],
-        ["Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"],
-        ["Vegas", "http://github.com/alexch/vegas", "the un-framework"],
-        ["Stinky Art Collective", "http://stinky.com"],
-        ["Purple Technology", "http://purpletech.com", "Java lore"],
-        ["Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"],
-        ["Deep Test", "http://github.com/qxjit/deep-test", "we put the *use* in 'CPUs'"],
-        ["Test-First Teaching", "http://testfirst.org", "learn by doing"],
-        ["Mission: Implausible", "http://wiki.github.com/alexch/mission", "calling all ruby noobies!"],
-      ].each do |site|
-        li do
-          title, url, description = site
-          a title, :href => url
-          if description
-            text " - "
-            text description
-          end
-        end
-      end      
+  def item name = nil, url = nil, description = nil
+    li do
+      if url
+        a name, :href => url
+      elsif name
+        name
+      end
+    
+      if description
+        text " - ", description
+      end
+  
+      yield if block_given?
     end
+  end
+  
+  def past
+    section "Past" do
+      item do
+        text "CTO and Co-founder at "
+        a "Cohuman", :href => "http://cohuman.com"
+        text " (2009-2010)"
+      end
+
+      item do
+        text "Architect and Lead Developer on "
+        a "Pivotal Tracker", :href => "http://www.pivotaltracker.com"
+        text " (2006-2008)"
+      end
+    
+      li do
+        text "Principal, Senior Coach, Director of Systems, and Mad Scientist at "
+        a "Pivotal Labs", :href => "http://www.pivotallabs.com"
+        text " (2004-2008)"
+      end
+    
+      li do
+        text "Teacher/Coder/Mentor at "
+        a "jGuru", :href => "http://www.jguru.com"
+        text " (1999-2001)"
+      end
+    
+      li do
+        text "Founder and Principal Consultant at "
+        a "Purple Technology", :href => "http://www.purpletech.com"
+        text " (1998-2004)"
+      end
+    
+      li do
+        text "Creator and Dalang of "
+        a "Gamelan", :href => "http://web.archive.org/web/19961220054020/http://www.gamelan.com/"
+        text " (1995-1998)"
+      end
+    
+      li do
+        text "Director of Engineering at "
+        a "EarthWeb", :href => "http://web.archive.org/web/19961103131307/http://www.earthweb.com/"
+        text " (1995-1998)"
+      end
+    
+      li do
+        text "Student of Cognitive Psychology at "
+        a "Reed College", :href => "http://reed.edu"
+        text " (1989-1992)"
+      end
     end
   end
   
   def prose
-    div :class => "prose" do
-    h2 "Prose"
-    ul do
-      li do
+    section "Prose" do
+      item do
         text "Courting Demeter, on three blogs: "
         a "Purple", :href => "http://www.purpletech.com/blog/index.php?itemid=25"
         text ", "
@@ -371,14 +386,6 @@ a:hover { color: red; }
         text "."
       end
     end
-    end
-  end
-  
-  def professional
-    # h2 "Professional"
-    # ul do
-    #   
-    # end
   end
   
   def alex_pic

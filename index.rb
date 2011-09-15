@@ -42,8 +42,8 @@ body {
   margin: 0px;
 }
 
-#bullets { margin-left: 2em; }
-#bullets ul { list-style-position: inside; }
+#sections { margin-left: 2em; }
+#sections ul { list-style-position: inside; }
 
 h1 { margin: 0; }
 h2 {margin-bottom: .5em;}
@@ -167,12 +167,6 @@ a:hover { color: red; }
   external :script, google_analytics_code('UA-23417120-1')
   
   def body_content
-    # div :id => "right_side" do
-    #   twitter
-    #   flickr
-    #   reader
-    # end
-    
 
     div :id => "headline" do
       b "Alex Chaffee"
@@ -185,27 +179,46 @@ a:hover { color: red; }
       alex_pic
     end
 
-    div :id => :bullets do
+    div :id => :sections do
       section "Teaching" do
         item "Test-First Teaching", "http://testfirst.org", "learn by doing"
         item "Ruby Notes", "http://github.com/alexch/ruby_notes"
         item "JavaScript Notes", "http://github.com/alexch/javascript_notes"
+        item "RailsBridge", "http://railsbridge.org", "more is better"
       end
 
       section "Apps" do
+        item "Moodlog", "http://moodlog.org", "how do you feel?"
         item "JesusPAC", "http://JesusPAC.com/", "kicking ass for the Lord"
         item "Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"
         item "Bookmarklet: New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss", "creates a link to the RSS feed for the Twitter user you're looking at"
         item "Bookmarklet: Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"
-        item "Moodlog", "http://moodlog.org", "how do you feel?"
+        item "Stinky Art Collective", "http://stinky.com"
+      end
+
+      section "Code" do
         item "Wrong", "http://github.com/alexch/wrong", "the right way to assert"
         item "Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"
-        item "Vegas", "http://github.com/alexch/vegas", "the un-framework"
-        item "Stinky Art Collective", "http://stinky.com"
+        item "Whos", "http://github.com/alexch/whos", "command-line parallelized whois, minus the spam"
+        item "Rerun", "https://github.com/alexch/rerun", "relaunch your thingy after stuff changes"
         item "Purple Technology", "http://purpletech.com", "Java lore"
-        item "Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"
-        item "Deep Test", "http://github.com/qxjit/deep-test", "we put the *use* in 'CPUs'"
       end
+
+      section "Writings" do
+        item "Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"
+        item do
+          text "Courting Demeter, on three blogs: "
+          a "Purple", :href => "http://www.purpletech.com/blog/index.php?itemid=25"
+          text ", "
+          a "Pivotal", :href => "http://pivots.pivotallabs.com/users/alex/blog/articles/273-lovely-demeter-meter-maid"
+          text " and "
+          a "haacked", :href => "http://haacked.com/archive/2009/07/14/law-of-demeter-dot-counting.aspx#72846"
+          text "."
+        end
+        item "Loose Lips", "http://pivotallabs.com/users/alex/blog", "my Pivotal blog"
+        item "alexch's almanac", "http://alexch.tumblr.com/", "my Tumblog: mostly pull quotes, occasional rants"
+      end
+      
       past
     end
 
@@ -370,20 +383,6 @@ a:hover { color: red; }
         text "Student of Cognitive Psychology at "
         a "Reed College", :href => "http://reed.edu"
         text " (1989-1992)"
-      end
-    end
-  end
-  
-  def prose
-    section "Prose" do
-      item do
-        text "Courting Demeter, on three blogs: "
-        a "Purple", :href => "http://www.purpletech.com/blog/index.php?itemid=25"
-        text ", "
-        a "Pivotal", :href => "http://pivots.pivotallabs.com/users/alex/blog/articles/273-lovely-demeter-meter-maid"
-        text " and "
-        a "haacked", :href => "http://haacked.com/archive/2009/07/14/law-of-demeter-dot-counting.aspx#72846"
-        text "."
       end
     end
   end

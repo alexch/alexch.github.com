@@ -22,20 +22,33 @@ class Iconistan < Erector::Widget
   CSS
   
   needs :sites
-
+  
+  # todo: test
+  class Site
+    attr_reader :url, :domain, :img
+    def initialize url
+      @url = url
+      @domain = url.match(/https?:\/\/([^.]*)\./)[1]
+      @img = "icons/#{@domain}.png"
+    end
+  end
+  
+  def sites
+    @sites.map{|url| Site.new(url)}
+  end
+  
   def content
-    div :class => "iconistan" do
-      @sites.each do |u|
-        domain = u.match(/https?:\/\/([^.]*)\./)[1]
-        div :class => "icon" do
-          div :class => "icon_border" do
-            a :href => u do
-              img :src => "icons/#{domain}.png", :height => 16, :width => 16
+    div.iconistan do
+      sites.each do |site|
+        div.icon do
+          div.icon_border do
+            a :href => site.url do
+              img :src => site.img, :height => 16, :width => 16
             end
           end
           text nbsp(" ")
-          div :class => "url" do
-            url u
+          div.url do
+            url site.url
           end
         end
       end

@@ -24,16 +24,22 @@ div.prefix { float: right; padding-top: 5px;}
 .clear { clear: both; }
 #feeds { clear: both; }
 
-#headline { 
-    border-bottom: 1px solid black; 
+
+#top { 
+  background: #EAD1FF;
+  border-bottom: 1px solid #A04DFF; 
     font-size: 11pt;
-    background: #EFFEFF;
     padding: .15em .25em .1em;
     min-height: 26px;    
 }
-#headline .email { margin-left: 2em;}
-#headline b { font-size: 18pt;}
-
+#top .email { margin-left: 2em;}
+#top .logo {
+  padding-top: 1em;
+  padding-left: 1em;
+}
+#top .logo b {
+  font-size: 32pt;
+}
 
 /* styling */
   
@@ -42,31 +48,67 @@ body {
   margin: 0px;
 }
 
-#sections { margin-left: 2em; }
 #sections ul { list-style-position: inside; }
 
 h1 { margin: 0; }
 h2 {margin-bottom: .5em;}
 
-h1,h2,h3,#headline b { 
-  font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif; font-size-adjust:0.532; font-weight:800; font-style:normal;
+h1,h2,h3,#top b { 
+  font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif; font-weight:800; font-style:normal;
+}
+
+
+#sections {
+  margin-left: 2em;
+}
+
+.section {
+  margin: 2em 1em;
 }
 
 .section 
   h2.title {
     float: left;
     width: 8em;
+    
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    
   }
 
 .section
   .items {
-    padding-left: 10em;
+    padding-left: 12em;
   }
 
 ul {margin-top: .5em;}
 img { border-style: none; }
 
 .footer { border-top: 1px solid black; background: #e8e8e8; font-size: 10pt; text-align: center; padding: .5em; }
+
+ .items>ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;  
+  list-style-type: none;
+}
+
+li.item {
+  margin-bottom: .25em;
+}
+
+li.item
+  span.name {
+    font-weight: bold;
+  }
+li.item
+  span.name a {
+    text-decoration: none;
+  }
 
 .twitter, .reader, .tumblr {
   float: left;
@@ -79,13 +121,17 @@ img { border-style: none; }
 }
 
 h3 {
-  background-color: #e8e8e8; border-bottom: 1px solid #9d9d9d;
+  background-color: #e8e8e8; 
+  border-bottom: 1px solid #9d9d9d;
   margin: 0px; padding: .25em 1em;
   #{rounded(:top)}
 }
 .tweet {font-size: 10pt;}
 h3 a { text-decoration: none; }
+
+a { color: #0000dd; }
 a:hover { color: red; }
+a:visited { color: #4E3EFF; }
 
 .tumblr {
   padding: 0; margin: 1em;
@@ -168,11 +214,13 @@ a:hover { color: red; }
   
   def body_content
 
-    div :id => "headline" do
-      b "Alex Chaffee"
-      a "alex@stinky.com", :class => "email", :href => "mailto:alex@stinky.com"
-      
+    div :id => "top" do
       iconistan
+      div.logo {
+        b "Alex Chaffee"
+        a "alex@stinky.com", :class => "email", :href => "mailto:alex@stinky.com"
+      }
+      
     end
 
     div :id => "alex_pic" do
@@ -184,7 +232,7 @@ a:hover { color: red; }
         item "Test-First Teaching", "http://testfirst.org", "learn by doing"
         item "Ruby Notes", "http://github.com/alexch/ruby_notes"
         item "JavaScript Notes", "http://github.com/alexch/javascript_notes"
-        item "RailsBridge", "http://railsbridge.org", "more is better"
+        item "RailsBridge", "http://railsbridge.org", "the more coders the better"
       end
 
       section "Apps" do
@@ -320,16 +368,19 @@ a:hover { color: red; }
   end
   
   def item name = nil, url = nil, description = nil
-    li do
-      if url
-        a name, :href => url
-      elsif name
-        name
+    li.item do
+      if name
+        span.name {
+          if url
+            a name, :href => url
+          else
+            text name
+          end
+        }
+        text " - " if description          
       end
     
-      if description
-        text " - ", description
-      end
+      text description if description
   
       yield if block_given?
     end

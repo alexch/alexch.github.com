@@ -22,7 +22,6 @@ div.prefix { float: right; padding-top: 5px;}
 }
 
 .clear { clear: both; }
-#feeds { clear: both; }
 
 
 #top { 
@@ -113,6 +112,11 @@ li.item
 .twitter, .reader, .tumblr {
   float: left;
   border: 2px solid #a3a3a3; margin: 1em; #{rounded}
+}
+
+.tumblr {
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .flickr {
@@ -227,7 +231,7 @@ a:visited { color: #4E3EFF; }
       alex_pic
     end
 
-    div :id => :sections do
+    div.sections! do
       section "Teaching" do
         item "Test-First Teaching", "http://testfirst.org", "learn by doing"
         item "Ruby Notes", "http://github.com/alexch/ruby_notes"
@@ -237,10 +241,19 @@ a:visited { color: #4E3EFF; }
 
       section "Apps" do
         item "Moodlog", "http://moodlog.org", "how do you feel?"
+        item "Cohuman", "http://cohuman.com", "what are you doing?"
+        item "Bookmarklets", "bookmarklets/index.html" do
+          ul do
+            item "New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss", 
+              "creates a link to the RSS feed for the Twitter user you're looking at"
+            item "Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"
+          end
+        end
+      end
+      
+      section "Sites" do
         item "JesusPAC", "http://JesusPAC.com/", "kicking ass for the Lord"
         item "Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"
-        item "Bookmarklet: New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss", "creates a link to the RSS feed for the Twitter user you're looking at"
-        item "Bookmarklet: Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"
         item "Stinky Art Collective", "http://stinky.com"
       end
 
@@ -268,21 +281,22 @@ a:visited { color: #4E3EFF; }
       end
       
       past
-    end
+      
+      div.clear
 
-    div :id => :feeds do
-      flickr      
-      table do
-        tr do
-          td(:valign => :top, :width => "50%") { twitter }
-          td(:valign => :top, :width => "50%") { reader }
+      section "Feeds" do
+        flickr      
+        table do
+          tr do
+            td(:valign => :top, :width => "50%") { twitter }
+            td(:valign => :top, :width => "50%") { reader }
+          end
         end
-        tr do
-          td(:valign => :top, :colspan => 2) { tumblr }
-        end
+        tumblr
       end
     end
     
+    div.clear
     footer
 
   end
@@ -400,37 +414,37 @@ a:visited { color: #4E3EFF; }
         text " (2006-2008)"
       end
     
-      li do
+      item do
         text "Principal, Senior Coach, Director of Systems, and Mad Scientist at "
         a "Pivotal Labs", :href => "http://www.pivotallabs.com"
         text " (2004-2008)"
       end
     
-      li do
+      item do
         text "Teacher/Coder/Mentor at "
         a "jGuru", :href => "http://www.jguru.com"
         text " (1999-2001)"
       end
     
-      li do
+      item do
         text "Founder and Principal Consultant at "
         a "Purple Technology", :href => "http://www.purpletech.com"
         text " (1998-2004)"
       end
     
-      li do
+      item do
         text "Creator and Dalang of "
         a "Gamelan", :href => "http://web.archive.org/web/19961220054020/http://www.gamelan.com/"
         text " (1995-1998)"
       end
     
-      li do
+      item do
         text "Director of Engineering at "
         a "EarthWeb", :href => "http://web.archive.org/web/19961103131307/http://www.earthweb.com/"
         text " (1995-1998)"
       end
     
-      li do
+      item do
         text "Student of Cognitive Psychology at "
         a "Reed College", :href => "http://reed.edu"
         text " (1989-1992)"

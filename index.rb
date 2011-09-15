@@ -114,7 +114,7 @@ li.item
   border: 2px solid #a3a3a3; margin: 1em; #{rounded}
 }
 
-.tumblr {
+.tumblr > ol {
   max-height: 500px;
   overflow-y: auto;
 }
@@ -263,7 +263,13 @@ a:visited { color: #4E3EFF; }
         item "Whos", "http://github.com/alexch/whos", "command-line parallelized whois, minus the spam"
         item "Rerun", "https://github.com/alexch/rerun", "relaunch your thingy after stuff changes"
         item "Purple Technology", "http://purpletech.com", "Java lore"
+        item "Fork me on GitHub", "http://github.com/alexch"
       end
+
+      # section "Interests" do
+      #   item "Dolores Park", "http://"
+      #   item "Quantified Self", "http://"
+      # end
 
       section "Writings" do
         item "Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"
@@ -280,7 +286,7 @@ a:visited { color: #4E3EFF; }
         item "alexch's almanac", "http://alexch.tumblr.com/", "my Tumblog: mostly pull quotes, occasional rants"
       end
       
-      past
+      career
       
       div.clear
 
@@ -334,7 +340,6 @@ a:visited { color: #4E3EFF; }
     end 
   end
  
-
   def footer
     div :class => "footer" do
       text "This site produced with "
@@ -366,6 +371,7 @@ a:visited { color: #4E3EFF; }
       "http://pivotallabs.com/users/alex/blog",
       "http://google.com/reader/shared/alexch",
       "http://stinky.com/alex",
+      "http://foursquare.com/alexch"
     ]
     div "More Alex:", :class => "prefix"
   end
@@ -400,8 +406,16 @@ a:visited { color: #4E3EFF; }
     end
   end
   
-  def past
-    section "Past" do
+  def career
+    section "Career" do
+      item do
+        text "Teacher and courseware author at ",
+          a("Blazing Cloud", :href=> "http://blazingcloud.net"),
+          " and ",
+          a("Marakana", :href=> "http://marakana.com"),
+          " (2010 - present)"
+      end
+            
       item do
         text "CTO and Co-founder at "
         a "Cohuman", :href => "http://cohuman.com"
@@ -448,6 +462,10 @@ a:visited { color: #4E3EFF; }
         text "Student of Cognitive Psychology at "
         a "Reed College", :href => "http://reed.edu"
         text " (1989-1992)"
+      end
+      
+      item do
+        text "Obligatory ", a("LinkedIn", :href=>"http://linkedin.com/in/alexchaffee"), " hyperlink"
       end
     end
   end

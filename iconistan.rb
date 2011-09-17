@@ -2,6 +2,8 @@ require 'rubygems'
 require 'erector'
 require './rounded'
 
+Widget = Erector::Widget unless Object.const_defined?(:Widget)
+
 class Iconistan < Erector::Widget
   extend Rounded
   external :style, <<-CSS
@@ -24,12 +26,25 @@ class Iconistan < Erector::Widget
   needs :sites
   
   # todo: test
-  class Site
-    attr_reader :url, :domain, :img
+  class Site < Widget
     def initialize url
       @url = url
       @domain = url.match(/https?:\/\/([^.]*)\./)[1]
       @img = "icons/#{@domain}.png"
+    end
+    
+    def content
+      div.icon do
+        div.icon_border do
+          a :href => @url do
+            img :src => @img, :height => 16, :width => 16
+          end
+        end
+        text nbsp(" ")
+        div.url do
+          url @url
+        end
+      end
     end
   end
   
@@ -40,17 +55,7 @@ class Iconistan < Erector::Widget
   def content
     div.iconistan do
       sites.each do |site|
-        div.icon do
-          div.icon_border do
-            a :href => site.url do
-              img :src => site.img, :height => 16, :width => 16
-            end
-          end
-          text nbsp(" ")
-          div.url do
-            url site.url
-          end
-        end
+        widget site
       end
     end
   end

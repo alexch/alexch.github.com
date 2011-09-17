@@ -13,7 +13,10 @@ class Iconistan < Erector::Widget
   div.iconistan div.icon { margin: 2px; float: left; height: 36px; }
   div.iconistan div.icon:nth-child(1) { margin-left: 0px; }
 
-  div.iconistan div.icon div.icon_border { float: left; border: 2px solid #a3a3a3; #{rounded(2)}; margin: 0px; padding: 1px;}
+  div.iconistan div.icon div.icon_border { float: left; 
+    border: 2px solid #a3a3a3; #{rounded(2)}; margin: 0px; padding: 1px;
+    background-color: white;
+  }
   div.iconistan div.icon:hover div.icon_border { border: 2px solid red; }
 
   div.iconistan div.icon img { margin: 0px; }  

@@ -26,14 +26,16 @@ class Iconistan < Erector::Widget
   div.iconistan div.icon:hover div.url { visibility: visible; }
   CSS
   
-  needs :sites
+  needs :sites, :dir => "icons"
   
   # todo: test
   class Site < Widget
-    def initialize url
-      @url = url
-      @domain = url.match(/https?:\/\/([^.]*)\./)[1]
-      @img = "icons/#{@domain}.png"
+    needs :url, :dir
+    
+    def initialize options
+      super
+      @domain = @url.match(/https?:\/\/([^.]*)\./)[1]
+      @img = "#{@dir}/#{@domain}.png"
     end
     
     def content
@@ -52,7 +54,7 @@ class Iconistan < Erector::Widget
   end
   
   def sites
-    @sites.map{|url| Site.new(url)}
+    @sites.map{|url| Site.new(url: url, dir: @dir)}
   end
   
   def content

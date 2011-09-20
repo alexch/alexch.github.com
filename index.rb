@@ -1,12 +1,16 @@
+
 require 'rubygems'
 require 'erector'
-require './rounded'
-require './iconistan'
+
+here = File.expand_path(File.dirname(__FILE__))
+require "#{here}/rounded"
+require "#{here}/iconistan"
+require "#{here}/page"
 
 # http://fontdeck.com/project/1443
 
-class Index < Erector::Widgets::Page
-  extend Rounded
+class Index < Page
+  
   external :style, <<-STYLE
 /* layout */
 #alex_pic {float: right; clear: right;}
@@ -21,9 +25,6 @@ div.prefix { float: right; padding-top: 5px;}
   background: white;
 }
 
-.clear { clear: both; }
-
-
 #top { 
   background: #EAD1FF;
   border-bottom: 1px solid #A04DFF; 
@@ -31,6 +32,7 @@ div.prefix { float: right; padding-top: 5px;}
     padding: .15em .25em .1em;
     min-height: 26px;    
 }
+
 #top .email { margin-left: 2em;}
 #top .logo {
   padding-top: 1em;
@@ -42,20 +44,12 @@ div.prefix { float: right; padding-top: 5px;}
 
 /* styling */
   
-body { 
-  font-family: 'Optima', 'Trebuchet MS', Gill Sans, Tahoma, Geneva, sans-serif;	
-  margin: 0px;
-}
 
 #sections ul { list-style-position: inside; }
-
-h1 { margin: 0; }
-h2 {margin-bottom: .5em;}
 
 h1,h2,h3,#top b { 
   font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif; font-weight:800; font-style:normal;
 }
-
 
 #sections {
   margin-left: 2em;
@@ -83,7 +77,6 @@ h1,h2,h3,#top b {
   }
 
 ul {margin-top: .5em;}
-img { border-style: none; }
 
 .footer { border-top: 1px solid black; background: #e8e8e8; font-size: 10pt; text-align: center; padding: .5em; }
 
@@ -131,11 +124,7 @@ h3 {
   #{rounded(:top)}
 }
 .tweet {font-size: 10pt;}
-h3 a { text-decoration: none; }
 
-a { color: #0000dd; }
-a:hover { color: red; }
-a:visited { color: #4E3EFF; }
 
 .tumblr {
   padding: 0; margin: 1em;
@@ -192,40 +181,8 @@ a:visited { color: #4E3EFF; }
   def page_title
     "Alex Chaffee"
   end
-  
-  def head_content
-    super
-    link :rel=>"stylesheet", :href=>"http://f.fontdeck.com/s/css/u5mYSdgdXljzmDHdstX1xDoEPik/alexch.github.com/1443.css", :type=>"text/css"
-  end
-  
-  def self.google_analytics_code account_id
-    <<-JAVASCRIPT
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '#{account_id}']);
-    _gaq.push(['_setDomainName', 'none']);
-    _gaq.push(['_setAllowLinker', true]);
-    _gaq.push(['_trackPageview']);
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    JAVASCRIPT
-  end
-
-  external :script, google_analytics_code('UA-23417120-1')
-  
-  def body_content
-
-    div :id => "top" do
-      iconistan
-      div.logo {
-        b "Alex Chaffee"
-        a "alex@stinky.com", :class => "email", :href => "mailto:alex@stinky.com"
-      }
-      
-    end
+  def main
 
     div :id => "alex_pic" do
       alex_pic
@@ -301,13 +258,8 @@ a:visited { color: #4E3EFF; }
         tumblr
       end
     end
-    
-    div.clear
-    footer
-
   end
   
-
   def reader_widget
     div :class => "reader_widget" do
       javascript :src => "http://www.google.com/reader/ui/publisher-en.js"
@@ -357,54 +309,7 @@ a:visited { color: #4E3EFF; }
     end
   end
   
-  def iconistan
-    widget Iconistan, :sites =>
-    [
-      "http://twitter.com/alexch",
-      "http://google.com/profiles/alexch",
-      "http://tumblr.com/alexch",
-      "http://github.com/alexch",
-      "http://friendfeed.com/alexch",
-      "http://linkedin.com/in/alexchaffee",  
-      "http://facebook.com/daycha",
-      "http://flickr.com/photos/alexchaffee/",
-      "http://pivotallabs.com/users/alex/blog",
-      "http://google.com/reader/shared/alexch",
-      "http://stinky.com/alex",
-      "http://foursquare.com/alexch"
-    ]
-    div "More Alex:", :class => "prefix"
-  end
-  
-  def section name
-    div.section do
-      h2.title name
-      div.items do
-        ul do
-          yield
-        end
-      end
-    end
-  end
-  
-  def item name = nil, url = nil, description = nil
-    li.item do
-      if name
-        span.name {
-          if url
-            a name, :href => url
-          else
-            text name
-          end
-        }
-        text " - " if description          
-      end
-    
-      text description if description
-  
-      yield if block_given?
-    end
-  end
+
   
   def career
     section "Career" do

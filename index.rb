@@ -15,8 +15,9 @@ class Index < Page
 /* layout */
 #alex_pic {float: right; clear: right;}
 
-div.iconistan { float: right;}
-div.prefix { float: right; padding-top: 5px;}
+#top .iconistan { float: right;}
+
+#top .prefix { float: right; padding-top: 5px;}
 
 #right_side {
   float: right;
@@ -93,6 +94,11 @@ li.item {
   margin-bottom: .25em;
 }
 
+li.item ul {
+  margin-top: .25em;
+  margin-bottom: .5em;
+}
+
 li.item
   span.name {
     font-weight: bold;
@@ -101,6 +107,7 @@ li.item
   span.name a {
     text-decoration: none;
   }
+  
 
 .twitter, .reader, .tumblr {
   float: left;
@@ -190,10 +197,25 @@ h3 {
 
     div.sections! do
       section "Teaching" do
-        item "Test-First Teaching", "http://testfirst.org", "learn by doing"
+        item "Test-First Teaching", "http://testfirst.org", "learn by doing" do
+          ul do
+            item "Learn Ruby", "https://github.com/alexch/learn_ruby"
+            item "Learn JavaScript", "https://github.com/alexch/learn_javascript"
+            item "Sarah Allen and Alex Chaffee at GoGaRuCo, Sep. 17, 2010 (30 min. video)",  
+              "http://confreaks.net/videos/357-gogaruco2010-test-first-teaching" 
+          end
+        end
         item "Ruby Notes", "http://github.com/alexch/ruby_notes"
         item "JavaScript Notes", "http://github.com/alexch/javascript_notes"
         item "RailsBridge", "http://railsbridge.org", "the more coders the better"
+        item "Monkey vs. Robot", "http://github.com/alexch/monkey-vs-robot", "or, You Are Not An Object-Oriented Programmer" do
+          ul do
+            item "Alex Chaffee at GoGaRuCo, Sep. 18, 2011 (6 min. video)", 
+              "http://www.justin.tv/alexchaffee/b/295449071"
+          end
+        end
+        item "Off the Rails", "https://github.com/alexch/Off-The-Rails", "Rack apps and Ruby web frameworks that are not on Rails"
+        
       end
 
       section "Apps" do
@@ -217,10 +239,15 @@ h3 {
       section "Code" do
         item "Wrong", "http://github.com/alexch/wrong", "the right way to assert"
         item "Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"
-        item "Whos", "http://github.com/alexch/whos", "command-line parallelized whois, minus the spam"
-        item "Rerun", "https://github.com/alexch/rerun", "relaunch your thingy after stuff changes"
         item "Purple Technology", "http://purpletech.com", "Java lore"
         item "Fork me on GitHub", "http://github.com/alexch"
+        item "My Dotfiles", "http://github.com/alexch/dotfiles", "shell like I do"        
+      end
+
+      section "Tools" do
+        item "Whos", "http://github.com/alexch/whos", "command-line parallelized whois, minus the spam"
+        item "Rerun", "https://github.com/alexch/rerun", "relaunch your thingy after stuff changes"
+        item "Pong", "http://rubygems.org/gems/pong"
       end
 
       # section "Interests" do
@@ -241,6 +268,10 @@ h3 {
         end
         item "Loose Lips", "http://pivotallabs.com/users/alex/blog", "my Pivotal blog"
         item "alexch's almanac", "http://alexch.tumblr.com/", "my Tumblog: mostly pull quotes, occasional rants"
+        item do
+          iconistan
+          div.clear
+        end
       end
       
       career

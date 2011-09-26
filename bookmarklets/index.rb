@@ -92,16 +92,12 @@ CSS
         end
       end
       p do
-        b do
-          text 'Update:'
-        end
-        text 'fixed to work in Firefox (thanks to Adam Curry for bug report)'
+        b 'Update:'
+        text ' fixed to work in Firefox (thanks to Adam Curry for bug report)'
       end
       p do
-        b do
-          text 'Update (2011-06-23):'
-        end
-        text 'now uses twitter screen name, not user id, in RSS URL'
+        b 'Update (2011-06-23):'
+        text ' now uses twitter screen name, not user id, in RSS URL'
       end
     end
 

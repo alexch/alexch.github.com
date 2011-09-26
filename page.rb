@@ -42,7 +42,7 @@ class Page < Erector::Widgets::Page
     "icons"
   end
 
-  def iconistan
+  def iconistan prefix = nil
     widget Iconistan, :dir => icon_dir,
       :sites => [
       "http://twitter.com/alexch",
@@ -53,12 +53,13 @@ class Page < Erector::Widgets::Page
       "http://linkedin.com/in/alexchaffee",  
       "http://facebook.com/daycha",
       "http://flickr.com/photos/alexchaffee/",
+      "http://quora.com/Alex-Chaffee",
       "http://pivotallabs.com/users/alex/blog",
       "http://google.com/reader/shared/alexch",
       "http://stinky.com/alex",
       "http://foursquare.com/alexch"
     ]
-    div "More Alex:", :class => "prefix"
+    div.prefix prefix if prefix
   end
    
    def head_content
@@ -68,7 +69,7 @@ class Page < Erector::Widgets::Page
 
    def body_content
      div :id => "top" do
-       iconistan
+       iconistan "More Alex:"
        div.logo {
          b do
            a "Alex Chaffee", :href => "/"

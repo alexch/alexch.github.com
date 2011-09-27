@@ -1,6 +1,6 @@
 here = File.expand_path(File.dirname(__FILE__))
 up = File.expand_path("#{here}/..")
-# require "#{up}/"
+require "#{up}/lib/bookmarklet"
 
 class Index < Page
   def page_title
@@ -35,6 +35,11 @@ CSS
       item do
         h1 'Alex\'s Bookmarklets'
       end
+      p do
+        text "Hey, do these work? If not, "
+        a "let me know", :href => "mailto:alex@stinky.com"
+        text ", OK?"
+      end
     end
     section "Fonzie" do
       h2 "Answering the eternal quesion, \"What font is that?\""
@@ -43,9 +48,10 @@ CSS
         text 'Drag the link below to your bookmarks bar.'
       end
       blockquote.bookmarklet do
-        a(:href => 'javascript:var%20msg%20=%20%22Fonzie%20says:%20\%22Ayy!%20%22;var%20sel%20=%20window.getSelection();var%20n%20=%20sel.anchorNode;if%20(n)%20{msg%20+=%20sel%20+%20%27%22\n%27;var%20s%20=%20getComputedStyle(n.parentNode);atts%20=%20[%22font-family%22,%22font-size%22,%22font-style%22,%22font-variant%22,%22font-weight%22,%22line-height%22,%22text-align%22,%22text-decoration%22,%22text-indent%22,%22text-rendering%22,%22text-shadow%22,%22text-overflow%22,%22text-transform%22,%22outline-color%22,%22outline-style%22,%22outline-width%22,%22color%22,%22background-color%22];var%20skip_values=[%22auto%22,%27normal%27,%27none%27,%270px%27,%27rgb(0,%200,%200)%27,%27rgba(0,%200,%200,%200)%27,%27rgb(255,%20255,%20255)%27];for%20(var%20i=0;i<atts.length;++i)%20{var%20a=atts[i];v%20=%20s.getPropertyValue(a);var%20skip%20=%20false;for%20(var%20j=0;j<skip_values.length;++j)%20{if%20(v%20==%20skip_values[j])%20{skip%20=%20true;}}if%20(!skip%20&&%20!(a==%22text-align%22%20&&%20v==%22left%22))%20{msg%20+=%20a%20+%20%22:%20%22%20+%20v%20+%20%22\n%22;}}}%20else%20{msg%20+=%20%22If%20you%20select%20some%20text,%20I%27ll%20tell%20you%20what%20font%20it%20is.\%22%22;}alert(msg);') do
-          text 'Fonzie'
-        end
+        here = File.expand_path(File.dirname(__FILE__))        
+        b = Bookmarklet.new File.read("#{here}/fonzie.js")
+        a "Fonzie", :href => "javascript:#{b.squished}"  # no idea why it shouldn't be escaped now
+        # a "Fonzie", :href => b.href
       end
       p do
         b 'Usage: '
@@ -83,13 +89,22 @@ CSS
         end
         text ' script.'
       end
+      js = <<-JAVASCRIPT
+$('.profile-details').
+  append('<a href="/statuses/user_timeline/' + 
+    $('span.screen-name').text().replace('@','') + 
+    '.rss">RSS</a>')
+      JAVASCRIPT
       p do
         text 'Drag this little dude to your bookmarks bar and click it when you\'re on someone\'s timeline. It\'ll put an "RSS" link right under the user\'s bio, for you to click or copy.'
-        blockquote.bookmarklet do
-          a(:href => 'javascript:(function(){$(%27.profile-details%27).append(%27<a%20href=\%22/statuses/user_timeline/%27+$(%27span.screen-name%27).text().replace(%27@%27,%27%27)+%27.rss\%22>RSS</a>%27);})()') do
-            text 'Twitter RSS'
-          end
+        blockquote.bookmarklet do          
+          a 'Twitter RSS', :href => (Bookmarklet.new js).href
         end
+      end
+      
+      p do
+        b 'Source: '
+        pre js
       end
       p do
         b 'Update:'

@@ -53,14 +53,68 @@ check_escaped "alert('hi')", "alert(%27hi%27)"
 check_escaped %q(alert("hi")), "alert(%22hi%22)"
 check_escaped "backslash\\", "backslash%5C"
 
+def check_parse js
+  # puts "--- executing\n#{js}\n\n"
+  
+  # To install node and jsdom:
+  #  curl http://npmjs.org/install.sh | sh
+  #  npm install jsdom
+
+  require "open3"
+  File.open("/tmp/tmp.js", "w") do |f|
+    f.write <<-JAVASCRIPT
+var jsdom = require('jsdom');
+jsdom.env('<html></html>', [], function(errors, window) {
+  window.getSelection = function(){
+    return {anchorNode: null};
+  };
+  function alert(s) { window.alert(s); }
+#{js}
+})
+    JAVASCRIPT
+  end  
+  stdout, stderr, status = 
+    Open3.capture3(
+      {"NODE_PATH"=> "/usr/local/lib/node_modules"},
+      "/usr/bin/env node /tmp/tmp.js"
+    )
+  if status.exitstatus == 0
+    stdout
+  else
+    require "json"
+    result = {:js => js, :stderr => stderr, :stdout => stdout}
+    raise JavaScriptError, result
+  end
+end
+
+class JavaScriptError < Exception
+  attr_accessor :result
+  def initialize result
+    super("JavaScript Execution Error: #{result[:stderr]}")
+    @result = result
+  end
+end
+
+capturing {
+  check_parse "alert('hi')"
+}
+e = rescuing {
+  capturing {
+    check_parse "asldfkj"
+  }
+}
+deny { e.nil? }
 
 ## href
-assert { href("") == "javascript:" }
-assert { href("alert('hi')") == "javascript:alert(%27hi%27)"}
+assert { href("") == "javascript:(function(){})()" }
+assert { href("alert('hi')") == "javascript:(function(){alert('hi')})()"}
 
 # full fonzie
 
-js = File.read("#{here}/fonzie.js")
-
-exemplar = "javascript:var%20msg%20=%20%22Fonzie%20says:%20%5C%22Ayy!%20%22;var%20sel%20=%20window.getSelection();var%20n%20=%20sel.anchorNode;if%20(n)%20{msg%20+=%20sel%20+%20%27%22%5Cn%27;var%20s%20=%20getComputedStyle(n.parentNode);atts%20=%20[%22font-family%22,%22font-size%22,%22font-style%22,%22font-variant%22,%22font-weight%22,%22line-height%22,%22text-align%22,%22text-decoration%22,%22text-indent%22,%22text-rendering%22,%22text-shadow%22,%22text-overflow%22,%22text-transform%22,%22outline-color%22,%22outline-style%22,%22outline-width%22,%22color%22,%22background-color%22];for%20(var%20i=0;i<atts.length;++i)%20{var%20a=atts[i];v%20=%20s.getPropertyValue(a);if%20(v%20!=%20%22auto%22%20&&%20v%20!=%20%27normal%27%20&&%20v%20!=%20%27none%27)msg%20+=%20a%20+%20%22:%20%22%20+%20v%20+%20%22%5Cn%22;}}%20else%20{msg%20+=%20%22If%20you%20select%20some%20text,%20I%27ll%20tell%20you%20what%20font%20it%20is.%5C%22%22;}alert(msg);"
-assert {  href(js) == exemplar }
+js = File.read("#{here}/../bookmarklets/fonzie.js")
+capturing {
+  check_parse js
+}
+capturing {
+  check_parse squished(js)
+}

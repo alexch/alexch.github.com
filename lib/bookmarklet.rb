@@ -22,7 +22,7 @@ class Bookmarklet
   end
   
   def href    
-    "javascript:#{escaped}"
+    "javascript:(function(){#{squished}})()"
   end
 end
 

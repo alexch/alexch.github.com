@@ -68,7 +68,8 @@ jsdom.env('<html></html>', [], function(errors, window) {
   window.getSelection = function(){
     return {anchorNode: null};
   };
-  function alert(s) { window.alert(s); }
+//  function alert(s) { window.alert(s); }
+  function alert(s) { console.log(s); }
 #{js}
 })
     JAVASCRIPT
@@ -96,7 +97,7 @@ class JavaScriptError < Exception
 end
 
 capturing {
-  check_parse "alert('hi')"
+  puts check_parse "alert('hi')"
 }
 e = rescuing {
   capturing {

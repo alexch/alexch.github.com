@@ -5,13 +5,13 @@
 * <http://alexchaffee.com>
 * This document: <http://alexchaffee.com/dolores/dogarea.html>
 
+Come to the [next open workshop this Thursday](http://sfrpd.org/wp-dev/?p=3621) and let them know what *you* think. (Even if you disagree with me!)
+
 # Abstract
 
 The current Dolores Park plan has an off-leash area in the North-East corner of the park, **directly atop Hipster Hill**. This is arguably the worst possible place to have a dog area. Instead, we should put a dog area in the North-West corner, which would be safer, easier to maintain, and less likely to lead to conflicts.
 
-Come to the [next open workshop this Thursday]() and let them know what *you* think. (Even if you disagree!)
-
-(Note that there's also an official proposal for an official dog area in the South Field. I think that's a great proposal and I support it wholeheartedly. This document is just about dogs in the *NORTH* field.)
+(Note that there's also an official proposal for a dog area in the South Field. I think that's a great plan and I support it wholeheartedly. This document is just about dog areas in the *NORTH* field.)
 
 # Maps
 
@@ -27,8 +27,8 @@ We have an opportunity here, with the DP Renovation, to improve Dolores Park for
 
 What is a dog area? Basically it's two things:
 
-  * signs and other signals (e.g. natural boundaries) for letting people know, in general, where dogs are invited to play
-  * amenities for dogs and owners, to help watch and play and supervise
+  * signs and other signals (e.g. natural boundaries and word of mouth) for letting people know, in general, where dogs are invited to play
+  * amenities for dog owners, to help them supervise their dogs at play
 
 So think of a dog area not as a boundary, but as a focus -- a point of attraction for a certain activity or group.
 
@@ -147,7 +147,7 @@ But, even though it is smaller, it is plenty big enough to provide some good bal
 
 Maybe. But it's not much steeper than Hipster Hill. And the ADA path will require a retaining wall above it, which will level it out some. It's also possible to regrade it slightly while retaining its character.
 
-## But what about the hill own to the tracks?
+## But what about the hill down to the tracks?
 
 That hill is a complete distaster. It's too steep to use, and if a person or a dog walks down it without slipping, they emerge on the dangerous muni tracks. In my opinion there needs to be a high wall lining the muni tunnel, with a fence to keep people from falling over. That would allow *more* flat space, and would be a great place to put some benches facing the field and the downtown skyline.
 
@@ -160,7 +160,9 @@ No, it's actually about the same distance from the edge of the flat field, and a
 Probably not. If you think about it, the current free-for-all system works pretty well.
 
   * Currently roughly 80% of the lawn space in Dolores Park is effectively off-leash.
-  * The area bordering 20th St., near the playground, is by social convention leash-only, and when large picnicking crowds gather, the dog owners usually gravitate away.
+  * The area bordering 20th St., near the playground, is by social convention leash-only
+  * When large picnicking crowds gather, the dog owners usually gravitate away.
+  * Dog owners don't like it when their dogs beg for sandwiches any more than the sandwich eaters do.
 
 Most conflicts I've seen have been between two dog owners; when a dog has bothered a human, the owner has been polite and got the dog out of there and the conflict was resolved amicably. But when two dog owners start yelling at each other, or a non-dog-owner feels threatened, that can escalate into a real aggressive conflict. (Not fun!)
 
@@ -170,7 +172,13 @@ Most conflicts I've seen have been between two dog owners; when a dog has bother
 
 I'm not telling anyone what they can't do. I'm sure that people will continue to walk their dogs all across the park, in the mornings, and rainy afternoons, as they do now without harm.
 
-This proposal attempts to predict and react to a park which has been getting more and more users, and to design some guidelines for when there *is* a conflict
+This proposal attempts to predict and react to a park which has been getting more and more users, and to design some practical guidelines for when there *is* a conflict.
 
+# References
 
+* <http://sfrecpark.org/documents/Workshop1Presentation06.02.11.pdf>
+* <http://www.doloresparkworks.org/dolores-park-renovation/>
+* <http://sfrecpark.org/doloresParkProject.aspx>
+* <http://missionlocal.org/category/topics/dolores-park-topics/>
+* <http://missionlocal.org/2011/09/wait-dolores-park-is-historical/>
 

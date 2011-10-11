@@ -3,15 +3,19 @@
 * Author: Alex Chaffee
 * <alex@stinky.com>
 * <http://alexchaffee.com>
-* This document: <http://alexchaffee.com/good-dog-area.html>
+* This document: <http://alexchaffee.com/dolores/dogarea.html>
 
 # Abstract
 
 The current Dolores Park plan has an off-leash area in the North-East corner of the park, **directly atop Hipster Hill**. This is arguably the worst possible place to have a dog area. Instead, we should put a dog area in the North-West corner, which would be safer, easier to maintain, and less likely to lead to conflicts.
 
+Come to the [next open workshop this Thursday]() and let them know what *you* think. (Even if you disagree!)
+
+(Note that there's also an official proposal for an official dog area in the South Field. I think that's a great proposal and I support it wholeheartedly. This document is just about dogs in the *NORTH* field.)
+
 # Maps
 
-![Dog Area Plans](park-nw-plan.png)
+![Dog Area Plans](dogarea.png)
 
 # Preamble
 
@@ -115,12 +119,12 @@ The ADA path will be downhill of the NW dog area, providing a natural boundary, 
 
 # Maps and photos
 
-  * Hipster Hill on a nice day
-  * Northwest Slope
+  * Hipster Hill on a nice day [todo]
+  * Northwest Slope [todo]
 
 ## Proposed NW Dog Area
 
-![NE Dog Area](park-nw-plan.png)
+![NE Dog Area](dogarea.png)
 
 As an aside, I find it deeply amusing that the aerial map used to demonstrate the NE dog area shows several dozen picnic blankets laid out right inside the boundary, presumably occupied by sunbathers and couples who would not appreciate a dog playing fetch on top of them.
 

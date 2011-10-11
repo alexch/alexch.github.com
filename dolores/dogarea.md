@@ -1,8 +1,9 @@
 # Proposal: Good Dog Area
 
-* Author: Alex Chaffee
-* <alex@stinky.com>
-* <http://alexchaffee.com>
+## Author: Alex Chaffee
+* twitter: [@alexch](http://twitter.com/alexch)
+* email: <alex@stinky.com>
+* web: <http://alexchaffee.com>
 * This document: <http://alexchaffee.com/dolores/dogarea.html>
 
 Come to the [next open workshop this Thursday](http://sfrpd.org/wp-dev/?p=3621) and let them know what *you* think. (Even if you disagree with me!)
@@ -179,6 +180,7 @@ This proposal attempts to predict and react to a park which has been getting mor
 * <http://sfrecpark.org/documents/Workshop1Presentation06.02.11.pdf>
 * <http://www.doloresparkworks.org/dolores-park-renovation/>
 * <http://sfrecpark.org/doloresParkProject.aspx>
-* <http://missionlocal.org/category/topics/dolores-park-topics/>
 * <http://missionlocal.org/2011/09/wait-dolores-park-is-historical/>
+* <http://missionlocal.org/2011/08/dolores-park-renovation-now-weve-got-a-plan/>
+
 

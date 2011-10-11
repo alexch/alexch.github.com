@@ -129,8 +129,14 @@ No; if you check the maps you'll see that the area allowing off-leash dogs on th
 
 [find current RPD dog map too]
 
+But, even though it is smaller, it is plenty big enough to provide some good ball-tossing and chasing space.
+
 ## Isn't the hill too hilly?
 
 Maybe. But it's not much steeper than Hipster Hill. And the ADA path will require a retaining wall above it, which will level it out some. It's also possible to regrade it slightly while retaining its character.
+
+## Doesn't it encroach on the soccer field?
+
+It's actually about the same distance from the edge of the flat field, and arguably encroaches *less* since it's separated by a slope and the ADA path.
 
 

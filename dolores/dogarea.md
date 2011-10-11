@@ -122,6 +122,7 @@ The ADA path will be downhill of the NW dog area, providing a natural boundary, 
 
   * Hipster Hill on a nice day [todo]
   * Northwest Slope [todo]
+  * [Framework Plan](http://sfrpd.org/wp-dev/wp-content/uploads/FRAMEWORK-PLAN_med_res.pdf) [pdf]
 
 ## Proposed NW Dog Area
 
@@ -182,5 +183,7 @@ This proposal attempts to predict and react to a park which has been getting mor
 * <http://sfrecpark.org/doloresParkProject.aspx>
 * <http://missionlocal.org/2011/09/wait-dolores-park-is-historical/>
 * <http://missionlocal.org/2011/08/dolores-park-renovation-now-weve-got-a-plan/>
+* <http://sfrpd.org/wp-dev/wp-content/uploads/FRAMEWORK-PLAN_med_res.pdf>
+* <http://sfrpd.org/wp-dev/?p=3541>
 
 

@@ -1,7 +1,7 @@
 PATH
   remote: ../erector
   specs:
-    erector (0.9.0.pre1)
+    erector (0.9.0.pre2)
       treetop (>= 1.2.3)
 
 GEM

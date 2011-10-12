@@ -126,10 +126,25 @@ The ADA path will be downhill of the NW dog area, providing a natural boundary, 
 
 # Maps and photos
 
-  * Hipster Hill on a nice day [todo]
-  * Northwest Slope [todo]
-  * [Framework Plan](http://sfrpd.org/wp-dev/wp-content/uploads/FRAMEWORK-PLAN_med_res.pdf) [pdf]
-  * Proposal(s):
+Hipster Hill on a nice day [todo]
+
+
+## Northwest Slope
+
+<a href="http://www.flickr.com/photos/alexchaffee/6238501542/" title="north slope, with dogs included by purplepix, on Flickr"><img src="http://farm7.static.flickr.com/6229/6238501542_ee849a3e18_z.jpg" width="640" height="478" alt="north slope, with dogs included"></a>
+
+<a href="http://www.flickr.com/photos/alexchaffee/6237995475/" title="Dogs hanging out at the north slope by purplepix, on Flickr"><img src="http://farm7.static.flickr.com/6038/6237995475_72d866f378_z.jpg" width="612" height="612" alt="Dogs hanging out at the north slope"></a>
+
+<a href="http://www.flickr.com/photos/alexchaffee/6237993747/" title="Dogs hanging out at the north slope by purplepix, on Flickr"><img src="http://farm7.static.flickr.com/6102/6237993747_f4dfc388d2_z.jpg" width="612" height="612" alt="Dogs hanging out at the north slope"></a>
+
+More Northwest Slope pix at [this flickr photoset](http://www.flickr.com/photos/alexchaffee/sets/72157627754783043)
+
+## the current plan
+
+[Framework Plan](http://sfrpd.org/wp-dev/wp-content/uploads/FRAMEWORK-PLAN_med_res.pdf) [pdf]
+
+
+## proposal(s):
 
 ![NE Dog Area](dogarea.png)
 

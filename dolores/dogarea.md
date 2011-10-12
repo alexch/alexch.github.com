@@ -10,6 +10,12 @@ Come to the [next open workshop this Thursday](http://sfrpd.org/wp-dev/?p=3621) 
 
 # Abstract
 
+This Thursday is the second-to-last open public workshop on the Dolores Park
+Renovation project. The process has produced a pretty good plan, under some
+serious constraints, and the dog subcommittee especially has done a great job.
+But there's one decision that I think is really dumb, and unless more people
+show up and say so too, it will go forward. Namely:
+
 The current Dolores Park plan has an off-leash area in the North-East corner of the park, **directly covering Hipster Hill**. This is arguably the worst possible place to have a dog area. Instead, we should put a dog area along the North-West edge, which would be safer, easier to maintain, and less likely to lead to conflicts.
 
 (Note that there's also an official proposal for a dog area in the South Field. I think that's a great plan and I support it wholeheartedly. This document is just about dog areas in the *NORTH* field.)

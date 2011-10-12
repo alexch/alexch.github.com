@@ -1,6 +1,8 @@
 here = File.expand_path(File.dirname(__FILE__))
 
-task :default => [:test, :run]
+task :default => [
+  # :test, 
+  :run]
 
 build_command = "erector --to-html ./index.rb ./bookmarklets/index.rb"
 

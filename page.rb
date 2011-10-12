@@ -35,6 +35,26 @@ class Page < Erector::Widgets::Page
     })();
     JAVASCRIPT
   end
+  
+  def facebook_sdk app_id = 50113824556
+    rawtext <<-JAVASCRIPT
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=#{app_id}";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    JAVASCRIPT
+  end
+  
+# https://developers.facebook.com/docs/reference/plugins/like/
+  def facebook_like url
+    rawtext <<-HTML
+       <div class="fb-like" data-href="#{url}" data-send="true" data-width="450" data-show-faces="true"></div>
+       HTML
+  end
 
   external :script, google_analytics_code('UA-23417120-1')
 
@@ -68,6 +88,7 @@ class Page < Erector::Widgets::Page
    end
 
    def body_content
+     facebook_sdk
      div :id => "top" do
        iconistan "More Alex:"
        div.logo {

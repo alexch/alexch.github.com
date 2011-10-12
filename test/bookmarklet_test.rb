@@ -77,7 +77,8 @@ jsdom.env('<html></html>', [], function(errors, window) {
   stdout, stderr, status = 
     Open3.capture3(
       {"NODE_PATH"=> "/usr/local/lib/node_modules"},
-      "/usr/bin/env node /tmp/tmp.js"
+      # "/usr/bin/env node /tmp/tmp.js"
+      "/usr/local/bin/node /tmp/tmp.js"
     )
   if status.exitstatus == 0
     stdout

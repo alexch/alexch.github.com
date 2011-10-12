@@ -23,7 +23,11 @@ class Index < Page
     font-weight: bold;
   }
   
-CSS
+  div.fb-like {
+    float: right;
+  }
+  
+  CSS
 
   def icon_dir
     "../icons"
@@ -31,6 +35,7 @@ CSS
 
   def main
     br
+    facebook_like "http://alexchaffee.com/bookmarklets"
     section "" do
       item do
         h1 'Alex\'s Bookmarklets'

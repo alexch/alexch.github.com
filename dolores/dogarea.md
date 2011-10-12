@@ -1,3 +1,12 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 # Proposal: Good Dog Area
 
 ## Author: Alex Chaffee
@@ -214,6 +223,12 @@ Coexist.
 * <http://missionlocal.org/2011/08/dolores-park-renovation-now-weve-got-a-plan/>
 * <http://sfrpd.org/wp-dev/wp-content/uploads/FRAMEWORK-PLAN_med_res.pdf>
 * <http://sfrpd.org/wp-dev/?p=3541>
+
+# Comments
+
+<div class="fb-comments" data-href="http://alexchaffee.com/dolores/dogarea.html" data-num-posts="10" data-width="500"></div>
+
+
 
 
 <script type="text/javascript">

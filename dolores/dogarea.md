@@ -88,6 +88,8 @@ Finally The biggest problem with that area is that it's already claimed by the h
 
 *Possibility for conflict:* **LOW**
 
+# Details
+
 ## Paths
 
 I propose we remove a section of the current sidewalk path (going from the Muni stop up the hill to the steps just north of the bridge). This will compensate for the addition of a 10' wide path right nearby by regaining green lawn.
@@ -98,15 +100,16 @@ If people want to walk, or jog, in a straight line along that side of the park, 
 
 ## Amenities
 
-Benches are very important for a dog area, and the current SW dog area points out (a) how well-used they are, and (b) how poorly placed benches can make a dog area worse. The benches are too close together, causing concentrated wear on the ground around the benches, and they face the wrong direction, forcing owners to crane their necks, and encouraging play on the uphill
+Benches are very important for a dog area, and the current SW dog area points out (a) how well-used they are, and (b) how poorly placed benches can make a dog area worse. The benches are too close together, causing concentrated wear on the ground around the benches, and they face the wrong direction, forcing owners to crane their necks to supervise their pets, and forcing them to stand up and walk around if they need to grab them.
 
 A NW dog area should have benches facing the lawn and hill down to the soccer field. These benches would be appreciated and used by non-dog-owners too, just like the benches currently lining the path above the SW dog area.
 
 Also, any dog area worth the name should have a fountain, both for dogs to drink and for owners to wash their dirty pets before leaving.
 
-It is horrifying to imagine putting benches or fountains in the middle of hipster hill. Even if a fountain is placed outside the tennis court, it would be inconvenient for dogs playing 100' away on the lawn. And tennis players would likely not appreciate sharing a fountain with muddy slobbering dogs (another potential source of conflict).
+It is horrifying to imagine putting benches or fountains in the middle of Hipster Hill. Even if a fountain is placed outside the tennis court, it would be inconvenient for dogs playing 100' away on the lawn. And tennis players would likely not appreciate sharing a fountain with muddy slobbering dogs (another potential source of conflict).
 
-More on benches:
+More bench design thoughts:
+
   * dog area benches should *face* where the dogs play, and not be placed in the middle of a lawn
   * benches allow dog owners to chill out and supervise their dogs
   * benches also provide a "safe zone" where dogs can retreat when play gets too rough
@@ -116,7 +119,7 @@ More on benches:
 
 The NW dog area depends on a reliable fence between the muni tracks and the park. This is mandated by safety concerns anyway.
 
-The ADA path will be downhill of the NW dog area, providing a natural boundary, as well as a retaining wall. It's not clear to me that any more fencing would be necessary or desirable between the hill and the path.
+The ADA path will be downhill of the NW dog area, providing a natural boundary, as well as a retaining wall. It's not clear to me that any more fencing would be necessary or desirable uphill of the path.
 
 # Maps and photos
 
@@ -128,53 +131,62 @@ The ADA path will be downhill of the NW dog area, providing a natural boundary, 
 
 ![NE Dog Area](dogarea.png)
 
-As an aside, I find it deeply amusing that the aerial map used to demonstrate the NE dog area shows several dozen picnic blankets laid out right inside the boundary, presumably occupied by sunbathers and couples who would not appreciate a dog playing fetch on top of them.
+(As an aside, I find it deeply amusing that the aerial map used to demonstrate the NE dog area shows several dozen picnic blankets laid out right inside the boundary, presumably occupied by sunbathers and couples who might not appreciate a pack of dogs running among them.)
 
-# FAQ (straw man / devil's advocate)
-
-## Why are you claiming both western hillsides?
-
-1. we're not claiming anything; we're providing a place where dog owners can retire to avoid conflicts with other park users, but most of the time the area would be open, relatively dog-free, and multi-use
-2. there are many other hillsides in the park, including one right nearby (see map) with an even better view of downtown and the event field
+# FAQ
 
 ## Isn't this a land grab by the dog people?
 
 No; if you check the maps you'll see that the area allowing off-leash dogs on the north field is significantly reduced.
 
-[find current RPD dog map too]
+[todo: find current RPD dog map too]
 
 But, even though it is smaller, it is plenty big enough to provide some good ball-tossing and chasing space.
 
-## Isn't the hill too hilly?
+## Why are you claiming both western hillsides?
 
-Maybe. But it's not much steeper than Hipster Hill. And the ADA path will require a retaining wall above it, which will level it out some. It's also possible to regrade it slightly while retaining its character.
+1. we're not claiming anything; we're providing a place where dog owners can retire to avoid conflicts with other park users, but most of the time the area would be open, relatively dog-free, and multi-use
+2. there are many other hillsides in the park, including one just around the bend with an even better view of downtown and the event field
+3. if there's an event that brings a lot of people to the north field, dogs can and should move to the south field... and vice versa
+
+## Isn't the hill too hilly for dogs?
+
+Maybe. But it's not much steeper than Hipster Hill. And the ADA path will require a retaining wall above it, which will level it out some. It's also possible to use the renovation machinery to regrade it slightly while retaining its essential bowl-shaped character.
 
 ## But what about the hill down to the tracks?
 
-That hill is a complete distaster. It's too steep to use, and if a person or a dog walks down it without slipping, they emerge on the dangerous muni tracks. In my opinion there needs to be a high wall lining the muni tunnel, with a fence to keep people from falling over. That would allow *more* flat space, and would be a great place to put some benches facing the field and the downtown skyline.
+That hill is a complete distaster. It's too steep to use, and if a person or a dog succeeds in walking down it without slipping, they emerge on the dangerous Muni tracks. In my opinion there needs to be a wall lining Muni Canyon, with a fence to keep people and animals from falling in. That would allow *more* flat green space in the park proper, and against the fence would be a great place to put some benches facing the field and the downtown skyline.
 
 ## Doesn't the NW dog area encroach on the soccer field?
 
-No, it's actually about the same distance from the edge of the flat field, and arguably encroaches *less* since it's separated by a slope and the ADA path.
+No, it's actually about the same distance from the edge of the flat field, and arguably encroaches *less* since it's separated by some altitude and the ADA path.
 
-## Won't this lead to chaos?
+## Won't all these dog areas lead to chaos?
 
-Probably not. If you think about it, the current free-for-all system works pretty well.
+Probably not. If you think about it, the current free-for-all system is not ideal, but it works pretty well. For example:
 
   * Currently roughly 80% of the lawn space in Dolores Park is effectively off-leash.
-  * The area bordering 20th St., near the playground, is by social convention leash-only
+  * The area bordering 20th St., near the playground, is by social convention leash-only.
   * When large picnicking crowds gather, the dog owners usually gravitate away.
   * Dog owners don't like it when their dogs beg for sandwiches any more than the sandwich eaters do.
 
-Most conflicts I've seen have been between two dog owners; when a dog has bothered a human, the owner has been polite and got the dog out of there and the conflict was resolved amicably. But when two dog owners start yelling at each other, or a non-dog-owner feels threatened, that can escalate into a real aggressive conflict. (Not fun!)
+Most conflicts I've seen have been between two dog owners; when a dog has bothered a human, the owner has been polite and apologetic and got the dog out of there, and the conflict was resolved amicably. But when two dog owners start yelling at each other, or a non-dog-owner feels threatened, that can escalate into a real aggressive conflict. (Not fun!)
 
-  > Therefore it's essential that when a conflict arises, there is somewhere for the dog and owner to go.
+  > Therefore it's essential that when a conflict arises, there is a designated space for the dog and owner to go.
 
 ## So I can't play fetch on the north field anymore?
 
-I'm not telling anyone what they can't do. I'm sure that people will continue to walk their dogs all across the park, in the mornings, and rainy afternoons, as they do now without harm.
+I'm not telling anyone what they can't do. I'm sure that people will continue to run their dogs all across the park, in the mornings, and cloudy afternoons, as they do now without harm.
 
 This proposal attempts to predict and react to a park which has been getting more and more users, and to design some practical guidelines for when there *is* a conflict.
+
+# Conclusion
+
+More benches! No fences! More shade trees!
+
+Share the park.
+
+Coexist.
 
 # References
 

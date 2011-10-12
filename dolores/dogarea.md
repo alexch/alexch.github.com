@@ -10,7 +10,7 @@ Come to the [next open workshop this Thursday](http://sfrpd.org/wp-dev/?p=3621) 
 
 # Abstract
 
-The current Dolores Park plan has an off-leash area in the North-East corner of the park, **directly atop Hipster Hill**. This is arguably the worst possible place to have a dog area. Instead, we should put a dog area in the North-West corner, which would be safer, easier to maintain, and less likely to lead to conflicts.
+The current Dolores Park plan has an off-leash area in the North-East corner of the park, **directly covering Hipster Hill**. This is arguably the worst possible place to have a dog area. Instead, we should put a dog area along the North-West edge, which would be safer, easier to maintain, and less likely to lead to conflicts.
 
 (Note that there's also an official proposal for a dog area in the South Field. I think that's a great plan and I support it wholeheartedly. This document is just about dog areas in the *NORTH* field.)
 
@@ -20,8 +20,6 @@ The current Dolores Park plan has an off-leash area in the North-East corner of 
 
 The park is home to a diverse set of users.
 
-These rules must provide for minimizing conflict between people doing different things at the same time.
-
 We have an opportunity here, with the DP Renovation, to improve Dolores Park for everyone, dog owners and picknickers and kids and athelets and sunbathers and tourists and all. But we also have a risk -- if we make the wrong choices, we will make the park less fun for everybody.
 
 What is a dog area? Basically it's two things:
@@ -29,11 +27,9 @@ What is a dog area? Basically it's two things:
   * signs and other signals (e.g. natural boundaries and word of mouth) for letting people know, in general, where dogs are invited to play
   * amenities for dog owners, to help them supervise their dogs at play
 
-So think of a dog area not as a boundary, but as a focus -- a point of attraction for a certain activity or group.
+So try to think of a dog area not as a boundary, but as a focus -- a point of attraction for a certain activity or group.
 
 It makes no sense to put foci for two incompatible activities in the same spot. That's an inevitable recipe for conflict between two otherwise harmonious uses of the park.
-
-Lindsay's motto for the park renovation has been, "More benches, no fences." Without a reasonable dog area, we will get the opposite.
 
 # What makes a good dog area?
 
@@ -57,7 +53,7 @@ etc. in each area
 
 ## pro
 
-  * somewhat flat
+  * somewhat flat, though quite steep on one side
   * close to Dolores & 18th entrance
   * separated from field
 
@@ -96,13 +92,13 @@ I propose we remove a section of the current sidewalk path (going from the Muni 
 
 The removal of the straight path will improve traffic through the park by encouraging strollers to meander along the ADA path.
 
-If people want to walk, or jog, in a straight line along that side of the park, then they can hop across the bridge and walk along the path on the far side of the tracks. This area is being improved anyway; let's encourage people to use it.
+If people want to walk, or jog, in a straight line along that side of the park, then they can hop across the bridge and walk along the path on the far side of the tracks. That path area is being improved anyway; let's encourage people to use it.
 
 ## Amenities
 
 Benches are very important for a dog area, and the current SW dog area points out (a) how well-used they are, and (b) how poorly placed benches can make a dog area worse. The benches are too close together, causing concentrated wear on the ground around the benches, and they face the wrong direction, forcing owners to crane their necks to supervise their pets, and forcing them to stand up and walk around if they need to grab them.
 
-A NW dog area should have benches facing the lawn and hill down to the soccer field. These benches would be appreciated and used by non-dog-owners too, just like the benches currently lining the path above the SW dog area.
+A NW dog area should have benches at the rear, facing the lawn and hill down to the soccer field. These benches would be appreciated and used by non-dog-owners too, just like the benches currently lining the path above the SW dog area.
 
 Also, any dog area worth the name should have a fountain, both for dogs to drink and for owners to wash their dirty pets before leaving.
 

@@ -20,16 +20,16 @@ The current Dolores Park plan has an off-leash area in the North-East corner of 
 
 The park is home to a diverse set of users.
 
-We have an opportunity here, with the DP Renovation, to improve Dolores Park for everyone, dog owners and picknickers and kids and athelets and sunbathers and tourists and all. But we also have a risk -- if we make the wrong choices, we will make the park less fun for everybody.
+We have an opportunity here, with the DP Renovation, to improve Dolores Park for everyone, dog owners and picknickers and kids and atheletes and sunbathers and tourists and all. But we also have a risk -- if we make the wrong choices, we will make the park less fun for everybody.
 
 What is a dog area? Basically it's two things:
 
   * signs and other signals (e.g. natural boundaries and word of mouth) for letting people know, in general, where dogs are invited to play
   * amenities for dog owners, to help them supervise their dogs at play
 
-So try to think of a dog area not as a boundary, but as a focus -- a point of attraction for a certain activity or group.
+So try to think of a dog area not as a boundary, but as a focus -- a point of attraction for a certain group of park users.
 
-It makes no sense to put foci for two incompatible activities in the same spot. That's an inevitable recipe for conflict between two otherwise harmonious uses of the park.
+It makes no sense to put foci for two incompatible activities in the same spot. That's an inevitable recipe for conflict between two otherwise harmonious uses of the park. But sadly, the current north field dog area plan does just that.
 
 # What makes a good dog area?
 
@@ -61,6 +61,7 @@ etc. in each area
 
 * Safety-conscious dog owners will put their dogs on leash when they are near a busy street. But Hipster Hill is **next to a busy street**. Why would we put an off-leash dog area in an area where dogs are frequently leashed?  (The sad logical outcome of this would be to put a fence at the sidewalk, which I think nobody wants.)
 * It's very close to Dolores St. near 18th, which is actually the main entrance to the park, allowing incursions by picnickers, sunbathers, vendors, and transients, many of whom have their own dogs with them, and all of whom are unwelcome distractions to playing dogs, and usually vice versa.
+* Dog owners want their dogs to play, not to beg. But Hipster Hill is **full of sandwiches**. That leads to begging dogs and nervous lunchers.
 * It's on a slope, which increases wear and tear on the lawn, especially on soggy days.
 * It's on a slope, so most dog play would occur uphill (W) on the flat part anyway, where it does now most mornings and early afternoons.
 

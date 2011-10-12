@@ -14,9 +14,7 @@ The current Dolores Park plan has an off-leash area in the North-East corner of 
 
 (Note that there's also an official proposal for a dog area in the South Field. I think that's a great plan and I support it wholeheartedly. This document is just about dog areas in the *NORTH* field.)
 
-# Maps
-
-![Dog Area Plans](dogarea.png)
+![Dog Area Proposals](dogarea.png)
 
 # Preamble
 
@@ -37,7 +35,7 @@ It makes no sense to put foci for two incompatible activities in the same spot. 
 
 Lindsay's motto for the park renovation has been, "More benches, no fences." Without a reasonable dog area, we will get the opposite.
 
-# What makes a good dog area plan?
+# What makes a good dog area?
 
 * Bigger is better
   * more exercise, more varied dog play
@@ -51,42 +49,44 @@ Lindsay's motto for the park renovation has been, "More benches, no fences." Wit
   * If someone drops a party or a show in the middle of one area, all dogs can move to the other area
 
 * Amenities are essential
-  * benches, drinking fountain, trash cans, poop bag dispensers,
+  * benches, drinking fountain, trash cans, poop bag dispensers, shade trees,
 etc. in each area
-  * with amenities, dog owners will gravitate to these areas; without amenities, these dog area are just lines on a map nobody reads
+  * with amenities, dog owners will gravitate to these areas; without amenities, a dog area is just a line on a map nobody reads
 
 # Current Official Proposal: Hipster Hill
 
 ## pro
 
   * somewhat flat
-  * close to park entrance
+  * close to Dolores & 18th entrance
   * separated from field
 
 ## con
 
-* Safety-conscious dog owners will put their dogs on leash when they are near a busy street. But Hipster Hill is **directly above a busy street**. Why would we put an off-leash dog area in an area where dogs are frequently leashed?  (The sad logical outcome of this would be to put a fence at the sidewalk, which I think nobody wants.)
-* It's close to Dolores Ave. near 18th, which is actually the main entrance to the park, allowing incursions by picnickers, sunbathers, vendors, and transients, many of whom have their own dogs with them, and all of whom are unwelcome distractions to playing dogs, and usually vice versa.
+* Safety-conscious dog owners will put their dogs on leash when they are near a busy street. But Hipster Hill is **next to a busy street**. Why would we put an off-leash dog area in an area where dogs are frequently leashed?  (The sad logical outcome of this would be to put a fence at the sidewalk, which I think nobody wants.)
+* It's very close to Dolores St. near 18th, which is actually the main entrance to the park, allowing incursions by picnickers, sunbathers, vendors, and transients, many of whom have their own dogs with them, and all of whom are unwelcome distractions to playing dogs, and usually vice versa.
 * It's on a slope, which increases wear and tear on the lawn, especially on soggy days.
 * It's on a slope, so most dog play would occur uphill (W) on the flat part anyway, where it does now most mornings and early afternoons.
 
-Finally The biggest problem with that area is that it's already claimed by the hipsters! If we come out with plans that have paths or benches or boulders or dog fountains or even signs smack in the middle of the most trafficked, most used part of the park, then the conversation will immediately turn into a loud, public fight pitting dog owners against hipsters (with onlookers cheering and jeering at all parties).
+Finally, the biggest problem with that area is that it's already claimed by the hipsters! If we come out with plans that have paths or benches or boulders or dog fountains or even signs smack in the middle of the most trafficked, most used part of the park, then the conversation will immediately turn into a loud, public fight pitting dog owners against hipsters (with onlookers cheering and jeering at all parties).
 
-*Possibility for conflict:* **HIGH**
+> *Possibility for conflict:* **HIGH**
 
 # Alternate "Good Dog Area" Proposal: Northwest Slope
 
 ## pro
-  * close to ADA path
+  * close to Church & 18th entrance
+  * close to ADA path, making it accessible
   * some trees -> shade
-  * close to Southwest Slope Area (but not too close!)
+  * close to Southwest Dog Area -- easy to move from one dog area to another
 
 ## con
-  * mostly hilly
-  * existing path
+  * more hilly
   * smaller area
+  * a paved path currently runs through it
+  * next to Muni tracks
 
-*Possibility for conflict:* **LOW**
+> *Possibility for conflict:* **LOW**
 
 # Details
 
@@ -106,7 +106,7 @@ A NW dog area should have benches facing the lawn and hill down to the soccer fi
 
 Also, any dog area worth the name should have a fountain, both for dogs to drink and for owners to wash their dirty pets before leaving.
 
-It is horrifying to imagine putting benches or fountains in the middle of Hipster Hill. Even if a fountain is placed outside the tennis court, it would be inconvenient for dogs playing 100' away on the lawn. And tennis players would likely not appreciate sharing a fountain with muddy slobbering dogs (another potential source of conflict).
+It is horrifying to imagine putting benches or fountains in the middle of Hipster Hill.
 
 More bench design thoughts:
 
@@ -117,21 +117,20 @@ More bench design thoughts:
 
 ## Fences
 
-The NW dog area depends on a reliable fence between the muni tracks and the park. This is mandated by safety concerns anyway.
+A NW dog area will depend on a reliable fence between the muni tracks and the park. This is mandated by safety concerns anyway.
 
-The ADA path will be downhill of the NW dog area, providing a natural boundary, as well as a retaining wall. It's not clear to me that any more fencing would be necessary or desirable uphill of the path.
+The ADA path will be downhill of the NW dog area, providing a natural boundary, as well as a retaining wall. It's not clear that any more fencing would be necessary or desirable uphill of the path.
 
 # Maps and photos
 
   * Hipster Hill on a nice day [todo]
   * Northwest Slope [todo]
   * [Framework Plan](http://sfrpd.org/wp-dev/wp-content/uploads/FRAMEWORK-PLAN_med_res.pdf) [pdf]
-
-## Proposed NW Dog Area
+  * Proposal(s):
 
 ![NE Dog Area](dogarea.png)
 
-(As an aside, I find it deeply amusing that the aerial map used to demonstrate the NE dog area shows several dozen picnic blankets laid out right inside the boundary, presumably occupied by sunbathers and couples who might not appreciate a pack of dogs running among them.)
+(As an aside, I find it amusing that the aerial map used to demonstrate the NE dog area shows several dozen picnic blankets laid out right inside the boundary, presumably occupied by human sunbathers and diners who might not appreciate a pack of dogs running among them.)
 
 # FAQ
 
@@ -155,7 +154,7 @@ Maybe. But it's not much steeper than Hipster Hill. And the ADA path will requir
 
 ## But what about the hill down to the tracks?
 
-That hill is a complete distaster. It's too steep to use, and if a person or a dog succeeds in walking down it without slipping, they emerge on the dangerous Muni tracks. In my opinion there needs to be a wall lining Muni Canyon, with a fence to keep people and animals from falling in. That would allow *more* flat green space in the park proper, and against the fence would be a great place to put some benches facing the field and the downtown skyline.
+That hill is a complete distaster. It's too steep to use, and if a person or a dog succeeds in walking down it without slipping, they emerge on the dangerous Muni tracks. In my opinion there needs to be a wall lining Muni Canyon, with a serious fence to keep people and animals from falling in. That would allow *more* flat green space in the park proper. And against the fence would be a great place to put some benches facing the field and the downtown skyline.
 
 ## Doesn't the NW dog area encroach on the soccer field?
 
@@ -165,12 +164,12 @@ No, it's actually about the same distance from the edge of the flat field, and a
 
 Probably not. If you think about it, the current free-for-all system is not ideal, but it works pretty well. For example:
 
-  * Currently roughly 80% of the lawn space in Dolores Park is effectively off-leash.
+  * Currently roughly 80% of the lawn space in Dolores Park is effectively off-leash today.
   * The area bordering 20th St., near the playground, is by social convention leash-only.
   * When large picnicking crowds gather, the dog owners usually gravitate away.
-  * Dog owners don't like it when their dogs beg for sandwiches any more than the sandwich eaters do.
+  * Dog owners don't like it when their dogs beg for sandwiches any more than the sandwich owners do.
 
-Most conflicts I've seen have been between two dog owners; when a dog has bothered a human, the owner has been polite and apologetic and got the dog out of there, and the conflict was resolved amicably. But when two dog owners start yelling at each other, or a non-dog-owner feels threatened, that can escalate into a real aggressive conflict. (Not fun!)
+Most conflicts I've seen have been between two dog owners; when a dog has bothered a human, the owner has been polite and apologetic and gotten the dog out of there, and the conflict was resolved amicably. But when two dog owners start yelling at each other, or a non-dog-owner feels threatened, that can escalate into a real aggressive conflict. (Not fun!)
 
   > Therefore it's essential that when a conflict arises, there is a designated space for the dog and owner to go.
 

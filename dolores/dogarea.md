@@ -7,9 +7,9 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div style="float: right" class="fb-like" data-href="http://alexchaffee.com/dolores/dogarea.html" data-send="true" data-width="450" data-show-faces="true" data-font="lucida grande"></div>
-
 # Proposal: Good Dog Area
+
+<div style="float: right" class="fb-like" data-href="http://alexchaffee.com/dolores/dogarea.html" data-send="true" data-width="450" data-show-faces="true" data-font="lucida grande"></div>
 
 ## Author: Alex Chaffee
 * twitter: [@alexch](http://twitter.com/alexch)
@@ -227,6 +227,8 @@ Coexist.
 * <http://sfrpd.org/wp-dev/?p=3541>
 
 # Comments
+
+<div style="float: right" class="fb-like" data-href="http://alexchaffee.com/dolores/dogarea.html" data-send="true" data-width="450" data-show-faces="true" data-font="lucida grande"></div>
 
 <div class="fb-comments" data-href="http://alexchaffee.com/dolores/dogarea.html" data-num-posts="10" data-width="500"></div>
 

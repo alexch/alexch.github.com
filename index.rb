@@ -266,6 +266,19 @@ h3 {
           a "haacked", :href => "http://haacked.com/archive/2009/07/14/law-of-demeter-dot-counting.aspx#72846"
           text "."
         end
+        
+        item do
+          text "I live next to Dolores Park, and I'm an occasional blogger at "
+          a "Dolores Park Works", :href=>"http://www.doloresparkworks.org/"
+          text " and write some longer articles on my own"
+          ul do
+            item "Undivided Affection", "http://www.doloresparkworks.org/2010/08/undivided-affection/"
+            item "The Great Trash Bag Experiment", "http://www.doloresparkworks.org/2010/09/the-great-trash-bag-experiment/"
+            item "Share the Park", "http://www.doloresparkworks.org/2011/08/share-park/"
+            item "Good Dog Area", "http://alexchaffee.com/dolores/dogarea.html"
+          end
+        end
+
         item "Loose Lips", "http://pivotallabs.com/users/alex/blog", "my Pivotal blog"
         item "alexch's almanac", "http://alexch.tumblr.com/", "my Tumblog: mostly pull quotes, occasional rants"
         item do

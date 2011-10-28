@@ -1,0 +1,276 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Installing Rails development stack on OS X Lion - Pivotal Blabs</title>
+<style type="text/css">
+        /* Copyright 2010 Google Inc. All Rights Reserved. */
+
+body {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #00c;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  border: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.hfeed {
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 75px;
+  width: 750px;
+  min-width: 750px;
+}
+
+.hentry {
+  max-width: 640px;
+  margin-top: 3px;
+}
+
+.id {
+  display: none;
+}
+
+.entry-content {
+  font-size: 110%;
+}
+
+.author {
+  display: inline;
+}
+
+.updated {
+  border-bottom: 0;
+  float: right;
+  color: #777;
+}
+
+.comment .updated {
+  float: none;
+  margin-left: 10px;
+}
+
+.fn {
+  font-size: 110%;
+}
+
+.photo {
+  height: 64px;
+  width: 64px;
+  float: left;
+  /* Offsets the photo to the left of the rest of the buzz contents. */
+  margin-left: -75px;
+}
+
+.url {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reshared-from {
+  background: url(http://www.gstatic.com/s2/tt/images/repost.png) no-repeat;
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #777;
+}
+
+.map {
+  height: 220px;
+  width: 300px;
+}
+
+.geo {
+  padding-top: 10px;
+}
+
+.geo .fn {
+  background: url(http://www.gstatic.com/s2/tt/images/mapspin2.png) no-repeat;
+  padding-left: 15px;
+  font-weight: bold;
+  display: block;
+}
+
+.geo .adr {
+  display: block;
+}
+
+.service {
+  font-size: 120%;
+  color: #777;
+}
+
+.service:before {
+  content: " - ";
+}
+
+.liked .fn, .reshare .fn, .comment .fn, .comment .entry-content {
+  font-size: 100%;
+}
+
+.original-content {
+  display: none;
+}
+
+.liked {
+  background: url(http://www.gstatic.com/s2/tt/images/like-selected.gif) no-repeat left top;
+  padding-left: 20px;
+  margin: 10px 0;
+  color: #777;
+}
+
+.reshare {
+  background: url(http://www.gstatic.com/s2/tt/images/repost.png) no-repeat left top;
+  padding-left: 20px;
+  margin: 10px 0;
+  color: #777;
+}
+
+.liked .fn, .reshare .fn {
+  font-weight: normal;
+}
+
+.visibility {
+  font-size: 120%;
+  color: #777;
+}
+
+.visibility:before {
+  content: " - ";
+}
+
+.attachment {
+  padding: 10px 5px 10px 5px;
+}
+
+.object-type {
+  display: none;
+}
+
+.sep {
+  background-color: #e2e2e2;
+  font-size: 0;
+  height: 1px;
+  margin: 13px 0 20px;
+  max-width: 640px;
+}
+
+.comment {
+  padding: 5px 0;
+}
+
+.comment .entry-content:before {
+  content: " - ";
+  color: #777;
+}
+
+/* Hidden content */
+.comment .author .photo, .permalink, .activity .entry-title, .uid, .published, .original, .latitude,
+.longitude {
+  display: none;
+}
+
+
+      </style></head>
+<body><div class="hfeed"><div class="hentry activity"><span class="id">tag:google.com,2010:buzz:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k</span>
+<address class="author vcard"><a href="https://plus.google.com/107397735779828096052"><img class="photo" alt="Alex Chaffee" src="https://lh3.googleusercontent.com/-PXKU25glaKc/AAAAAAAAAAI/AAAAAAAAAAA/DhShc8QmapE/photo.jpg" /></a>
+<span><a class="url" href="https://plus.google.com/107397735779828096052"><span class="fn">Alex Chaffee</span></a></span>
+<span class="uid">107397735779828096052</span></address>
+<abbr class="published" title="2011-08-05T15:01:22.866Z">Aug 05, 2011</abbr>
+<abbr class="updated" title="2011-08-05T15:01:22.866Z">Aug 05, 2011</abbr>
+<span class="service">Google Reader</span>
+<span class="visibility">Public</span>
+
+<div class="entry-title">Installing Rails development stack on OS X Lion - Pivotal Blabs</div>
+
+<div class="original-content">&lt;a href=&quot;http://pivotallabs.com/users/jnoble/blog/articles/1808-installing-rails-development-stack-on-os-x-lion&quot;&gt;&lt;b&gt;Installing Rails development stack on OS X Lion&lt;/b&gt;&lt;/a&gt; - &lt;a href=&quot;http://pivots.pivotallabs.com/blabs.rss&quot; class=&quot;ot-origin-anchor&quot;&gt;Pivotal Blabs&lt;/a&gt;</div>
+<div class="entry-content"><a href="http://pivotallabs.com/users/jnoble/blog/articles/1808-installing-rails-development-stack-on-os-x-lion"><b>Installing Rails development stack on OS X Lion</b></a> - <a href="http://pivots.pivotallabs.com/blabs.rss" class="ot-origin-anchor">Pivotal Blabs</a></div>
+
+<div class="permalink"><a target="_blank" rel="bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div>
+
+</div>
+<div class="sep"></div>
+
+
+<div class="hentry comment"><span class="id">tag:google.com,2010:buzz-comment:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k:1312557551321000</span>
+<address class="author vcard"><a href="https://plus.google.com/106500313906019086377"><img class="photo" alt="Kevin Christmas" src="https://lh6.googleusercontent.com/-gf_vfnpp_OM/AAAAAAAAAAI/AAAAAAAAAAA/7mtd2l3nQzA/photo.jpg" /></a>
+<span><a class="url" href="https://plus.google.com/106500313906019086377"><span class="fn">Kevin Christmas</span></a></span>
+<span class="uid">106500313906019086377</span></address>
+<span class="entry-title entry-content">postgresql isn&#39;t worth the trouble to port to?</span>
+<abbr class="published" title="2011-08-05T15:19:11.321Z">Aug 05, 2011</abbr>
+<abbr class="updated" title="2011-08-05T15:19:11.321Z">Aug 05, 2011</abbr>
+<div class="permalink"><a target="_blank" rel="Bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div></div> <div class="hentry comment"><span class="id">tag:google.com,2010:buzz-comment:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k:1312561214231000</span>
+<address class="author vcard"><a href="https://plus.google.com/107397735779828096052"><img class="photo" alt="Alex Chaffee" src="https://lh3.googleusercontent.com/-PXKU25glaKc/AAAAAAAAAAI/AAAAAAAAAAA/DhShc8QmapE/photo.jpg" /></a>
+<span><a class="url" href="https://plus.google.com/107397735779828096052"><span class="fn">Alex Chaffee</span></a></span>
+<span class="uid">107397735779828096052</span></address>
+<span class="entry-title entry-content">I have no dog in that fight, but mysql is still the M in the LAMP stack on most servers (even though it has changed like the other letters have changed for ruby devs -- L = OS X, A = thin or webrick, M = sqlite3, P = ruby)<br /><br />I&#39;ve used both mysql and postgres and it turns out SQL is horrible no matter what engine you use.</span>
+<abbr class="published" title="2011-08-05T16:20:14.231Z">Aug 05, 2011</abbr>
+<abbr class="updated" title="2011-08-05T16:21:21.000Z">Aug 05, 2011</abbr>
+<div class="permalink"><a target="_blank" rel="Bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div></div> <div class="hentry comment"><span class="id">tag:google.com,2010:buzz-comment:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k:1312562419449000</span>
+<address class="author vcard"><a href="https://plus.google.com/106500313906019086377"><img class="photo" alt="Kevin Christmas" src="https://lh6.googleusercontent.com/-gf_vfnpp_OM/AAAAAAAAAAI/AAAAAAAAAAA/7mtd2l3nQzA/photo.jpg" /></a>
+<span><a class="url" href="https://plus.google.com/106500313906019086377"><span class="fn">Kevin Christmas</span></a></span>
+<span class="uid">106500313906019086377</span></address>
+<span class="entry-title entry-content">Yeah, I get the LAMP thing, but if Apple is ditching MySQL for Postgresql and OS X is the dev platform of choice for Rails, it seems like it would be a lot easier on everyone if the default setup changed. Just wondering...</span>
+<abbr class="published" title="2011-08-05T16:40:19.449Z">Aug 05, 2011</abbr>
+<abbr class="updated" title="2011-08-05T16:40:19.449Z">Aug 05, 2011</abbr>
+<div class="permalink"><a target="_blank" rel="Bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div></div> <div class="hentry comment"><span class="id">tag:google.com,2010:buzz-comment:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k:1312563353332000</span>
+<address class="author vcard"><a href="https://profiles.google.com/Tanner.Beam"><img class="photo" alt="Tanner Beam" src="https://lh4.googleusercontent.com/-akPzm5_0CCo/AAAAAAAAAAI/AAAAAAAAAAA/dcF0N3YkIx0/photo.jpg" /></a>
+<span><a class="url" href="https://profiles.google.com/Tanner.Beam"><span class="fn">Tanner Beam</span></a></span>
+<span class="uid">107698388103862468378</span></address>
+<span class="entry-title entry-content">Oh great so can I take advantage of you guys when I have an SQL question?  Like right now!</span>
+<abbr class="published" title="2011-08-05T16:55:53.332Z">Aug 05, 2011</abbr>
+<abbr class="updated" title="2011-08-05T16:55:53.332Z">Aug 05, 2011</abbr>
+<div class="permalink"><a target="_blank" rel="Bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div></div> <div class="hentry comment"><span class="id">tag:google.com,2010:buzz-comment:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k:1312566297636000</span>
+<address class="author vcard"><a href="https://plus.google.com/106500313906019086377"><img class="photo" alt="Kevin Christmas" src="https://lh6.googleusercontent.com/-gf_vfnpp_OM/AAAAAAAAAAI/AAAAAAAAAAA/7mtd2l3nQzA/photo.jpg" /></a>
+<span><a class="url" href="https://plus.google.com/106500313906019086377"><span class="fn">Kevin Christmas</span></a></span>
+<span class="uid">106500313906019086377</span></address>
+<span class="entry-title entry-content">Sure, you can ask Alex anything!</span>
+<abbr class="published" title="2011-08-05T17:44:57.636Z">Aug 05, 2011</abbr>
+<abbr class="updated" title="2011-08-05T17:44:57.636Z">Aug 05, 2011</abbr>
+<div class="permalink"><a target="_blank" rel="Bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div></div> <div class="hentry comment"><span class="id">tag:google.com,2010:buzz-comment:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k:1312567478849000</span>
+<address class="author vcard"><a href="https://plus.google.com/107397735779828096052"><img class="photo" alt="Alex Chaffee" src="https://lh3.googleusercontent.com/-PXKU25glaKc/AAAAAAAAAAI/AAAAAAAAAAA/DhShc8QmapE/photo.jpg" /></a>
+<span><a class="url" href="https://plus.google.com/107397735779828096052"><span class="fn">Alex Chaffee</span></a></span>
+<span class="uid">107397735779828096052</span></address>
+<span class="entry-title entry-content">SELECT * FROM answers WHERE 1=0<br /><br />LEFT INNER JOIN your_mom</span>
+<abbr class="published" title="2011-08-05T18:04:38.849Z">Aug 05, 2011</abbr>
+<abbr class="updated" title="2011-08-05T18:04:38.849Z">Aug 05, 2011</abbr>
+<div class="permalink"><a target="_blank" rel="Bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div></div> <div class="hentry comment"><span class="id">tag:google.com,2010:buzz-comment:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k:1312568594290000</span>
+<address class="author vcard"><a href="https://profiles.google.com/Tanner.Beam"><img class="photo" alt="Tanner Beam" src="https://lh4.googleusercontent.com/-akPzm5_0CCo/AAAAAAAAAAI/AAAAAAAAAAA/dcF0N3YkIx0/photo.jpg" /></a>
+<span><a class="url" href="https://profiles.google.com/Tanner.Beam"><span class="fn">Tanner Beam</span></a></span>
+<span class="uid">107698388103862468378</span></address>
+<span class="entry-title entry-content">SET safety OFF <br />folder1=&quot;C:\secret\pr0nstash\&quot;<br />SET DEFAULT TO &amp;folder1<br />USE folder1+&quot;videotitles.db&quot; ALIAS booty<br />SELECT booty<br />REPLACE ALL favorite with &quot;yes&quot; FOR viewcount&gt;100</span>
+<abbr class="published" title="2011-08-05T18:23:14.290Z">Aug 05, 2011</abbr>
+<abbr class="updated" title="2011-08-05T18:24:51.000Z">Aug 05, 2011</abbr>
+<div class="permalink"><a target="_blank" rel="Bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div></div> <div class="hentry comment"><span class="id">tag:google.com,2010:buzz-comment:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k:1312605657816000</span>
+<address class="author vcard"><a href="https://plus.google.com/105157679830352599621"><img class="photo" alt="Steve Conover" src="https://lh5.googleusercontent.com/-aQRxqu0JktQ/AAAAAAAAAAI/AAAAAAAAAAA/qw-xTc-iTBk/photo.jpg" /></a>
+<span><a class="url" href="https://plus.google.com/105157679830352599621"><span class="fn">Steve Conover</span></a></span>
+<span class="uid">105157679830352599621</span></address>
+<span class="entry-title entry-content">for any problem under the tens of millions of rows: postgres is fine. mysql is fine.</span>
+<abbr class="published" title="2011-08-06T04:40:57.816Z">Aug 06, 2011</abbr>
+<abbr class="updated" title="2011-08-06T04:40:57.816Z">Aug 06, 2011</abbr>
+<div class="permalink"><a target="_blank" rel="Bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div></div> <div class="hentry comment"><span class="id">tag:google.com,2010:buzz-comment:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k:1312612841914000</span>
+<address class="author vcard"><a href=""><img class="photo" alt="Michael Sofaer" src="https://lh6.googleusercontent.com/-tAp0zsypwV4/AAAAAAAAAAI/AAAAAAAAAAA/wsXGr33ToYc/photo.jpg" /></a>
+<span><a class="url" href=""><span class="fn">Michael Sofaer</span></a></span>
+<span class="uid">115596999507185327673</span></address>
+<span class="entry-title entry-content">If you are following a recipe posted on a web site by hand to set up your dev machine, consider having chef do that for you from a recipe in a repository.</span>
+<abbr class="published" title="2011-08-06T06:40:41.914Z">Aug 06, 2011</abbr>
+<abbr class="updated" title="2011-08-06T06:40:41.914Z">Aug 06, 2011</abbr>
+<div class="permalink"><a target="_blank" rel="Bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div></div> <div class="hentry comment"><span class="id">tag:google.com,2010:buzz-comment:z13hgtoihk3jx1lqc04ccd1q2xqawpugdng0k:1312633796488000</span>
+<address class="author vcard"><a href="https://plus.google.com/106500313906019086377"><img class="photo" alt="Kevin Christmas" src="https://lh6.googleusercontent.com/-gf_vfnpp_OM/AAAAAAAAAAI/AAAAAAAAAAA/7mtd2l3nQzA/photo.jpg" /></a>
+<span><a class="url" href="https://plus.google.com/106500313906019086377"><span class="fn">Kevin Christmas</span></a></span>
+<span class="uid">106500313906019086377</span></address>
+<span class="entry-title entry-content">Hmmm tasty metaphors...</span>
+<abbr class="published" title="2011-08-06T12:29:56.488Z">Aug 06, 2011</abbr>
+<abbr class="updated" title="2011-08-06T12:29:56.488Z">Aug 06, 2011</abbr>
+<div class="permalink"><a target="_blank" rel="Bookmark" href="https://plus.google.com/107397735779828096052/posts/aYc1tNxTdNh">Permalink</a></div></div></div></body></html>

@@ -105,11 +105,18 @@ class Page < Erector::Widgets::Page
      footer
    end
 
+   external :style, <<-CSS
+   div.section h2.title a {
+     text-decoration: none;
+     color: black;
+   }
+   CSS
+
    # todo: test anchor_name
    def section name, anchor_name = name.gsub(/\s/, '').downcase
      a :name => anchor_name
      div.section do
-       h2.title name
+       h2.title { a name, href: "##{anchor_name}" }
        div.items do
          ul do
            yield

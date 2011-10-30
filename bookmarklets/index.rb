@@ -77,11 +77,20 @@ class Index < Page
     
     section "Better Twitter Trends" do
       h2 'I think @Twitter should change "trends" to "insipid bullshit that 12 year-olds and SEO spammers are talking about."'
+      blockquote { a " - wilw", href: "https://twitter.com/#!/wilw/status/130722431911460864"}
       p do
+        p do
+          b 'Install: '
+          text 'Drag the link below to your bookmarks bar.'
+        end
         blockquote.bookmarklet do
           here = File.expand_path(File.dirname(__FILE__))                
           b = Bookmarklet.new File.read("#{here}/better_trends.js")
           a 'Better Trends', :href => b.href
+        end
+        p do
+          b 'Usage: '
+          text 'Click it when you get tired of the insipid bullshit in your Trends sidebar.'        
         end
       end
       img src: "better-trends.png"      

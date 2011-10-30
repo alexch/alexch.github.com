@@ -90,7 +90,8 @@ class Index < Page
         end
         p do
           b 'Usage: '
-          text 'Click it when you get tired of the insipid bullshit in your Trends sidebar.'        
+          text 'Click it when you get tired of the insipid bullshit in your Trends sidebar.'
+          p "Better trend suggestions welcome!"
         end
       end
       img src: "better-trends.png"      

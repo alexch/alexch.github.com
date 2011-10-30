@@ -46,6 +46,7 @@ class Index < Page
         text ", OK?"
       end
     end
+    
     section "Fonzie" do
       h2 "Answering the eternal quesion, \"What font is that?\""
       p do
@@ -72,6 +73,18 @@ class Index < Page
         b 'Update: '
         text 'Fonzie gets a bit cooler, now skipping common values like "0px" and "none".'
       end
+    end
+    
+    section "Better Twitter Trends" do
+      h2 'I think @Twitter should change "trends" to "insipid bullshit that 12 year-olds and SEO spammers are talking about."'
+      p do
+        blockquote.bookmarklet do
+          here = File.expand_path(File.dirname(__FILE__))                
+          b = Bookmarklet.new File.read("#{here}/better_trends.js")
+          a 'Better Trends', :href => b.href
+        end
+      end
+      img src: "better-trends.png"      
     end
 
     section "Twitter RSS" do

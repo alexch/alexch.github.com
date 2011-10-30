@@ -1,10 +1,5 @@
-PATH
-  remote: ../erector
-  specs:
-    erector (0.9.0.pre2)
-      treetop (>= 1.2.3)
-
 GEM
+  remote: http://rubygems.org/
   specs:
     ParseTree (3.0.7)
       RubyInline (>= 3.7.0)
@@ -13,6 +8,8 @@ GEM
       ZenTest (~> 4.3)
     ZenTest (4.6.0)
     diff-lcs (1.1.2)
+    erector (0.9.0.pre1)
+      treetop (>= 1.2.3)
     file-tail (1.0.6)
       spruz (~> 0.2)
     polyglot (0.3.2)
@@ -48,7 +45,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  erector!
+  erector (= 0.9.0.pre1)
   rake
   rerun
   wrong

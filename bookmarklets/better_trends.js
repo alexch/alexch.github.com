@@ -4,4 +4,4 @@ function item(name, promoted){return "<li class='trend-item'><a href='/#!/search
 
 "</b></span></a></li>"
 }
-$('.trends-inner ul.trends').html(item("wilw") + item("feliciaday") + item("jonathancoulton") + item("donttrythis") + item("scalzi") + item("jephjacques") + item("alexch", true) + item("psfr"));
+$('.trends-inner ul.trends').html(item("wilw") + item("feliciaday") + item("jonathancoulton") + item("paulandstorm") + item("donttrythis") + item("scalzi") + item("jephjacques") + item("alexch", true) + item("psfr"));

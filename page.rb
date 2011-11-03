@@ -66,7 +66,7 @@ class Page < Erector::Widgets::Page
     widget Iconistan, :dir => icon_dir,
       :sites => [
       "http://twitter.com/alexch",
-      "http://google.com/profiles/alexch",
+      "https://plus.google.com/107397735779828096052/about",
       "http://tumblr.com/alexch",
       "http://github.com/alexch",
       "http://friendfeed.com/alexch",

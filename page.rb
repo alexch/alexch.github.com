@@ -62,6 +62,8 @@ class Page < Erector::Widgets::Page
     "icons"
   end
 
+  # G+ logo from http://boldperspective.com/2011/free-google-plus-icon-vector/
+  
   def iconistan prefix = nil
     widget Iconistan, :dir => icon_dir,
       :sites => [

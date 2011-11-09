@@ -147,7 +147,7 @@ $('.profile-details').
     section 'Fix Cloudant Heroku Console' do
       p do
         text "Cloudant's Heroku console ("
-        url("http://cloudant/futon/database.html")
+        url "https://cloudant.com/futon/database.html"
         text ") wraps the normal futon in some extra HTML, showing the heroku header and a Cloudant 'overview'. Unfortunately this pushes down the main futon content so that even when you're scrolled down all the way, on long pages, you can't see the futon controls ('showing 1-82 of 82 rows' and the 'rows per page' and 'next page' widgets). This trivial bookmarklet fixes it by giving the 'wrap' div a height of 88% instead of 100%."
       end
       blockquote.bookmarklet do          

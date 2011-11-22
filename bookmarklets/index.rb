@@ -157,6 +157,19 @@ $('.profile-details').
       end      
     end
 
+    section "Unhide Google Reader Friends" do
+      p do
+        text "When Google "
+        a "disabled sharing inside Google Reader", :href => "http://sharebro.org"
+        text " they didn't really ", b("disable"), " it so much as ", b("hide"), " it. "
+        text "While we work on ways to bring it back more permanently, here's a quick bookmarklet that unhides the legendary ", b("People you follow (1000+)"), " sidebar."
+      end
+      blockquote.bookmarklet do          
+        here = File.expand_path(File.dirname(__FILE__))                
+        b = Bookmarklet.new File.read("#{here}/unhide-friends.js")
+        a 'Unhide Friends', :href => b.href
+      end      
+    end
 
     section "Credits" do
       hr

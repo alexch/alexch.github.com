@@ -230,23 +230,20 @@ h3 {
         end
       end
       
-      section "Sites" do
-        item "JesusPAC", "http://JesusPAC.com/", "kicking ass for the Lord"
-        item "Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"
-        item "Stinky Art Collective", "http://stinky.com"
-      end
-
       section "Code" do
         item "Wrong", "http://github.com/alexch/wrong", "the right way to assert"
         item "Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"
+        item "Files", "http://github.com/alexch/files", "easy temporary files and directories"
+        
         item "Purple Technology", "http://purpletech.com", "Java lore"
         item "Fork me on GitHub", "http://github.com/alexch"
         item "My Dotfiles", "http://github.com/alexch/dotfiles", "shell like I do"        
       end
 
       section "Tools" do
-        item "Whos", "http://github.com/alexch/whos", "command-line parallelized whois, minus the spam"
+        item "deck.rb", "http://github.com/alexch/deck.rb", "HTML5 presentations, written in Markdown"
         item "Rerun", "https://github.com/alexch/rerun", "relaunch your thingy after stuff changes"
+        item "Whos", "http://github.com/alexch/whos", "command-line parallelized whois, minus the spam"
         item "Pong", "http://rubygems.org/gems/pong"
       end
 
@@ -254,6 +251,12 @@ h3 {
       #   item "Dolores Park", "http://"
       #   item "Quantified Self", "http://"
       # end
+
+      section "Sites" do
+        item "JesusPAC", "http://JesusPAC.com/", "kicking ass for the Lord"
+        item "Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"
+        item "Stinky Art Collective", "http://stinky.com"
+      end
 
       section "Writings" do
         item "Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"

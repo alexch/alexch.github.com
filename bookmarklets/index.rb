@@ -118,7 +118,7 @@ class Index < Page
         text ' script.'
       end
       js = <<-JAVASCRIPT
-$('.profile-details').
+$('.profile-card-inner').
   append('<a href="/statuses/user_timeline/' + 
     $('span.screen-name').text().replace('@','') + 
     '.rss">RSS</a>')
@@ -134,13 +134,21 @@ $('.profile-details').
         b 'Source: '
         pre js
       end
-      p do
-        b 'Update:'
-        text ' fixed to work in Firefox (thanks to Adam Curry for bug report)'
-      end
-      p do
-        b 'Update (2011-06-23):'
-        text ' now uses twitter screen name, not user id, in RSS URL'
+      ul do
+        li do
+          b 'Update:'
+          text ' fixed to work in Firefox (thanks to Adam Curry for bug report)'
+        end
+        li do
+          b 'Update (2011-06-23):'
+          text ' now uses twitter screen name, not user id, in RSS URL'
+        end
+        li do
+          b 'Update (2012-05-23):'
+          text " chasing Twitter's CSS changes (thanks to "
+          a "tyaremco", :href => "https://github.com/tyaremco"
+          text ' for bug report)'
+        end
       end
     end
 

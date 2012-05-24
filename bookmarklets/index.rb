@@ -189,11 +189,11 @@ $('.profile-card-inner').
         text ' and are in the public domain. If you like them, drop me a line.'
       end
       p do
-        text 'Built using'
+        text 'Built using '
         a :href => 'http://daringfireball.net/2007/03/javascript_bookmarklet_builder' do
           text 'Bookmarklet Builder'
         end
-        text 'by John Gruber.'
+        text ' by John Gruber.'
       end
     end
     

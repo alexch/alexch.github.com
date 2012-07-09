@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta content="text/html;charset=UTF-8" http-equiv="content-type" /><title>Alex's Bookmarklets - New Twitter RSS Bookmarklet, Font Bookmarklet</title><link href="http://f.fontdeck.com/s/css/u5mYSdgdXljzmDHdstX1xDoEPik/alexch.github.com/1443.css" rel="stylesheet" type="text/css" /><link href="tweet/jquery.tweet.css" media="all" rel="stylesheet" type="text/css" /><style type="text/css" xml:space="preserve">  .clear { clear: both; }
-  body { 
-    font-family: 'Optima', 'Trebuchet MS', Gill Sans, Tahoma, Geneva, sans-serif;	
+  body {
+    font-family: 'Optima', 'Trebuchet MS', Gill Sans, Tahoma, Geneva, sans-serif;
     margin: 0px;
   }
 
@@ -13,7 +13,7 @@
   a { color: #0000dd; }
   a:hover { color: red; }
   a:visited { color: #4E3EFF; }
-  
+
   #top .logo a { color: black; text-decoration: none; }
 </style><style type="text/css" xml:space="preserve">   div.section h2.title a {
      text-decoration: none;
@@ -33,12 +33,12 @@
   background: white;
 }
 
-#top { 
+#top {
   background: #EAD1FF;
-  border-bottom: 1px solid #A04DFF; 
+  border-bottom: 1px solid #A04DFF;
     font-size: 11pt;
     padding: .15em .25em .1em;
-    min-height: 26px;    
+    min-height: 26px;
 }
 
 #top .email { margin-left: 2em;}
@@ -51,11 +51,11 @@
 }
 
 /* styling */
-  
+
 
 #sections ul { list-style-position: inside; }
 
-h1,h2,h3,#top b { 
+h1,h2,h3,#top b {
   font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif; font-weight:800; font-style:normal;
 }
 
@@ -67,16 +67,16 @@ h1,h2,h3,#top b {
   margin: 2em 1em;
 }
 
-.section 
+.section
   h2.title {
     float: left;
     width: 8em;
-    
+
     -webkit-margin-before: 0;
     -webkit-margin-after: 0.83em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
-    
+
   }
 
 .section
@@ -88,13 +88,15 @@ ul {margin-top: .5em;}
 
 .footer { border-top: 1px solid black; background: #e8e8e8; font-size: 10pt; text-align: center; padding: .5em; }
 
+
  .items>ul {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
-  -webkit-padding-start: 0;  
+  -webkit-padding-start: 0;
   list-style-type: none;
+  padding-top: .5em;
 }
 
 li.item {
@@ -114,7 +116,7 @@ li.item
   span.name a {
     text-decoration: none;
   }
-  
+
 
 .twitter, .reader, .tumblr {
   float: left;
@@ -132,7 +134,7 @@ li.item
 }
 
 h3 {
-  background-color: #e8e8e8; 
+  background-color: #e8e8e8;
   border-bottom: 1px solid #9d9d9d;
   margin: 0px; padding: .25em 1em;
   -webkit-border-top-left-radius: 5px 5px; -moz-border-radius-topleft: 5px; -webkit-border-top-right-radius: 5px 5px; -moz-border-radius-topright: 5px
@@ -161,7 +163,7 @@ h3 {
   font-size: 10pt;
   padding: 1em;
   margin: 0em;
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 .tumblr_photo_post img {
   margin: auto;
@@ -194,13 +196,13 @@ h3 {
   div.iconistan div.icon { margin: 2px; float: left; height: 36px; }
   div.iconistan div.icon:nth-child(1) { margin-left: 0px; }
 
-  div.iconistan div.icon div.icon_border { float: left; 
+  div.iconistan div.icon div.icon_border { float: left;
     border: 2px solid #a3a3a3; -webkit-border-top-left-radius: 2px 2px; -moz-border-radius-topleft: 2px; -webkit-border-top-right-radius: 2px 2px; -moz-border-radius-topright: 2px; -webkit-border-bottom-left-radius: 2px 2px; -moz-border-radius-bottomleft: 2px; -webkit-border-bottom-right-radius: 2px 2px; -moz-border-radius-bottomright: 2px; margin: 0px; padding: 1px;
     background-color: white;
   }
   div.iconistan div.icon:hover div.icon_border { border: 2px solid red; }
 
-  div.iconistan div.icon img { margin: 0px; }  
+  div.iconistan div.icon img { margin: 0px; }
   div.iconistan div.icon div.url { position: absolute; top: 28px; left: 2px; /* must sync url's left and iconistan's padding */
    background: #EFFEFF; border: 1px solid black; padding: 2px 8px; }
   div.iconistan div.icon div.url { visibility: hidden; }
@@ -253,4 +255,4 @@ h3 {
   append('&lt;a href=&quot;/statuses/user_timeline/' + 
     $('span.screen-name').text().replace('@','') + 
     '.rss&quot;&gt;RSS&lt;/a&gt;')
-</pre></p><ul><li><b>Update:</b> fixed to work in Firefox (thanks to Adam Curry for bug report)</li><li><b>Update (2011-06-23):</b> now uses twitter screen name, not user id, in RSS URL</li><li><b>Update (2012-05-23):</b> chasing Twitter's CSS changes (thanks to <a href="https://github.com/tyaremco">tyaremco</a> for bug report)</li></ul></ul></div></div><a name="fixcloudantherokuconsole"></a><div class="section"><h2 class="title"><a href="#fixcloudantherokuconsole">Fix Cloudant Heroku Console</a></h2><div class="items"><ul><p>Cloudant's Heroku console (<a href="https://cloudant.com/futon/database.html">https://cloudant.com/futon/database.html</a>) wraps the normal futon in some extra HTML, showing the heroku header and a Cloudant 'overview'. Unfortunately this pushes down the main futon content so that even when you're scrolled down all the way, on long pages, you can't see the futon controls ('showing 1-82 of 82 rows' and the 'rows per page' and 'next page' widgets). This trivial bookmarklet fixes it by giving the 'wrap' div a height of 88% instead of 100%.</p><blockquote class="bookmarklet"><a href="javascript:(function(){document.getElementById('wrap').setAttribute('style', 'height: 88%')})()">Cloudant Fix</a></blockquote></ul></div></div><a name="unhidegooglereaderfriends"></a><div class="section"><h2 class="title"><a href="#unhidegooglereaderfriends">Unhide Google Reader Friends</a></h2><div class="items"><ul><p>When Google <a href="http://sharebro.org">disabled sharing inside Google Reader</a> they didn't really <b>disable</b> it so much as <b>hide</b> it. While we work on ways to bring it back more permanently, here's a quick bookmarklet that unhides the legendary <b>People you follow (1000+)</b> sidebar.</p><blockquote class="bookmarklet"><a href="javascript:(function(){document.getElementById('lhn-friends').setAttribute('class', 'section lhn-section')})()">Unhide Friends</a></blockquote></ul></div></div><a name="credits"></a><div class="section"><h2 class="title"><a href="#credits">Credits</a></h2><div class="items"><ul><hr /><p>All bookmarklets on this page were written (or improved) by <a href="http://alexch.github.com">Alex Chaffee</a> and are in the public domain. If you like them, drop me a line.</p><p>Built using<a href="http://daringfireball.net/2007/03/javascript_bookmarklet_builder">Bookmarklet Builder</a>by John Gruber.</p></ul></div></div><div class="clear"></div><div class="footer">This site produced with <a href="http://erector.rubyforge.org">Erector</a>. Source code at <a href="http://github.com/alexch/alexch.github.com">Github</a>.</div></body></html>
+</pre></p><ul><li><b>Update:</b> fixed to work in Firefox (thanks to Adam Curry for bug report)</li><li><b>Update (2011-06-23):</b> now uses twitter screen name, not user id, in RSS URL</li><li><b>Update (2012-05-23):</b> chasing Twitter's CSS changes (thanks to <a href="https://github.com/tyaremco">tyaremco</a> for bug report)</li></ul></ul></div></div><a name="fixcloudantherokuconsole"></a><div class="section"><h2 class="title"><a href="#fixcloudantherokuconsole">Fix Cloudant Heroku Console</a></h2><div class="items"><ul><p>Cloudant's Heroku console (<a href="https://cloudant.com/futon/database.html">https://cloudant.com/futon/database.html</a>) wraps the normal futon in some extra HTML, showing the heroku header and a Cloudant 'overview'. Unfortunately this pushes down the main futon content so that even when you're scrolled down all the way, on long pages, you can't see the futon controls ('showing 1-82 of 82 rows' and the 'rows per page' and 'next page' widgets). This trivial bookmarklet fixes it by giving the 'wrap' div a height of 88% instead of 100%.</p><blockquote class="bookmarklet"><a href="javascript:(function(){document.getElementById('wrap').setAttribute('style', 'height: 88%')})()">Cloudant Fix</a></blockquote></ul></div></div><a name="unhidegooglereaderfriends"></a><div class="section"><h2 class="title"><a href="#unhidegooglereaderfriends">Unhide Google Reader Friends</a></h2><div class="items"><ul><p>When Google <a href="http://sharebro.org">disabled sharing inside Google Reader</a> they didn't really <b>disable</b> it so much as <b>hide</b> it. While we work on ways to bring it back more permanently, here's a quick bookmarklet that unhides the legendary <b>People you follow (1000+)</b> sidebar.</p><blockquote class="bookmarklet"><a href="javascript:(function(){document.getElementById('lhn-friends').setAttribute('class', 'section lhn-section')})()">Unhide Friends</a></blockquote></ul></div></div><a name="credits"></a><div class="section"><h2 class="title"><a href="#credits">Credits</a></h2><div class="items"><ul><hr /><p>All bookmarklets on this page were written (or improved) by <a href="http://alexch.github.com">Alex Chaffee</a> and are in the public domain. If you like them, drop me a line.</p><p>Built using <a href="http://daringfireball.net/2007/03/javascript_bookmarklet_builder">Bookmarklet Builder</a> by John Gruber.</p></ul></div></div><div class="clear"></div><div class="footer">This site produced with <a href="http://erector.rubyforge.org">Erector</a>. Source code at <a href="http://github.com/alexch/alexch.github.com">Github</a>.</div></body></html>

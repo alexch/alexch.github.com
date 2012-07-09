@@ -1,10 +1,10 @@
 class Page < Erector::Widgets::Page
   extend Rounded
 
-  external :style, <<-STYLE
+  external :style, <<-CSS
   .clear { clear: both; }
-  body { 
-    font-family: 'Optima', 'Trebuchet MS', Gill Sans, Tahoma, Geneva, sans-serif;	
+  body {
+    font-family: 'Optima', 'Trebuchet MS', Gill Sans, Tahoma, Geneva, sans-serif;
     margin: 0px;
   }
 
@@ -16,10 +16,10 @@ class Page < Erector::Widgets::Page
   a { color: #0000dd; }
   a:hover { color: red; }
   a:visited { color: #4E3EFF; }
-  
+
   #top .logo a { color: black; text-decoration: none; }
-  STYLE
-  
+  CSS
+
   def self.google_analytics_code account_id
     <<-JAVASCRIPT
     var _gaq = _gaq || [];
@@ -35,7 +35,7 @@ class Page < Erector::Widgets::Page
     })();
     JAVASCRIPT
   end
-  
+
   def facebook_sdk app_id = 50113824556
     rawtext <<-JAVASCRIPT
 <div id="fb-root"></div>
@@ -48,7 +48,7 @@ class Page < Erector::Widgets::Page
 }(document, 'script', 'facebook-jssdk'));</script>
     JAVASCRIPT
   end
-  
+
 # https://developers.facebook.com/docs/reference/plugins/like/
   def facebook_like url
     rawtext <<-HTML
@@ -63,7 +63,7 @@ class Page < Erector::Widgets::Page
   end
 
   # G+ logo from http://boldperspective.com/2011/free-google-plus-icon-vector/
-  
+
   def iconistan prefix = nil
     widget Iconistan, :dir => icon_dir,
       :sites => [
@@ -72,7 +72,7 @@ class Page < Erector::Widgets::Page
       "http://tumblr.com/alexch",
       "http://github.com/alexch",
       "http://friendfeed.com/alexch",
-      "http://linkedin.com/in/alexchaffee",  
+      "http://linkedin.com/in/alexchaffee",
       "http://facebook.com/daycha",
       "http://flickr.com/photos/alexchaffee/",
       "http://quora.com/Alex-Chaffee",
@@ -83,7 +83,7 @@ class Page < Erector::Widgets::Page
     ]
     div.prefix prefix if prefix
   end
-   
+
    def head_content
      super
      link :rel=>"stylesheet", :href=>"http://f.fontdeck.com/s/css/u5mYSdgdXljzmDHdstX1xDoEPik/alexch.github.com/1443.css", :type=>"text/css"
@@ -137,7 +137,7 @@ class Page < Erector::Widgets::Page
              text name
            end
          }
-         text " - " if description          
+         text " - " if description
        end
 
        text description if description
@@ -145,5 +145,5 @@ class Page < Erector::Widgets::Page
        yield if block_given?
      end
    end
-  
+
 end

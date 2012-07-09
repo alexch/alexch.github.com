@@ -6,6 +6,8 @@ here = File.expand_path(File.dirname(__FILE__))
 $: << "#{here}/.."
 require "lib/bookmarklet"
 
+Wrong.config.verbose
+
 def href h
   Bookmarklet.new(h).href
 end
@@ -55,7 +57,7 @@ check_escaped "backslash\\", "backslash%5C"
 
 def check_parse js
   # puts "--- executing\n#{js}\n\n"
-  
+
   # To install node and jsdom:
   #  curl http://npmjs.org/install.sh | sh
   #  npm install jsdom
@@ -73,10 +75,11 @@ jsdom.env('<html></html>', [], function(errors, window) {
 #{js}
 })
     JAVASCRIPT
-  end  
-  stdout, stderr, status = 
+  end
+  here = File.expand_path(File.dirname(__FILE__))
+  stdout, stderr, status =
     Open3.capture3(
-      {"NODE_PATH"=> "/usr/local/lib/node_modules"},
+      {"NODE_PATH"=> "#{here}/../node_modules"},
       # "/usr/bin/env node /tmp/tmp.js"
       "/usr/local/bin/node /tmp/tmp.js"
     )

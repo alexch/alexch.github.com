@@ -10,7 +10,7 @@ require "#{here}/page"
 # http://fontdeck.com/project/1443
 
 class Index < Page
-  
+
   external :style, <<-STYLE
 /* layout */
 #alex_pic {float: right; clear: right;}
@@ -26,12 +26,12 @@ class Index < Page
   background: white;
 }
 
-#top { 
+#top {
   background: #EAD1FF;
-  border-bottom: 1px solid #A04DFF; 
+  border-bottom: 1px solid #A04DFF;
     font-size: 11pt;
     padding: .15em .25em .1em;
-    min-height: 26px;    
+    min-height: 26px;
 }
 
 #top .email { margin-left: 2em;}
@@ -44,11 +44,11 @@ class Index < Page
 }
 
 /* styling */
-  
+
 
 #sections ul { list-style-position: inside; }
 
-h1,h2,h3,#top b { 
+h1,h2,h3,#top b {
   font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif; font-weight:800; font-style:normal;
 }
 
@@ -60,16 +60,16 @@ h1,h2,h3,#top b {
   margin: 2em 1em;
 }
 
-.section 
+.section
   h2.title {
     float: left;
     width: 8em;
-    
+
     -webkit-margin-before: 0;
     -webkit-margin-after: 0.83em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
-    
+
   }
 
 .section
@@ -81,13 +81,15 @@ ul {margin-top: .5em;}
 
 .footer { border-top: 1px solid black; background: #e8e8e8; font-size: 10pt; text-align: center; padding: .5em; }
 
+
  .items>ul {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
-  -webkit-padding-start: 0;  
+  -webkit-padding-start: 0;
   list-style-type: none;
+  padding-top: .5em;
 }
 
 li.item {
@@ -107,7 +109,7 @@ li.item
   span.name a {
     text-decoration: none;
   }
-  
+
 
 .twitter, .reader, .tumblr {
   float: left;
@@ -125,7 +127,7 @@ li.item
 }
 
 h3 {
-  background-color: #e8e8e8; 
+  background-color: #e8e8e8;
   border-bottom: 1px solid #9d9d9d;
   margin: 0px; padding: .25em 1em;
   #{rounded(:top)}
@@ -154,7 +156,7 @@ h3 {
   font-size: 10pt;
   padding: 1em;
   margin: 0em;
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 .tumblr_photo_post img {
   margin: auto;
@@ -167,7 +169,7 @@ h3 {
   external :js, "http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"
   external :js, "tweet/jquery.tweet.js"
   external :css, "tweet/jquery.tweet.css"
-  
+
   external :script, <<-SCRIPT
   $(document).ready(function(){
       $(".tweet").tweet({
@@ -201,43 +203,38 @@ h3 {
           ul do
             item "Learn Ruby", "https://github.com/alexch/learn_ruby"
             item "Learn JavaScript", "https://github.com/alexch/learn_javascript"
-            item "Sarah Allen and Alex Chaffee at GoGaRuCo, Sep. 17, 2010 (30 min. video)",  
-              "http://confreaks.net/videos/357-gogaruco2010-test-first-teaching" 
+            item "Sarah Allen and Alex Chaffee at GoGaRuCo, Sep. 17, 2010 (30 min. video)",
+              "http://confreaks.net/videos/357-gogaruco2010-test-first-teaching"
           end
         end
-        item "Ruby Notes", "http://github.com/alexch/ruby_notes"
-        item "JavaScript Notes", "http://github.com/alexch/javascript_notes"
-        item "RailsBridge", "http://railsbridge.org", "the more coders the better"
-        item "Monkey vs. Robot", "http://github.com/alexch/monkey-vs-robot", "or, You Are Not An Object-Oriented Programmer" do
+
+        item "Talks and Notes" do
           ul do
-            item "Alex Chaffee at GoGaRuCo, Sep. 18, 2011 (6 min. video)", 
-              "http://www.justin.tv/alexchaffee/b/295449071"
+            item "Test Driven", "https://github.com/alexch/test-driven",
+                 "an introduction to test-driven development"
+            item "Ruby Notes", "http://github.com/alexch/ruby_notes",
+                 "covering Ruby from nil to eigenclass"
+            item "Rails Notes", "http://github.com/alexch/rails_notes",
+                 "some highlights of the popular Ruby webapp framework"
+            item "JavaScript Notes", "http://github.com/alexch/javascript_notes",
+                "some details about the language everyone loves to hate"
+            item "Monkey vs. Robot", "http://github.com/alexch/monkey-vs-robot", "or, You Are Not An Object-Oriented Programmer" do
+              ul do
+                item "Alex Chaffee at GoGaRuCo, Sep. 18, 2011 (6 min. video)",
+                  "http://www.justin.tv/alexchaffee/b/295449071"
+              end
+            end
+            item "Off the Rails", "https://github.com/alexch/Off-The-Rails", "Rack apps and Ruby web frameworks that are not on Rails"
           end
         end
-        item "Off the Rails", "https://github.com/alexch/Off-The-Rails", "Rack apps and Ruby web frameworks that are not on Rails"
-        
+        item "RailsBridge", "http://railsbridge.org", "the more coders the better"
       end
 
-      section "Apps" do
+      section "Apps and Sites" do
         item "Moodlog", "http://moodlog.org", "how do you feel?"
         item "Cohuman", "http://cohuman.com", "what are you doing?"
-        item "Bookmarklets", "bookmarklets/index.html" do
-          ul do
-            item "New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss", 
-              "creates a link to the RSS feed for the Twitter user you're looking at"
-            item "Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"
-          end
-        end
-      end
-      
-      section "Code" do
-        item "Wrong", "http://github.com/alexch/wrong", "the right way to assert"
-        item "Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"
-        item "Files", "http://github.com/alexch/files", "easy temporary files and directories"
-        
+        item "Stinky Art Collective", "http://stinky.com"
         item "Purple Technology", "http://purpletech.com", "Java lore"
-        item "Fork me on GitHub", "http://github.com/alexch"
-        item "My Dotfiles", "http://github.com/alexch/dotfiles", "shell like I do"        
       end
 
       section "Tools" do
@@ -245,18 +242,29 @@ h3 {
         item "Rerun", "https://github.com/alexch/rerun", "relaunch your thingy after stuff changes"
         item "Whos", "http://github.com/alexch/whos", "command-line parallelized whois, minus the spam"
         item "Pong", "http://rubygems.org/gems/pong"
+        item "Bookmarklets", "bookmarklets/index.html" do
+          ul do
+            item "New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss",
+              "creates a link to the RSS feed for the Twitter user you're looking at"
+            item "Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"
+          end
+        end
+      end
+
+      section "Code" do
+        item "Wrong", "http://github.com/alexch/wrong", "the right way to assert"
+        item "Erector", "http://erector.rubyforge.org", "views in pure Ruby, no angle brackets required"
+        item "Files", "http://github.com/alexch/files", "easy temporary files and directories"
+        item "Thready", "http://github.com/alexch/thready", "lets control-backslash print your threads' stack traces, like Java"
+        item "Annotate Models", "http://github.com/ctran/annotate_models", "I help maintain Dave Thomas' venerable rake task"
+        item "My GitHub Repos", "http://github.com/alexch"
+        item "My Dotfiles", "http://github.com/alexch/dotfiles", "shell like I do"
       end
 
       # section "Interests" do
       #   item "Dolores Park", "http://"
       #   item "Quantified Self", "http://"
       # end
-
-      section "Sites" do
-        item "JesusPAC", "http://JesusPAC.com/", "kicking ass for the Lord"
-        item "Are Bill And Emily Watching Fringe Yet?", "http://arebillandemilywatchingfringeyet.com/", "single-serving site (reload for full effect)"
-        item "Stinky Art Collective", "http://stinky.com"
-      end
 
       section "Writings" do
         item "Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"
@@ -269,7 +277,7 @@ h3 {
           a "haacked", :href => "http://haacked.com/archive/2009/07/14/law-of-demeter-dot-counting.aspx#72846"
           text "."
         end
-        
+
         item do
           text "I live next to Dolores Park, and I'm an occasional blogger at "
           a "Dolores Park Works", :href=>"http://www.doloresparkworks.org/"
@@ -289,13 +297,13 @@ h3 {
           div.clear
         end
       end
-      
+
       career
-      
+
       div.clear
 
       section "Feeds" do
-        flickr      
+        flickr
         table do
           tr do
             td(:valign => :top, :width => "50%") { twitter }
@@ -306,28 +314,28 @@ h3 {
       end
     end
   end
-  
+
   def reader_widget
     div :class => "reader_widget" do
       javascript :src => "http://www.google.com/reader/ui/publisher-en.js"
       javascript :src =>  "http://www.google.com/reader/public/javascript/user/15504357426492542506/state/com.google/broadcast?n=8&callback=GRC_p(%7Bc%3A%22khaki%22%2Ct%3A%22Alex%20Chaffee%5C's%20shared%20items%22%2Cs%3A%22true%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"
     end
   end
-  
+
   def flickr
     div :class => "flickr" do
       h3 { a "Flickr", :href=> "http://www.flickr.com/photos/alexchaffee/" }
       center { flickr_widget }
     end
   end
-  
+
   def twitter
     div :class => "twitter" do
       h3 { a "Twitter", :href=> "http://twitter.com/alexch" }
       div :class => "tweet"
     end
-  end    
-  
+  end
+
   def reader
     div :class => "reader" do
       h3 { a "Google Reader", :href => "http://google.com/reader/shared/alexch" }
@@ -336,9 +344,9 @@ h3 {
           reader_widget
         end
       end
-    end 
+    end
   end
- 
+
   def footer
     div :class => "footer" do
       text "This site produced with "
@@ -348,16 +356,16 @@ h3 {
       text "."
     end
   end
-  
+
   def tumblr
     div :class => "tumblr" do
       h3 { a "Tumblr", :href => "http://alexch.tumblr.com/" }
       javascript :src=>"http://alexch.tumblr.com/js"
     end
   end
-  
 
-  
+
+
   def career
     section "Career" do
       item do
@@ -367,7 +375,7 @@ h3 {
           a("Marakana", :href=> "http://marakana.com"),
           " (2010 - present)"
       end
-            
+
       item do
         text "CTO and Co-founder at "
         a "Cohuman", :href => "http://cohuman.com"
@@ -379,49 +387,49 @@ h3 {
         a "Pivotal Tracker", :href => "http://www.pivotaltracker.com"
         text " (2006-2008)"
       end
-    
+
       item do
         text "Principal, Senior Coach, Director of Systems, and Mad Scientist at "
         a "Pivotal Labs", :href => "http://www.pivotallabs.com"
         text " (2004-2008)"
       end
-    
+
       item do
         text "Teacher/Coder/Mentor at "
         a "jGuru", :href => "http://www.jguru.com"
         text " (1999-2001)"
       end
-    
+
       item do
         text "Founder and Principal Consultant at "
         a "Purple Technology", :href => "http://www.purpletech.com"
         text " (1998-2004)"
       end
-    
+
       item do
         text "Creator and Dalang of "
         a "Gamelan", :href => "http://web.archive.org/web/19961220054020/http://www.gamelan.com/"
         text " (1995-1998)"
       end
-    
+
       item do
         text "Director of Engineering at "
         a "EarthWeb", :href => "http://web.archive.org/web/19961103131307/http://www.earthweb.com/"
         text " (1995-1998)"
       end
-    
+
       item do
         text "Student of Cognitive Psychology at "
         a "Reed College", :href => "http://reed.edu"
         text " (1989-1992)"
       end
-      
+
       item do
         text "Obligatory ", a("LinkedIn", :href=>"http://linkedin.com/in/alexchaffee"), " hyperlink"
       end
     end
   end
-  
+
   def alex_pic
     rawtext <<-HTML
     <!-- Start of Flickr Badge -->
@@ -440,10 +448,10 @@ h3 {
     #flickr_badge_source {padding:0 !important; font: 11px Arial, Helvetica, Sans serif !important; color:#666666 !important;}
     </style>
     <table id="flickr_badge_uber_wrapper" cellpadding="0" cellspacing="10" border="0"><tr><td>
-      
+
 <!--      <a href="http://www.flickr.com" id="flickr_www">www.<strong style="color:#3993ff">flick<span style="color:#ff1c92">r</span></strong>.com</a>
     -->
-      
+
       <table cellpadding="0" cellspacing="10" border="0" id="flickr_badge_wrapper">
     <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=1&display=random&size=m&layout=v&source=user_tag&user=88815727%40N00&tag=alex"></script>
     </table>
@@ -451,7 +459,7 @@ h3 {
     <!-- End of Flickr Badge -->
     HTML
   end
-  
+
   def flickr_widget
     rawtext <<-HTML
     <!-- Start of Flickr Badge -->

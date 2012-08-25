@@ -73,6 +73,11 @@ class Index < Page
         b 'Update: '
         text 'Fonzie gets a bit cooler, now skipping common values like "0px" and "none".'
       end
+      p do 
+        text 'See also '
+        a 'FontFriend', href: 'http://somadesign.ca/projects/fontfriend/'
+        text ', another fun font bookmarklet.'
+      end
     end
     
     section "Better Twitter Trends" do

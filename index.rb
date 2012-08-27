@@ -199,10 +199,10 @@ h3 {
 
     div.sections! do
       section "Teaching" do
+        item "Code Like This", "http://codelikethis.com", "centralizing my slides, lectures, and labs on Ruby, JavaScript, and more"
+
         item "Test-First Teaching", "http://testfirst.org", "learn by doing" do
           ul do
-            item "Learn Ruby", "https://github.com/alexch/learn_ruby"
-            item "Learn JavaScript", "https://github.com/alexch/learn_javascript"
             item "Sarah Allen and Alex Chaffee at GoGaRuCo, Sep. 17, 2010 (30 min. video)",
               "http://confreaks.net/videos/357-gogaruco2010-test-first-teaching"
           end
@@ -212,12 +212,6 @@ h3 {
           ul do
             item "Test Driven", "https://github.com/alexch/test-driven",
                  "an introduction to test-driven development"
-            item "Ruby Notes", "http://github.com/alexch/ruby_notes",
-                 "covering Ruby from nil to eigenclass"
-            item "Rails Notes", "http://github.com/alexch/rails_notes",
-                 "some highlights of the popular Ruby webapp framework"
-            item "JavaScript Notes", "http://github.com/alexch/javascript_notes",
-                "some details about the language everyone loves to hate"
             item "Monkey vs. Robot", "http://github.com/alexch/monkey-vs-robot", "or, You Are Not An Object-Oriented Programmer" do
               ul do
                 item "Alex Chaffee at GoGaRuCo, Sep. 18, 2011 (6 min. video)",
@@ -225,6 +219,20 @@ h3 {
               end
             end
             item "Off the Rails", "https://github.com/alexch/Off-The-Rails", "Rack apps and Ruby web frameworks that are not on Rails"
+
+            item "Are Agile Projects Doomed toHalf-Baked Design?", "http://www.scribd.com/doc/49379/Are-Agile-Projects-doomed-to-halfbaked-design", "on combining agile development and graphic/UX design" do
+              ul do
+                item "slides", "http://www.scribd.com/doc/49379/Are-Agile-Projects-doomed-to-halfbaked-design"
+                item "audio", "http://agilepartners.com/podcasts/w2e-weds-agile-dev.mp3"
+              end
+            end
+
+            item "Ruby Notes", "http://github.com/alexch/ruby_notes",
+                 "covering Ruby from nil to eigenclass"
+            item "Rails Notes", "http://github.com/alexch/rails_notes",
+                 "some highlights of the popular Ruby webapp framework"
+            item "JavaScript Notes", "http://github.com/alexch/javascript_notes",
+                "some details about the language everyone loves to hate"
           end
         end
         item "RailsBridge", "http://railsbridge.org", "the more coders the better"

@@ -124,9 +124,9 @@ class Index < Page
       end
       js = <<-JAVASCRIPT
 $('.profile-card-inner').
-  append('<a href="/statuses/user_timeline/' + 
+  append('<a href="https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=' + 
     $('span.screen-name').text().replace('@','') + 
-    '.rss">RSS</a>')
+    '">RSS</a>')
       JAVASCRIPT
       p do
         text 'Drag this little dude to your bookmarks bar and click it when you\'re on someone\'s timeline. It\'ll put an "RSS" link right under the user\'s bio, for you to click or copy.'
@@ -153,6 +153,12 @@ $('.profile-card-inner').
           text " chasing Twitter's CSS changes (thanks to "
           a "tyaremco", :href => "https://github.com/tyaremco"
           text ' for bug report)'
+        end
+        li do
+          b 'Update (2013-04-08):'
+          text " using better-supported api.twitter.com call (thanks "
+          a raw("J&#246;rg"), href: "https://gist.github.com/curlyheads"
+          text ")"
         end
       end
     end

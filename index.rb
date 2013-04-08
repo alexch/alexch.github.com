@@ -199,6 +199,7 @@ h3 {
 
     div.sections! do
       section "Teaching" do
+
         item "Code Like This", "http://codelikethis.com", "centralizing my slides, lectures, and labs on Ruby, JavaScript, and more"
 
         item "Test-First Teaching", "http://testfirst.org", "learn by doing" do
@@ -212,12 +213,14 @@ h3 {
           ul do
             item "Test Driven", "https://github.com/alexch/test-driven",
                  "an introduction to test-driven development"
+
             item "Monkey vs. Robot", "http://github.com/alexch/monkey-vs-robot", "or, You Are Not An Object-Oriented Programmer" do
               ul do
                 item "Alex Chaffee at GoGaRuCo, Sep. 18, 2011 (6 min. video)",
                   "http://www.justin.tv/alexchaffee/b/295449071"
               end
             end
+
             item "Off the Rails", "https://github.com/alexch/Off-The-Rails", "Rack apps and Ruby web frameworks that are not on Rails"
 
             item "Are Agile Projects Doomed toHalf-Baked Design?", "http://www.scribd.com/doc/49379/Are-Agile-Projects-doomed-to-halfbaked-design", "on combining agile development and graphic/UX design" do
@@ -245,18 +248,19 @@ h3 {
         item "Purple Technology", "http://purpletech.com", "Java lore"
       end
 
+      item "Bookmarklets", "bookmarklets/index.html" do
+        ul do
+          item "New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss",
+            "creates a link to the RSS feed for the Twitter user you're looking at"
+          item "Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"
+        end
+      end
+
       section "Tools" do
-        item "deck.rb", "http://github.com/alexch/deck.rb", "HTML5 presentations, written in Markdown"
+        item "deck.rb", "http://github.com/alexch/deck.rb", "write your slides in Markdown, present them in HTML5"
         item "Rerun", "https://github.com/alexch/rerun", "relaunch your thingy after stuff changes"
         item "Whos", "http://github.com/alexch/whos", "command-line parallelized whois, minus the spam"
         item "Pong", "http://rubygems.org/gems/pong"
-        item "Bookmarklets", "bookmarklets/index.html" do
-          ul do
-            item "New Twitter RSS Link", "http://alexch.github.com/bookmarklets/#twitterrss",
-              "creates a link to the RSS feed for the Twitter user you're looking at"
-            item "Fonzie", "http://alexch.github.com/bookmarklets/#fonzie", "tells you what font the selected text is in"
-          end
-        end
       end
 
       section "Code" do

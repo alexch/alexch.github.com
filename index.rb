@@ -230,12 +230,16 @@ h3 {
               end
             end
 
+            item "my SlideShare decks", "http://www.slideshare.net/alexchaffee/presentations",
+                "including Wrong, Erector, Test-Driven, and Selenium talks"
+
             item "Ruby Notes", "http://github.com/alexch/ruby_notes",
                  "covering Ruby from nil to eigenclass"
             item "Rails Notes", "http://github.com/alexch/rails_notes",
                  "some highlights of the popular Ruby webapp framework"
             item "JavaScript Notes", "http://github.com/alexch/javascript_notes",
                 "some details about the language everyone loves to hate"
+                
           end
         end
         item "RailsBridge", "http://railsbridge.org", "the more coders the better"

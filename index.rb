@@ -239,7 +239,7 @@ h3 {
                  "some highlights of the popular Ruby webapp framework"
             item "JavaScript Notes", "http://github.com/alexch/javascript_notes",
                 "some details about the language everyone loves to hate"
-                
+
           end
         end
         item "RailsBridge", "http://railsbridge.org", "the more coders the better"
@@ -384,6 +384,10 @@ h3 {
 
   def career
     section "Career" do
+      item do
+        a "Resume", href: "resume.html"
+      end
+
       item do
         text "Teacher and courseware author at ",
           a("Blazing Cloud", :href=> "http://blazingcloud.net"),

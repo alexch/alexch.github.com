@@ -1,1 +1,38 @@
 Alex is a hardcore coder, teacher, and a prolific contributor to a variety of open source tools and frameworks. At Pivotal Labs, he led the development of Pivotal Tracker, a popular project management application written in Ruby and JavaScript. He is also regarded as one of the Bay Area's leading Extreme Programming coaches. On top of his many software development accomplishments, he has published research papers on evolutionary computation (aka 'genetic algorithms') and implicit memory in human cognition.
+
+
+Alex is a coder, teacher, and a prolific contributor to a variety of open source tools and frameworks. At Pivotal Labs, he led the development of Pivotal Tracker, a popular project management application written in Ruby and JavaScript. He's also a volunteer with RailsBridge and Girl Develop It and a closet video game addict. His open-source educational materials are at http://CodeLikeThis.com
+
+
+Alex Chaffee is an long-established expert in Java and Agile
+methodologies. Alex was a co-creator of both Gamelan
+( http://www.gamelan.com), the official directory for the Java
+community, and JGuru (http://www.jguru.com), a popular Java developer
+resource site. Since 2000, Alex has been deeply involved in Agile 
+Development and Extreme Programming (XP). He now spends most of his
+time coaching and coding with XP teams at companies large and small,
+including some of Silicon Valley's leading e-commerce and Internet
+companies.
+
+
+Alex was one of the very first adopters of Java, and a jGuru who managed the EJB, Servlets, Threads, and Tomcat FAQ and Forum sections of jGuru.com.  He is the creator of Gamelan, the Official Directory of Java (http:/www.gamelan.com) where he also served as Director of Engineering.  Alex is a teacher and trainer who has designed many courses and workshops, and is a prolific contributor to a variety of open source tools and frameworks (including Tomcat, JUnit, and JDOM).  He has presented at numerous users groups and conferences, written articles for several Java magazines, and contributed to the book The Official Gamelan Java Directory. He has also published research papers on evolutionary computation (aka "genetic algorithms") and on implicit memory in human cognition. 
+For the last two years Alex has worked with Pivotal to implement software systems using Extreme Programming at a series of clients.  Alex coaches, mentors, and codes in equal parts and with equal passion.  Always in the technical thick of things, Alex is sure to see the opportunities in any project to improve design, extract reusable components and frameworks, or make best use of the seemingly endless variety of open-source components with which he is familiar.  Alex graduated with honors from Reed University.
+
+
+
+—
+
+Alex Chaffee, bring deep experience and multiple successive wins to the new venture. Recently, Matthew Work was CEO and Chairman and Leslie Brennan President and CFO of Discovery Mining, Inc., a provider of eDiscovery Software to the legal industry. Discovery Mining achieved multiple accolades in its six-year existence, including being ranked #188 in the 2007 Inc. 500 fastest-growing private companies list as well as inclusion in Deloitte Technology fast 50 in 2008. Discovery Mining was sold to Interwoven Inc, in August of 2008 for $36 million, yielding in excess of 1000% return to the early investors.  Alex Chaffee was involved in Discovery Mining as a critical software consultant and coach.
+
+Alex is passionate about software, design, entrepreneurship and highly effective teams.
+
+—
+
+Alex Chaffee
+Infamous Software Development Expert at building software and teams, software coach to Google and Ebay, among others:
+Principal and Senior Coach, Pivotal Labs - guided many teams and startups to successful product launches
+Co-inventor and lead architect, Pivotal Tracker - Web 2.0 task management application for Agile software development
+Co-creator, Gamelan - Official directory of Java applications and code
+
+
+

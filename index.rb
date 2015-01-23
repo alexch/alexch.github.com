@@ -43,8 +43,10 @@ class Index < Page
   font-size: 32pt;
 }
 
+#bio {
+  margin: 1em;
+}
 /* styling */
-
 
 #sections ul { list-style-position: inside; }
 
@@ -111,7 +113,7 @@ li.item
   }
 
 
-.twitter, .reader, .tumblr {
+.twitter, .tumblr {
   float: left;
   border: 2px solid #a3a3a3; margin: 1em; #{rounded}
 }
@@ -167,25 +169,10 @@ h3 {
   STYLE
 
   external :js, "http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"
-  external :js, "tweet/jquery.tweet.js"
-  external :css, "tweet/jquery.tweet.css"
 
-  external :script, <<-SCRIPT
-  $(document).ready(function(){
-      $(".tweet").tweet({
-          username: "alexch",
-          join_text: "auto",
-          avatar_size: 32,
-          count: 6,
-          auto_join_text_default: "I said,",
-          auto_join_text_ed: "I",
-          auto_join_text_ing: "I was",
-          auto_join_text_reply: "I replied to",
-          auto_join_text_url: "I was checking out",
-          loading_text: "loading tweets..."
-      });
-  });
-  SCRIPT
+  external :script, <<JS
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+JS
 
   def page_title
     "Alex Chaffee"
@@ -195,6 +182,13 @@ h3 {
 
     div :id => "alex_pic" do
       alex_pic
+    end
+
+    div id: "bio" do
+      text "Alex is a coder, teacher, gamer, coach, open source contributor, jogger, dog lover, word nerd, baker... "
+      text "At ", a("Pivotal Labs", href:"http://pivotallabs.com"), ", he led the development of ", a("Pivotal Tracker", href: "http://pivotaltracker.com"), ", a popular project management application written in Ruby and JavaScript. He has coached for and coded on Agile teams at tech companies big and small. "
+      text "He's also a volunteer with ", a("RailsBridge", href:"http://docs.railsbridge.org"), " and makes a mean mac and cheese. "
+      text "His open-source educational materials are at ", url("http://CodeLikeThis.com")
     end
 
     div.sections! do
@@ -320,21 +314,9 @@ h3 {
 
       section "Feeds" do
         flickr
-        table do
-          tr do
-            td(:valign => :top, :width => "50%") { twitter }
-            td(:valign => :top, :width => "50%") { reader }
-          end
-        end
+        twitter
         tumblr
       end
-    end
-  end
-
-  def reader_widget
-    div :class => "reader_widget" do
-      javascript :src => "http://www.google.com/reader/ui/publisher-en.js"
-      javascript :src =>  "http://www.google.com/reader/public/javascript/user/15504357426492542506/state/com.google/broadcast?n=8&callback=GRC_p(%7Bc%3A%22khaki%22%2Ct%3A%22Alex%20Chaffee%5C's%20shared%20items%22%2Cs%3A%22true%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"
     end
   end
 
@@ -348,18 +330,7 @@ h3 {
   def twitter
     div :class => "twitter" do
       h3 { a "Twitter", :href=> "http://twitter.com/alexch" }
-      div :class => "tweet"
-    end
-  end
-
-  def reader
-    div :class => "reader" do
-      h3 { a "Google Reader", :href => "http://google.com/reader/shared/alexch" }
-      center do
-        div :class => "reader_widget" do
-          reader_widget
-        end
-      end
+      text raw('<a class="twitter-timeline" href="https://twitter.com/alexch" data-widget-id="558770221066899456">Tweets by @alexch</a>')
     end
   end
 

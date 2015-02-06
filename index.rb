@@ -170,9 +170,9 @@ h3 {
 
   external :js, "http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"
 
-  external :script, <<JS
+  external :script, <<JAVASCRIPT
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-JS
+JAVASCRIPT
 
   def page_title
     "Alex Chaffee"

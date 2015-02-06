@@ -11,7 +11,7 @@ require "#{here}/page"
 
 class Index < Page
 
-  external :style, <<-STYLE
+  external :style, <<-CSS
 /* layout */
 #alex_pic {float: right; clear: right;}
 
@@ -166,7 +166,7 @@ h3 {
 .tumblr_source {
   font-style: italic;
 }
-  STYLE
+  CSS
 
   external :js, "http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"
 
@@ -280,7 +280,7 @@ JS
       # end
 
       section "Writings" do
-        item "Alexisms", "http://pivotallabs.com/users/alex/blog/articles/349-alexisms", "aphorismic emanations"
+        item "Alexisms", "./alexisms.html", "aphorismic emanations"
         item do
           text "Courting Demeter, on three blogs: "
           a "Purple", :href => "http://www.purpletech.com/blog/index.php?itemid=25"

@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>alex blabs</title>
+    <link>http://pivotallabs.com/users/alex/blog</link>
+    <description>loose lips sink ships</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 May 2011 10:56:00 -0700</lastBuildDate>
+    <item>
+      <pubDate>Fri, 20 May 2011 10:56:00 -0700</pubDate>
+      <title>Code Monkey</title>
+      <author>Alex Chaffee</author>
+      <link>http://pivotallabs.com/users/alex/blog/articles/1704-code-monkey</link>
+      <guid>http://pivotallabs.com/users/alex/blog/articles/1704-code-monkey</guid>
+      <description>&lt;p&gt;So I didn't go to &lt;a href=&quot;http://en.oreilly.com/rails2011&quot;&gt;whatever was going on in Baltimore&lt;/a&gt; this week, but I did do a whole bunch of open source coding over the past week or two:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://testfirst.org&quot;&gt;TestFirst&lt;/a&gt; has a totally revamped design, including the downloadable &amp;#40;or cloneable&amp;#41; student exercises, and &lt;em&gt;Learn JavaScript&lt;/em&gt; is now a first-class citizen&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sconover/wrong&quot;&gt;Wrong&lt;/a&gt;'s &lt;code&gt;expect&lt;/code&gt; alias now plays nicer with RSpec's &lt;code&gt;expect&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/alexch/rerun&quot;&gt;Rerun&lt;/a&gt; got a few new command-line options, including &lt;code&gt;--clear&lt;/code&gt; and &lt;code&gt;--exit&lt;/code&gt; so you can now easily rerun regular scripts &amp;#40;like &lt;code&gt;rerun -cx rake test&lt;/code&gt;&amp;#41; when their files change&lt;/li&gt;
+&lt;li&gt;I submitted a patch to &lt;a href=&quot;https://github.com/rubygems/rubygems/pull/59&quot;&gt;RubyGems&lt;/a&gt; to make the &lt;a href=&quot;http://pivotallabs.com/users/alex/blog/articles/1687-rubygems-warningitis-outbreak&quot;&gt;warningitis&lt;/a&gt; less ZOMG and more KTHXBY&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://alexch.github.com/bookmarklets/#fonzie&quot;&gt;Fonzie&lt;/a&gt; is a bookmarklet that tells you what font you're looking at&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;alexch.github.com/bookmarklets/#twitterrss&quot;&gt;Twitter RSS&lt;/a&gt; is a bookmarklet that brings back the RSS link to the New Twitter UI&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/alexch/showoff&quot;&gt;Showoff&lt;/a&gt; works better with nested bullets and missing &lt;code&gt;showoff.json&lt;/code&gt; files -- so go &lt;a href=&quot;https://github.com/schacon/showoff/pull/88&quot;&gt;nag Scott&lt;/a&gt; if you want him to accept my patches &lt;code&gt;;-&amp;#41;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;I also finally got my &lt;a href=&quot;http://stackoverflow.com/questions/591923/make-git-automatically-remove-trailing-whitespace-before-committing/4597057#4597057&quot;&gt;git pre-commit hook&lt;/a&gt; correctly stripping whitespace, and &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A lot of these projects, especially &lt;a href=&quot;http://testfirst.org&quot;&gt;TestFirst&lt;/a&gt;, are aching for improvement, so if you feel like contributing code or courseware, or even just feature requests, please &lt;a href=&quot;mailto:alex@stinky.com&quot;&gt;get in touch&lt;/a&gt;!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <pubDate>Thu, 12 May 2011 11:20:00 -0700</pubDate>
+      <title>RubyGems Warningitis Outbreak</title>
+      <author>Alex Chaffee</author>
+      <link>http://pivotallabs.com/users/alex/blog/articles/1687-rubygems-warningitis-outbreak</link>
+      <guid>http://pivotallabs.com/users/alex/blog/articles/1687-rubygems-warningitis-outbreak</guid>
+      <description>&lt;p&gt;Have you upgraded RubyGems lately? Is your console suddenly filled with warnings like this?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /Users/chaffee/.rvm/gems/ruby-1.9.2-p0/specifications/thin-1.2.7.gemspec:10.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You may be showing signs of a new malady known as Warningitis! So far there is no cure, but doing the following will temporarily cure your symptoms:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem update --system 1.7.2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/965921&quot;&gt;Several&lt;/a&gt; &lt;a href=&quot;https://github.com/rubygems/rubygems/pull/59&quot;&gt;experimental&lt;/a&gt; &lt;a href=&quot;https://github.com/mikbe/chicken_little&quot;&gt;treatments&lt;/a&gt; are being hastily developed as well, but these have not yet been approved by the FDA. Check &lt;a href=&quot;https://rubyforge.org/tracker/index.php?func=detail&amp;amp;aid=29176&amp;amp;group_id=126&amp;amp;atid=575&quot;&gt;the &quot;scary warnings are scary&quot; bug thread&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;p&gt;This has been a public health alert. Please do not panic. SARS masks and iodine pills are &lt;strong&gt;not&lt;/strong&gt; recommended at this time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <pubDate>Tue, 26 Oct 2010 11:12:00 -0700</pubDate>
+      <title>Upgrading your Rakefile from RSpec 1.3 to RSpec 2</title>
+      <author>Alex Chaffee</author>
+      <link>http://pivotallabs.com/users/alex/blog/articles/1451-upgrading-your-rakefile-from-rspec-1-3-to-rspec-2</link>
+      <guid>http://pivotallabs.com/users/alex/blog/articles/1451-upgrading-your-rakefile-from-rspec-1-3-to-rspec-2</guid>
+      <description>&lt;p&gt;I'm updating &lt;a href=&quot;http://erector.rubyforge.org&quot;&gt;Erector&lt;/a&gt; to RSpec 2 and came across two problems for which solutions were surprisingly difficult to Google. Here are my &amp;#40;finally successful&amp;#41; results.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Problem:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;no such file to load -- spec/rake/spectask
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Before:&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;require &quot;spec/rake/spectask&quot;  # RSpec 1.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;After:&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;require &quot;rspec/core/rake_task&quot; # RSpec 2.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Problem:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;undefined method `spec_files=' for #&amp;lt;RSpec::Core::RakeTask:0x00000101550aa8&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Before:&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;# RSpec 1.3
+Spec::Rake::SpecTask.new&amp;#40;:core&amp;#41; do |spec|
+  spec.spec_files = FileList['spec/erector/*_spec.rb']
+  spec.spec_opts = ['--backtrace']
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;After:&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;# RSpec 2.0
+RSpec::Core::RakeTask.new&amp;#40;:core&amp;#41; do |spec|
+  spec.pattern = 'spec/erector/*_spec.rb'
+  spec.rspec_opts = ['--backtrace']
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;See also &lt;a href=&quot;http://github.com/rspec/rspec-core/blob/master/Upgrade.markdown&quot;&gt;http://github.com/rspec/rspec-core/blob/master/Upgrade.markdown&lt;/a&gt; &amp;#40;curiously cloaked from Google searches for the above problem strings&amp;#41;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 08 Aug 2010 18:01:00 -0700</pubDate>
+      <title>Where, oh where has my gem server gone?</title>
+      <author>Alex Chaffee</author>
+      <link>http://pivotallabs.com/users/alex/blog/articles/1354-where-oh-where-has-my-gem-server-gone-</link>
+      <guid>http://pivotallabs.com/users/alex/blog/articles/1354-where-oh-where-has-my-gem-server-gone-</guid>
+      <description>&lt;p&gt;Uh-oh!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ERROR:  While executing gem ... &amp;#40;Gem::RemoteFetcher::FetchError&amp;#41;
+    bad response Moved Permanently 301 &amp;#40;http://gems.rubyforge.org/latest_specs.4.8&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Whew!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem sources -a http://rubygems.org/
+gem sources -r http://gems.rubyforge.org/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Looks like they weren't kidding when they said to switch from  rubyforge to rubygems.org &amp;#40;n&#233;e gemcutter&amp;#41;!&lt;/p&gt;
+
+&lt;p&gt;[Edited to change &quot;http://production.s3.rubygems.org/&quot; to &quot;http://rubygems.org/&quot;. Note that the trailing slash is significant!]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 25 Jul 2010 12:13:00 -0700</pubDate>
+      <title>monkey patch of the day - activesupport vs. json_pure vs. Ruby 1.8</title>
+      <author>Alex Chaffee</author>
+      <link>http://pivotallabs.com/users/alex/blog/articles/1332-monkey-patch-of-the-day-activesupport-vs-json-pure-vs-ruby-1-8</link>
+      <guid>http://pivotallabs.com/users/alex/blog/articles/1332-monkey-patch-of-the-day-activesupport-vs-json-pure-vs-ruby-1-8</guid>
+      <description>&lt;p&gt;The error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/Library/Ruby/Gems/1.8/gems/json_pure-1.4.3/lib/json/pure/generator.rb:232:in `__send__': undefined method `except' for #&amp;lt;JSON::Pure::Generator::State:0x102f245b0&amp;gt; &amp;#40;NoMethodError&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The environment: Ruby 1.8.7, DataMapper, dm-types, ActiveSupport, or just &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require 'json/pure'
+require 'active_support'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;#40;as seen in &lt;a href=&quot;http://gist.github.com/339528&quot;&gt;http://gist.github.com/339528&lt;/a&gt;&amp;#41;&lt;/p&gt;
+
+&lt;p&gt;My solution:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# workaround for activesupport vs. json_pure vs. Ruby 1.8 glitch
+if JSON.const_defined?&amp;#40;:Pure&amp;#41;
+  class JSON::Pure::Generator::State
+    include ActiveSupport::CoreExtensions::Hash::Except
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <pubDate>Fri, 16 Jul 2010 10:55:00 -0700</pubDate>
+      <title>Windowed String Comparison for RSpec</title>
+      <author>Alex Chaffee</author>
+      <link>http://pivotallabs.com/users/alex/blog/articles/1320-windowed-string-comparison-for-rspec</link>
+      <guid>http://pivotallabs.com/users/alex/blog/articles/1320-windowed-string-comparison-for-rspec</guid>
+      <description>&lt;p&gt;When two strings fail to match, if the difference is somewhere in the middle of the strings, it can be annoying/impossible to track down the 
+actual difference. I've written a little &lt;a href=&quot;http://gist.github.com/474363&quot;&gt;Comparison&lt;/a&gt; object that 
+overrides the failure message for &lt;code&gt;.should ==&lt;/code&gt; like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Strings differ at position 12: 
+expected: ...&quot;efghijklmnopqrst&quot;... 
+  actual: ...&quot;efghijklXXopqrst&quot;...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It shows a &quot;prelude&quot; of a few characters, then the difference, lined up on successive lines so they're easy to visually scan. It also does the right thing &amp;#40;or tries to&amp;#41; if the difference is near the beginning or end of the string &amp;#40;i.e. does or doesn't show ellipses&amp;#41;. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gist.github.com/474363&quot;&gt;http://gist.github.com/474363&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For people who can't wait for this to get incorporated into RSpec 
+proper, you can grab the code from github and &lt;code&gt;require &quot;comparison&quot;&lt;/code&gt; in your &lt;code&gt;spec_helper.rb&lt;/code&gt; and it'll override the existing RSpec &lt;code&gt;==&lt;/code&gt; matcher. Or wait for &lt;a href=&quot;http://github.com/rspec/rspec-expectations/issues/issue/9&quot;&gt;Issue 9&lt;/a&gt; to be pulled into version 2.1 &amp;#40;maybe&amp;#41;. Or if you want to use it in your favorite testing framework, the object is completely self-contained and should be easy to call from your own &lt;code&gt;assert_equals&lt;/code&gt; or whatever.&lt;/p&gt;
+
+&lt;p&gt;One open question is whether the exception message should show the 
+full actual string as well as the comparison... On one hand, it adds 
+to screen clutter, but on the other hand, it can be important in 
+tracking down the problem, especially if the prelude is ambiguous. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <pubDate>Wed, 28 Apr 2010 19:37:00 -0700</pubDate>
+      <title>Basic Ruby Webapp Performance Tuning (Rails or Sinatra)</title>
+      <author>Alex Chaffee</author>
+      <link>http://pivotallabs.com/users/alex/blog/articles/1232-basic-ruby-webapp-performance-tuning-rails-or-sinatra-</link>
+      <guid>http://pivotallabs.com/users/alex/blog/articles/1232-basic-ruby-webapp-performance-tuning-rails-or-sinatra-</guid>
+      <description>&lt;p&gt;My company launched our app, &lt;a href=&quot;http://www.cohuman.com&quot;&gt;Cohuman&lt;/a&gt;, a few weeks ago. The rush of finishing features, fixing bugs, and responding to user feedback has subsided a bit, and it's time to go back and give the little baby a tune-up. I find that a good development process will ebb and flow, and as long as you don't let something slide for too long, it's perfectly acceptable to let bugs, or performance issues, or development chores pile up for a bit and then attack them concertedly for an entire day or two. A bug-fest or chore-fest or tuning-fest can actually increase efficiency as you get in a rhythm... and it feels really good at the end of the day when you see all the bugs you slayed or all the milliseconds you shaved.&lt;/p&gt;
+
+&lt;p&gt;In this article I'd like to describe some of my techniques. I make no claim of originality or great expertise; I just want to share what I know, and hear &amp;#40;in comments&amp;#41; what other people have learned. I'm using Sinatra and ActiveRecord, but not Rails; hopefully this discussion will help people no matter what framework they're using.&lt;/p&gt;&lt;h1&gt;Metrics and Logs&lt;/h1&gt;
+
+&lt;p&gt;The first step, and often the most overlooked, is to gather metrics. Without knowing how it's working now, how are you going to know what to improve? And how are you going to know whether you made things better or worse? Frequently I'll make a change that I'm sure will improve performance, only to discover that it's made no change, or helped in one place but hurt in another.&lt;/p&gt;
+
+&lt;p&gt;Where to begin? We're using &lt;a href=&quot;http://www.newrelic.com/&quot;&gt;New Relic&lt;/a&gt; for live performance monitoring, so my decision of what to optimize was easy: I went to their Web Transactions panel and looked at the Most Time Consuming and Slowest Average Response Time reports. If you don't have a flashing signpost like that, it's easy enough to decide on a path to work on: either go with user reports, or click around your app and see what feels slow, or choose the most popular request &amp;#40;which is usually the home page&amp;#41;. &lt;/p&gt;
+
+&lt;p&gt;I always pick a single path to work on, from request to controller to database to view, and work on the slowest parts. This demands more metrics! It's a common mistake to jump in and start tuning the database when the view is actually taking twice as long. What's the use of cutting the database access from 400 to 200 msec when the view is taking 1200 msec to render?&lt;/p&gt;
+
+&lt;p&gt;I also like to grab a copy of the production DB and bring it to my development machine so I can be sure I'm profiling real cases, and not being fooled by artifacts of generated data. We're lucky that our app is currently small enough to do this; when the app gets bigger we'll have to write a script that grabs only selected users' data as a slice of the whole enchilada. &amp;#40;Note that there are some privacy concerns here: we are careful to only log in locally using our own accounts, and only to gather statistics in aggregate, not to look at details of user-entered data unless it's to diagnose a specific user-reported issue or bug.&amp;#41;&lt;/p&gt;
+
+&lt;p&gt;Lots of in-app metrics tools exist &amp;#40;e.g. ruby-prof, benchmark&amp;#41;, but I prefer the simple approach: I rolled my own Marker class that spits out basic msec timing information to the logs. In single-request performance tuning, what matters is relative timing between sections of code, so any objections to this technique on grounds of accuracy or detail are outweighed by its advantages: it's simple, it shows where your bottlenecks are, and it divides the logs into sections so you can get a sense of who's making what calls.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Marker
+  def self.mark&amp;#40;msg, logger = ActiveRecord::Base.logger&amp;#41;
+    start = Time.now
+    logger.info&amp;#40;&quot;#{start} --&amp;gt; starting #{msg} from #{caller[2]}:#{caller[1]}&quot;&amp;#41;
+    result = yield
+    finish = Time.now
+    logger.info&amp;#40;&quot;#{finish} --&amp;lt; finished #{msg} --- #{&quot;2.3f sec&quot; % &amp;#40;finish - start&amp;#41;}&quot;&amp;#41;
+    result
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Usage is simple: pick a block you're interested and wrap it in &lt;code&gt;Marker.mark&amp;#40;&quot;foo&quot;&amp;#41; do...end&lt;/code&gt;. You can then scan the logs using &quot;less&quot; &amp;#40;or a text editor&amp;#41; and search for the name you gave the block. Marking your controller and your view is a natural place to start; later you can insert marks inside interesting blocks of domain code. In Sinatra, you can do something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;get '/foo/:id' do
+  foo = Marker.mark&amp;#40;&quot;loading foo&quot;&amp;#41; do
+    Foo.find&amp;#40;params[:id]&amp;#41;
+  end
+  Marker.mark&amp;#40;&quot;rendering foo&quot;&amp;#41; do
+    FooWidget.new&amp;#40;:foo =&amp;gt; foo&amp;#41;.to_s # Erector
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I've also got a nice little Rack middleware component that marks the time spent inside each request. Note here that you can put lots of fun information in the name that can be helpful for debugging.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Marking
+  def initialize&amp;#40;app&amp;#41;
+    @app = app
+  end
+
+  def call&amp;#40;env&amp;#41;
+    response = nil
+    Marker.mark&amp;#40;&quot;#{env['REQUEST_METHOD']} #{env['SCRIPT_NAME']}#{env['PATH_INFO']}&quot;&amp;#41; do
+      response = @app.call&amp;#40;env&amp;#41;
+    end
+    response
+  end    
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Figuring out where a particular log message &amp;#40;especially a DB query&amp;#41; is coming from is essential. It's important not to make assumptions. If you think you know where the call is coming from, put in a stack trace to make sure, and rerun the request to confirm. That's why Marker is outputting caller -- &lt;code&gt;caller[0]&lt;/code&gt; is the code that names the mark, so you already know where that is; &lt;code&gt;caller[1]&lt;/code&gt; is the line that called it, and &lt;code&gt;caller[2]&lt;/code&gt; is the line that called &lt;code&gt;caller[1]&lt;/code&gt;. If that's not enough context, drop in a logger.info&amp;#40;caller.join&amp;#40;&quot;\n\t&quot;&amp;#41;&amp;#41; so you can scan the entire stack trace back up to the application code that you understand.&lt;/p&gt;
+
+&lt;p&gt;I've found that while ActiveRecord &amp;#40;2.3.5&amp;#41; tries to show where a result is coming from, it doesn't always get it right, especially if you're using plugins or gems that insert themselves into the call chain. So I monkey-patched AR to be a little smarter about its tracing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;module ActiveRecord
+  module ConnectionAdapters
+    class AbstractAdapter
+      # strip library file pathnames from logged stack traces
+      def log_info&amp;#40;sql, name, ms&amp;#41;
+        if @logger &amp;amp;&amp;amp; @logger.debug?
+          c = caller.detect{|line| line !~ /&amp;#40;activerecord|active_support|__DELEGATION__|vendor|new_?relic&amp;#41;/i}
+          c.gsub!&amp;#40;&quot;#{File.expand_path&amp;#40;File.dirname&amp;#40;RAILS_ROOT&amp;#41;&amp;#41;}/&quot;, ''&amp;#41; if defined?&amp;#40;RAILS_ROOT&amp;#41;
+          name = 's &amp;#40;%.1fms&amp;#41; s' % [name || 'SQL', ms, c]
+          @logger.debug&amp;#40;format_log_entry&amp;#40;name, sql.squeeze&amp;#40;' '&amp;#41;&amp;#41;&amp;#41;
+        end
+      end
+    end
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All this leads to log entries that look like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Thu Apr 15 11:09:17 -0700 2010 --&amp;gt; starting GET /app from /Users/cohumancomputer27inmac/dev/cohuman/lib/query_caching.rb:15:in `call':/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  User Load &amp;#40;0.8ms&amp;#41; domain/user.rb:362:in `authenticate_from_login_token'   SELECT * FROM &quot;users&quot; WHERE &amp;#40;&quot;users&quot;.&quot;login_token&quot; = E'abc123xyz'&amp;#41; LIMIT 1
+Thu Apr 15 11:09:17 -0700 2010 --&amp;gt; starting rendering ApplicationPage from /Users/cohumancomputer27inmac/dev/cohuman/controllers/app_controller.rb:4:in `GET /app':/Library/Ruby/Gems/1.8/gems/sinatra-0.9.4/lib/sinatra/base.rb:779:in `call'  Project Load &amp;#40;13.4ms&amp;#41; domain/user.rb:146:in `projects'   SELECT &quot;projects&quot;.* FROM &quot;projects&quot; INNER JOIN &quot;memberships&quot; ON &quot;projects&quot;.id = &quot;memberships&quot;.project_id WHERE &amp;#40;&amp;#40;&quot;memberships&quot;.user_id = 2&amp;#41;&amp;#41; 
+  User Load &amp;#40;3.2ms&amp;#41; domain/user.rb:135:in `coprojectmates'   SELECT &quot;users&quot;.* FROM &quot;users&quot; INNER JOIN &quot;memberships&quot; ON memberships.user_id = users.id WHERE &amp;#40;memberships.project_id in &amp;#40;4,129,122,1,66,82,102,684,533,139,3,155,624,106,90,394,399,153&amp;#41; AND memberships.user_id != 2&amp;#41;   Email Load &amp;#40;2.1ms&amp;#41; domain/user.rb:135:in `coprojectmates'   SELECT &quot;emails&quot;.* FROM &quot;emails&quot; WHERE &amp;#40;&quot;emails&quot;.user_id IN &amp;#40;1,3,5,7,8,11,12,9,6,14,15,16,17,18,22,27,26,35,45,32,30,79,37,109,80,504,507,508,39,165,521,725,727,729,730,731,734,735,736,105,28,58,240,381,51,40,36,785,834,839,844,847,850,842,840,841,843,889&amp;#41;&amp;#41;
+  User Load &amp;#40;11.7ms&amp;#41; domain/user.rb:128:in `cohumans'   SELECT &quot;users&quot;.* FROM &quot;users&quot; INNER JOIN &quot;cohumanities&quot; ON &quot;users&quot;.id = &quot;cohumanities&quot;.cohuman_id WHERE &amp;#40;&amp;#40;&quot;cohumanities&quot;.actor_id = 2&amp;#41;&amp;#41; 
+  Email Load &amp;#40;19.4ms&amp;#41; domain/user.rb:128:in `cohumans'   SELECT &quot;emails&quot;.* FROM &quot;emails&quot; WHERE &amp;#40;&quot;emails&quot;.user_id IN &amp;#40;1,6,108,8,22,35,509,852,853,854,862,864,866,3,895,896,897,929,930,931,30,944,165,827,976,977,978,735,1024,2003,2004,59&amp;#41;&amp;#41; 
+  SQL &amp;#40;0.5ms&amp;#41; domain/user.rb:177:in `temporary?'   SELECT count&amp;#40;*&amp;#41; AS count_all FROM &quot;emails&quot; WHERE &amp;#40;&quot;emails&quot;.user_id = 2&amp;#41; 
+  Email Load &amp;#40;0.3ms&amp;#41; domain/user.rb:173:in `verified?'   SELECT * FROM &quot;emails&quot; WHERE &amp;#40;&quot;emails&quot;.user_id = 2&amp;#41; 
+Thu Apr 15 11:09:17 -0700 2010 --&amp;lt; finished rendering ApplicationPage --- 0.307 sec
+Thu Apr 15 11:09:17 -0700 2010 --&amp;lt; finished GET /app --- 0.311 sec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I know it can look daunting, but when scanning logs, it's important to keep a clear head. Let's examine this little burst of gibberish and try to make sense of it.&lt;/p&gt;
+
+&lt;p&gt;Line 1 says &quot;--&gt; starting GET /app&quot; which means that the user has made a GET request for our main URL. We can skip ahead &amp;#40;search for &quot;--&amp;lt; GET /app&quot;&amp;#41; and see that the entire request took 0.311 seconds. This isn't bad, but it could be better. &lt;/p&gt;
+
+&lt;p&gt;Line 3 says &quot;--&gt; starting rendering ApplicationPage&quot; which means that all the other queries are happening from inside the rendering view code. &lt;/p&gt;
+
+&lt;p&gt;Note that the database queries are only taking 49.3 msec out of 311 msec, which means 84% of the time is spent either processing DB results or rendering them. This request is probably not a good candidate for DB-level tuning.&lt;/p&gt;
+
+&lt;p&gt;&amp;#40;How'd I add up all those scary milliseconds without an abacus? Piped my log text into this bad boy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  ruby -e 'x = 0; STDIN.each do |line| if line =~ /&amp;#40;&amp;#40;[0-9.]*&amp;#41;ms&amp;#41;/; then x += $1.to_f; end; end; puts x'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;#41;&lt;/p&gt;
+
+&lt;h1&gt;Indexes&lt;/h1&gt;
+
+&lt;p&gt;Most &amp;#40;if not all&amp;#41; databases add an index for the primary key of a table. But a quick scan of the database logs will show many fields that are used in queries, and chances are you haven't added indexes for them. &amp;#40;In fact, you probably shouldn't add an index for a field until it shows up in the logs, since indexing slows down writes and takes up extra disk space. Not a lot, but it might add up.&amp;#41; In the above example, look at the User Load -- every time a user hits the site we check to see if he's logged in by querying the database for his login cookie. Adding an index for the &quot;login_token&quot; field in the users table sped up this query by a factor of 10. &amp;#40;Yes, that violates my &quot;don't fix what ain't slow&quot; dictum, since going from 10 ms to 1 ms isn't really fixing much, but I figure it adds up over time since it happens on every single app request.&amp;#41;&lt;/p&gt;
+
+&lt;h1&gt;Avoidance&lt;/h1&gt;
+
+&lt;p&gt;The only perfect program is the one with zero lines of code. And the fastest code is that which is not run.&lt;/p&gt;
+
+&lt;p&gt;Sometimes you can optimize a section of code by removing unnecessary calls from your app layer. One nice trick these days is to move stuff behind an Ajax call. In Cohuman, we do this with some of our tabs: if you switch to a tab, and it hasn't been loaded yet, it shows a spinny and starts an Ajax call to load it in. As long as we can keep each Ajax call under a second in length, the user-perceived delay is negligible.&lt;/p&gt;
+
+&lt;h1&gt;Query Caching&lt;/h1&gt;
+
+&lt;p&gt;ActiveRecord maintains a query cache, so if you run the same query &amp;#40;and I mean the same SQL&amp;#41;, it won't hit the database again. But if you're not using Rails, query caching is disabled by default. So I wrote yet another Rack middleware so I don't have to remember to wrap all my controllers in a &lt;code&gt;ActiveRecord::Base.cache do&lt;/code&gt; block:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# a Rack middleware component that enables ActiveRecord query caching
+# To use, put &quot;use QueryCaching&quot; in your Sinatra app.
+
+class QueryCaching 
+  def initialize&amp;#40;app&amp;#41;
+    @app = app
+  end
+
+  def call&amp;#40;env&amp;#41;
+    if is_static_file?&amp;#40;env&amp;#41;
+      @app.call&amp;#40;env&amp;#41;
+    else
+      response = nil
+      ActiveRecord::Base.cache do
+        response = @app.call&amp;#40;env&amp;#41;
+      end
+      response
+    end
+  end
+
+  def is_static_file?&amp;#40;env&amp;#41;
+     # if the path end with a dot-extension &amp;#40;e.g. 'foo.jpg'&amp;#41; then we assume
+     # it's a static file and don't enable the query cache. &amp;#40;This will only
+     # work for some application URL schemes, naturally.&amp;#41;
+    env['PATH_INFO'] =~ /\/[^\/]*.[^\/.]+$/
+  end
+
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that this is a query cache, not an object cache &amp;#40;see below&amp;#41;.&lt;/p&gt;
+
+&lt;h1&gt;Query Tuning&lt;/h1&gt;
+
+&lt;p&gt;Once you've identified some troublesome queries, you need to decide how to optimize them. You've basically got two choices here; which to choose should be obvious from the logs. Are there many low-latency queries, or a few high-latency queries? High-latency queries are an obvious target, and you should do your best &amp;#40;with indexes and SQL&amp;#41; to cut them down to size, but don't let them distract you. There are two hidden costs to low-latency queries:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;They actually take longer than they say they do&lt;/strong&gt; - the AR log line only displays the time for the database connector to return the raw data. It doesn't show the time to create AR instances, build association &quot;classes&quot; &amp;#40;which takes an annoyingly long time, since all their methods are built on the fly for each instance&amp;#41;, and run post-load initialization code. &amp;#40;I just did a little experiment loading ~3000 of our User objects, which have a fair number of associations; &lt;code&gt;SELECT * FROM users&lt;/code&gt; took 21 msec but &lt;code&gt;User.all&lt;/code&gt; took 547 msec. That's about 25x as long!&amp;#41;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;They stack up, and I'm not talking pancakes&lt;/strong&gt; - chances are you've got a lot of webapp processes hitting a single database &amp;#40;or a small number of slaves&amp;#41;. As traffic increases, the queries will stack up like airplanes requesting permission to land. At a certain point you'll hit a cliff &amp;#40;sorry for the mixed metaphor -- it's not fun to imagine a plane hitting a cliff&amp;#41; and per-request latency will rise dramatically. Lowering the number of queries per web request will, um, raise the ceiling? Lengthen the runway? Lower the cliff? Anyway, it'll make this problem, uh, less worse. It's kind of counterintuitive, but the limiting factor for modern webapps is really the number of queries, not the amount of data returned by each query.&lt;/p&gt;
+
+&lt;p&gt;ActiveRecord associations &amp;#40;like &lt;code&gt;has_many&lt;/code&gt; and &lt;code&gt;belongs_to&lt;/code&gt;&amp;#41; are great for getting an app up and running, but as you peruse your logs you'll notice some things they're doing that aren't very efficient. Our app loads a lot of objects, each of which has lots of associated objects, some of which associate to other objects. If we're displaying a list of Users, and each user has associated Emails &amp;#40;via &lt;code&gt;has_many :emails&lt;/code&gt;&amp;#41;, and we want to render a list of users and their email addresses, we'll probably see one query that loads all users, and then one query for each user loading his or her emails. &lt;/p&gt;
+
+&lt;p&gt;Adding an &lt;code&gt;:include&lt;/code&gt; to the declaration is a good way to reduce these from N+1 to 2, but it doesn't always work. I have never been able to comprehend AR's alien logic, so my logs are often littered with queries despite my best efforts fiddling with the association declaration. Furthermore, AR is quite naive about object graphs: for example, &lt;code&gt;user.emails.first.user&lt;/code&gt; will make an extra query and return a &lt;em&gt;different&lt;/em&gt; user than the one you started with, even though they have the same id and you loaded the emails via &lt;code&gt;:include&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;So I've gotten good performance boosts by moving away from ActiveRecord and doing some nested queries by hand. Not by writing literal SQL, but by doing one query, extracting the necessary ids, and then doing the next query, and saving or plugging in values directly. This led naturally to Treasury &amp;#40;see below&amp;#41;.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, of course, writing SQL is unavoidable; fortunately, AR allows it, and there are many people who are much better at that than I, so I won't embarrass myself by discussing it further here.&lt;/p&gt;
+
+&lt;h1&gt;Object Caching and the Repository Pattern&lt;/h1&gt;
+
+&lt;p&gt;During my first pass at tuning Cohuman several months ago, I took a little time to write a library that implements a Repository Pattern. The &lt;a href=&quot;http://github.com/alexch/treasury&quot;&gt;Treasury&lt;/a&gt; is a work in progress that sits in front of ActiveRecord &amp;#40;and eventually, other ORMs&amp;#41; and caches object instances as they pass through. If you then request an object via the Treasury, it will check in its cache and return a pointer to the existing object instead of making a query; if you specify a list of ids, then it will only query for the ones it doesn't yet have. &amp;#40;There are other features I won't go into here, including a DSL for building queries... expect an upcoming article to officially introduce Treasury to the world.&amp;#41;&lt;/p&gt;
+
+&lt;p&gt;I've heard that DataMapper has an object cache, but I haven't yet dug into the details of how it works, so I don't know if Treasury is redundant with it, or if it would make sense to plug in DM behind it. &amp;#40;I've also heard it solves the N+1 query problem gracefully. Anyone want to proselytize DM in the comments?&amp;#41; &lt;/p&gt;
+
+&lt;p&gt;All the caches I've mentioned only persist within a single request. This is probably a good thing, since allowing instances to persist between requests would open a can of data integrity, thread safety, and multi-host worms. But I can't shake this vision I have of a sort of in-process memcache for Ruby objects, where multiple processes communicate changes to each other via TCP wormholes... Does anyone else share this vision, or am I doomed to wander the Ruby blog desert, mumbling incoherently at strangers?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <pubDate>Tue, 16 Mar 2010 14:36:00 -0700</pubDate>
+      <title>TextMate: The Last Straw</title>
+      <author>Alex Chaffee</author>
+      <link>http://pivotallabs.com/users/alex/blog/articles/1201-textmate-the-last-straw</link>
+      <guid>http://pivotallabs.com/users/alex/blog/articles/1201-textmate-the-last-straw</guid>
+      <description>&lt;p&gt;That's it. I'm done with TextMate. It hasn't been updated in over 2 years, either for essential functionality &amp;#40;replace in path&amp;#41; or performance fixes &amp;#40;searching through log files&amp;#41; or UI issues &amp;#40;how many boxes must you click to enable autosave?&amp;#41; or bug fixes. Every few months the author pokes his head up and says &quot;I'm working on TextMate 3.0!&quot; and then disappears again, happily accepting new license fees into his PayPal account.&lt;/p&gt;
+
+&lt;p&gt;I've just been bitten twice in two weeks by a bug that caused not just data loss, but data mangling in a way that was very difficult to fix. Here's the rough steps to reproduce:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Edit some files in TextMate&lt;/li&gt;
+&lt;li&gt;Leave TextMate running in the foreground&lt;/li&gt;
+&lt;li&gt;Switch to console and &quot;git pull&quot; in the latest code from your workmates&lt;/li&gt;
+&lt;li&gt;Run a search-and-replace that edits a file that was changed &amp;#40;by someone else&amp;#41; during the merge&lt;/li&gt;
+&lt;li&gt;Save that edit&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You'll see &amp;#40;with &quot;git diff&quot;&amp;#41; that your version of the file has your new post-merge changes... but it &lt;em&gt;also&lt;/em&gt; has reverted your buddy's changes from the merge. It's like you decided that those changes were no good and reverted them yourself and then added your own.&lt;/p&gt;
+
+&lt;p&gt;If you fail to notice this before checking in, you will totally hose your version control... but just for that one file. You can't just revert a whole commit... you'll have to step through change by change to figure out which change was theirs, which change was yours, and which change &lt;em&gt;looks&lt;/em&gt; like it was yours but was actually an inadvertent revert of theirs!&lt;/p&gt;
+
+&lt;p&gt;I can't work under these conditions. I'm switching to RubyMine today. See &lt;a href=&quot;http://bjclark.me/2010/03/10/rubymine-a-love-story/&quot;&gt;http://bjclark.me/2010/03/10/rubymine-a-love-story/&lt;/a&gt; for why.&lt;/p&gt;
+
+&lt;p&gt;P.S. I just found a bug report for this dated 2008-04-02. That's just about 2 years ago for a critical data-losing bug. Woot.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ticket.macromates.com/show?ticket_id=B036CF83&quot;&gt;http://ticket.macromates.com/show?ticket_id=B036CF83&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ticket.macromates.com/show?ticket_id=CACBB533&quot;&gt;http://ticket.macromates.com/show?ticket_id=CACBB533&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <pubDate>Fri, 22 Jan 2010 12:17:00 -0800</pubDate>
+      <title>UTC vs Ruby, ActiveRecord, Sinatra, Heroku and Postgres</title>
+      <author>Alex Chaffee</author>
+      <link>http://pivotallabs.com/users/alex/blog/articles/1142-utc-vs-ruby-activerecord-sinatra-heroku-and-postgres</link>
+      <guid>http://pivotallabs.com/users/alex/blog/articles/1142-utc-vs-ruby-activerecord-sinatra-heroku-and-postgres</guid>
+      <description>&lt;p&gt;Now that I'm starting to use DelayedJob to perform jobs in the future in my Heroku Sinatra app, its important that they happen at the scheduled time. But unless you pay attention, you'll find that times get mysteriously changed -- in my case, since I'm in San Francisco in the wintertime, by +/-8 hours -- which means that some conversion to or from UTC is being attempted, but it's only working halfway.&lt;/p&gt;
+
+&lt;p&gt;Trying to keep a handle on which libraries are attempting, and which are failing, to convert times is a losing battle, so I'm trying to do the right thing and save all my times in the database in UTC, and convert them to and from the user's local time as close to the UI as possible. Unfortunately, a variety of gotchas in Ruby and ActiveRecord and PostgreSQL makes this trickier than it should be. Here's a little catalog of my workarounds. &lt;/p&gt;&lt;hr /&gt;
+
+&lt;p&gt;You must set both &lt;code&gt;Time.zone = &quot;UTC&quot;&lt;/code&gt; and &lt;code&gt;ActiveRecord::Base.default_timezone = :utc&lt;/code&gt;. Since I'm using Sinatra, not Rails, this stuff goes either in &lt;code&gt;main&lt;/code&gt; &amp;#40;i.e. not inside any class&amp;#41; right after &lt;code&gt;require 'active_record'&lt;/code&gt;, or in a &lt;code&gt;configure&lt;/code&gt; block in your app, depending on your preference.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;When ActiveRecord creates queries -- which are used for both reading &lt;strong&gt;and&lt;/strong&gt; writing, mind you -- it will only convert to UTC times that are instances of ActiveSupport's proprietary &lt;code&gt;TimeWithZone&lt;/code&gt; class. It will &lt;strong&gt;not&lt;/strong&gt; convert regular Ruby &lt;code&gt;Time&lt;/code&gt; objects, even though &lt;code&gt;Time&lt;/code&gt; objects are perfectly aware of their time zones, and AR is perfectly aware that you'd prefer they be written as UTC &amp;#40;due to the &lt;code&gt;default_timezone&lt;/code&gt; setting&amp;#41;. This is clearly a bug IMHO, but the Rails core marked the bug as &quot;will not fix&quot;, so w/e. Here's a monkey patch, courtesy of &lt;a href=&quot;http://marklunds.com/articles/one/402&quot;&gt;Peter Marklund&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  module ActiveRecord
+    module ConnectionAdapters # :nodoc:
+      module Quoting
+        # Convert dates and times to UTC so that the following two will be equivalent:
+        # Event.all&amp;#40;:conditions =&amp;gt; [&quot;start_time &amp;gt; ?&quot;, Time.zone.now]&amp;#41;
+        # Event.all&amp;#40;:conditions =&amp;gt; [&quot;start_time &amp;gt; ?&quot;, Time.now]&amp;#41;
+        def quoted_date&amp;#40;value&amp;#41;
+          value.respond_to?&amp;#40;:utc&amp;#41; ? value.utc.to_s&amp;#40;:db&amp;#41; : value.to_s&amp;#40;:db&amp;#41;
+        end
+      end
+    end
+  end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;When outputting timestamps to a UI -- either inside HTML or in a JSON API -- you'll probably want to use &lt;code&gt;Time#strftime&lt;/code&gt;. Beware: on Mac OS X under Ruby 1.8, the &lt;code&gt;z&lt;/code&gt; &amp;#40;lowercase Z&amp;#41; selector will emit the &lt;strong&gt;local time zone&lt;/strong&gt;, not the zone of the Time object you've called &lt;code&gt;strftime&lt;/code&gt; on. The solution is to either use &lt;code&gt;Z&lt;/code&gt; &amp;#40;capital Z&amp;#41; or just a plain &lt;code&gt;Z&lt;/code&gt; which stands for Zulu Time. The latter is OK if you know you're using UTC, which, if you've followed my advice, you probably do. This is a pretty annoying issue, since it's much safer to use &lt;code&gt;z&lt;/code&gt;'s hour offsets than &lt;code&gt;Z&lt;/code&gt;'s three-letter codes, since the three-letter codes can be ambiguous, and in any case require an extra conversion to time offset, so you may as well just emit the offset. &lt;/p&gt;
+
+&lt;p&gt;Here are some methods on Time you may want to use that work around this &lt;code&gt;z&lt;/code&gt; issue:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  # Note: do NOT call this file 'time.rb' :-D
+
+  require 'time'
+
+  class Time
+    def full_date_and_time
+      strftime&amp;#40;'Y-m-d H:M:S Z'&amp;#41;
+    end
+
+    def iso8601
+      strftime&amp;#40;'Y-m-dTH:M:SZ'&amp;#41; # the final &quot;Z&quot; means &quot;Zulu time&quot; which is ok since we're now doing all times in UTC
+    end
+  end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That &lt;code&gt;iso8601&lt;/code&gt; method comes in really handy when you're using the excellent &lt;a href=&quot;http://github.com/rmm5t/jquery-timeago&quot;&gt;timeago jQuery plugin&lt;/a&gt; by Ryan McGeary &amp;#40;@rmm5t&amp;#41;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;By default PostgreSQL saves timestamps &lt;em&gt;sans&lt;/em&gt; time zone, which means that ActiveRecord interprets them as being in the &lt;code&gt;default_timezone&lt;/code&gt;. If you want to be extra clear and save them &lt;em&gt;with&lt;/em&gt; time zone, you'll have to change the Postgres adapter's type mapping. ActiveRecord doesn't let you configure this but here's a monkey patch, courtesy of 
+&lt;a href=&quot;http://jacqueschirag.wordpress.com/2007/08/13/timestamp-support-rails-and-mysqlpostgresqloracle/&quot;&gt;Chirag Patel&lt;/a&gt; &amp;#40;with a couple of mods&amp;#41;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    require 'active_record/connection_adapters/postgresql_adapter'
+    class ActiveRecord::ConnectionAdapters::PostgreSQLAdapter &amp;lt; ActiveRecord::ConnectionAdapters::AbstractAdapter
+      def native_database_types
+        {
+          :primary_key =&amp;gt; &quot;serial primary key&quot;.freeze,
+          :string      =&amp;gt; { :name =&amp;gt; &quot;character varying&quot;, :limit =&amp;gt; 255 },
+          :text        =&amp;gt; { :name =&amp;gt; &quot;text&quot; },
+          :integer     =&amp;gt; { :name =&amp;gt; &quot;integer&quot; },
+          :float       =&amp;gt; { :name =&amp;gt; &quot;float&quot; },
+          :decimal     =&amp;gt; { :name =&amp;gt; &quot;decimal&quot; },
+          :datetime    =&amp;gt; { :name =&amp;gt; &quot;timestamp with time zone&quot; },
+          :timestamp   =&amp;gt; { :name =&amp;gt; &quot;timestamp with time zone&quot; },
+          :time        =&amp;gt; { :name =&amp;gt; &quot;time&quot; },
+          :date        =&amp;gt; { :name =&amp;gt; &quot;date&quot; },
+          :binary      =&amp;gt; { :name =&amp;gt; &quot;bytea&quot; },
+          :boolean     =&amp;gt; { :name =&amp;gt; &quot;boolean&quot; }
+        }
+      end
+    end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It turned out that I didn't need this, so I ended up commenting it out. It may be that storing timestamps &lt;strong&gt;with&lt;/strong&gt;  time zones will cause a hiccup with some other random DB code, so watch out. If you do use it, and you've already got some data, make sure to write a migration that changes the types of all extant &lt;code&gt;datetime&lt;/code&gt; and &lt;code&gt;timestamp&lt;/code&gt; fields, and maybe a &lt;a href=&quot;http://www.zetetic.net/blog/2009/03/23/moving-a-rails-app-to-utc-in-postgresql/&quot;&gt;migration that shifts the times&lt;/a&gt; too.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That's all I've got for right now. I'm sure some more problems will come up on &lt;a href=&quot;http://eclipse.gsfc.nasa.gov/SEhelp/daylightsaving.html&quot;&gt;March 14, 2010&lt;/a&gt;...&lt;/p&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 13 Dec 2009 15:48:00 -0800</pubDate>
+      <title>opacity (or, a paucity of transparency)</title>
+      <author>Alex Chaffee</author>
+      <link>http://pivotallabs.com/users/alex/blog/articles/1105-opacity-or-a-paucity-of-transparency-</link>
+      <guid>http://pivotallabs.com/users/alex/blog/articles/1105-opacity-or-a-paucity-of-transparency-</guid>
+      <description>&lt;p&gt;The rules for how to make parts of your HTML page translucent are kind of hard to understand -- in other words, the opacity rules are pretty opaque. &amp;#40;Anyone who can make that into a good pun, let me know and I'll change the title of this article accordingly.&amp;#41; The following represents the results of a couple of days of empirical research and as such may be incomplete or inadequate, but here goes.&lt;/p&gt;
+
+&lt;p&gt;In the brave new HTML5 world, with all the CSS gizmos supported by Safari and Chrome and Firefox, there are now three ways to make things translucent. And none of them works quite the way I na&#239;vely expected.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;One&lt;/em&gt;. Use the &quot;opacity&quot; CSS attribute. This attribute works pretty well... at first. It applies to an element and all its children, but according to the spec it's meant to act as an upper bound on the opacity of all its children, and while it can technically be overridden, the overridden value is applied as a multiplier to the previous value, not as a whole separate value. So if you want some fully opaque children inside a translucent container, you can't get there from here. The children are always going to be at least as transparent as the parent -- in other words, they can't transcend their parent's transparency.&lt;/p&gt;
+
+&lt;p&gt;This is spelled out in detail in &lt;a href=&quot;https://developer.mozilla.org/En/Useful_CSS_tips/Color_and_Background&quot;&gt;https://developer.mozilla.org/En/Useful_CSS_tips/Color_and_Background&lt;/a&gt; and as a solution they propose either pulling the child out of the normal hierarchy &amp;#40;ugh -- that means you lose all the other CSS inherited styles and positioning&amp;#41;, or ...&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Two&lt;/em&gt;. Make an alpha channel PNG and use it as the parent's background, probably with &lt;code&gt;background-repeat:repeat&lt;/code&gt;. This is adequate, except that there's now &lt;em&gt;another&lt;/em&gt;, cleaner way...&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Three&lt;/em&gt;. For the parent, use &lt;code&gt;background-color: rgba&amp;#40;255, 255, 255, 0.5&amp;#41;&lt;/code&gt; &amp;#40;where '0.5' is the opacity and '255,255,255' is the decimal RGB value&amp;#41; -- that will work the same as an alpha PNG but without needing to go round-trip to Photoshop every time you want to change the color or level. Much better.&lt;/p&gt;
+
+&lt;p&gt;I have no idea what the level of support for rgba background colors is, but it seems to work in the latest Safari and Firefox so I'm happy.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

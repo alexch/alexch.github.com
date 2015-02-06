@@ -182,6 +182,9 @@ JS
 
     div :id => "alex_pic" do
       alex_pic
+      center.caption do
+        text "(", a("reload", onclick:'window.location.reload();', href: '#'), " for more pics of Alex)"
+      end
     end
 
     div id: "bio" do

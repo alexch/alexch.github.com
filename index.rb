@@ -51,7 +51,9 @@ class Index < Page
 #sections ul { list-style-position: inside; }
 
 h1,h2,h3,#top b {
-  font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif; font-weight:800; font-style:normal;
+  font-family:"Eigerdals Black", 'Trebuchet MS', sans-serif;
+  font-weight:800;
+  font-style:normal;
 }
 
 #sections {
@@ -65,7 +67,7 @@ h1,h2,h3,#top b {
 .section
   h2.title {
     float: left;
-    width: 8em;
+    width: 5.5em;
 
     -webkit-margin-before: 0;
     -webkit-margin-after: 0.83em;
@@ -168,7 +170,9 @@ h3 {
 }
   CSS
 
-  external :js, "http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"
+  external :js, "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+  external :js, "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"
+  external :css, "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
 
   external :script, <<JAVASCRIPT
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

@@ -20,22 +20,35 @@ class Alexisms < Index
     div :class => 'content' do
       h1 "Alexisms"
 
-      p 'Sayings I use, only some of which I originally said. Anyone with research on a saying\'s provenance or attribution, please let me know in a comment.'
+      p "Sayings I use, only some of which I originally said. Anyone with research on a saying's provenance or attribution, please let me know."
 
       say 'A comment is a lie waiting to happen.' do
         p do
           text "Which is not to say comments are bad. But they should ", b("illuminate"), " the code, not merely describe it."
         end
       end
+
       say '"Legacy" means any program that people are actually using.' do
         p '(Feathers: "Legacy" means "no tests.")'
       end
 
-      say 'Double negatives are not unconfusing.'
+      say 'Double negatives are not unconfusing.' do
+        p do
+          text "The confusion is multiplied in conditionals and booleans, e.g. ", code("if not window.disabled"), "."
+        end
+        p do
+          text "So try to name all your booleans in the positive, e.g. ", code("window.show()"), " not ", code("window.setInvisible(false)"), "."
+        end
+      end
 
       say "The only perfect program is an empty file."
 
-      say 'There\'s no such thing as human error. (Only system error.)'
+      say 'There\'s no such thing as human error. (Only system error.)' do
+        p "If a human of good intent made a mistake, then the fault lies in the system that allowed him to make that mistake and then allowed that mistake to survive without being noticed or corrected."
+        p do
+          text "Playing the ", a("Five Whys", href: "http://en.wikipedia.org/wiki/5_Whys"), " game can help expose the root causes of these mistakes."
+        end
+      end
 
       say 'It\'s always a people problem. (Jerry Weinberg)'
 
@@ -53,11 +66,12 @@ class Alexisms < Index
       end
 
       say 'Read the error message.' do
-        p "Even if it looks like barf, there are pearls in there, and you have to roll up your sleeves and feel around for them."
+        p "Even if it looks like total barf, there are pearls in there, and you have to roll up your sleeves and feel around for them."
       end
 
       say '"Never solve a general problem. There are no general problems." (William Pietri)' do
         p { url "https://clarity.fm/questions/946/answers/2941" }
+        p "Premature generalization is almost as bad as premature optimization."
       end
 
       say 'Object-Oriented Programming is like teenage sex: ...' do
@@ -67,10 +81,8 @@ class Alexisms < Index
 
       say 'Encapsulation means putting similar things together, and keeping dissimilar things apart.' do
         p 'Of course, the trick of design is knowing along what axes to group or differentiate items. One rule of thumb that has served me well since the days of Gamelan -- when we were sorting dozens of incoming applets per day into categories -- is:'
-
-        say 'Don\'t look at the item and think, "What category does this item belong in? Look at the category and think, "If I were looking for items in this category, would I want to find this item?"' do
-          p 'In other words, make your API fit the mindset of the user, not that of the provider.'
-        end
+        p 'Don\'t look at the item and think, "What category does this item belong in? Look at the category and think, "If I were looking for items in this category, would I want to find this item?"'
+        p 'In other words, make your API fit the mindset of the user, not that of the provider.'
       end
 
       div.saying do

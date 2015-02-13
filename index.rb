@@ -76,6 +76,9 @@ h1,h2,h3,#top b {
 
   }
 
+span.cite {
+  padding-left: 2em;
+}
 .section
   .items {
     padding-left: 12em;
@@ -199,6 +202,23 @@ JAVASCRIPT
     end
 
     div.sections! do
+      section "Coaching" do
+        p do
+          text "Working with Alex, I learned a lot about how to productively guide conversations. He clearly set the foundation for great conversation encouraging everyone to participate, corralling a wide range of ideas and opinions. Every engagement ended with actionable takeaways, the biggest of which was a desire to do it all over again."
+          br
+          span.cite do
+            text(" - ", i("Rudy Jahchan"), ", Team Lead, Carbon Five")
+          end
+        end
+        p do
+          text "In addition to being a very skilled developer, Alex is an excellent facilitator.  He has lots of experience leading Agile teams, and moderating the activities that go along with them.  He has led several activities for projects I have been involved with, all of which have run smoothly and successfully. "
+          br
+          span.cite do
+            text(" - ", i("Michael Wynholds"), ", President, Carbon Five")
+          end
+        end
+      end
+
       section "Teaching" do
 
         item "Code Like This", "http://codelikethis.com", "centralizing my slides, lectures, and labs on Ruby, JavaScript, and more"

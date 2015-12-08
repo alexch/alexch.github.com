@@ -96,6 +96,8 @@ class Alexisms < Index
       end
 
       say '"Have strong opinions, weakly held." (Paul Saffo)'
+      
+      say 'I had a problem, so I used a Service Oriented Architecture. Now I have N² problems.'
 
     end
   end

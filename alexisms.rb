@@ -99,6 +99,7 @@ class Alexisms < Index
       
       say 'I had a problem, so I used a Service Oriented Architecture. Now I have N² problems.'
 
+      say "If you work longer than 6 hours in a row, you're basically just adding bugs."
     end
   end
 end

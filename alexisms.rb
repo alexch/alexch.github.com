@@ -43,11 +43,15 @@ class Alexisms < Index
 
       say "The only perfect program is an empty file."
 
-      say 'There\'s no such thing as human error. (Only system error.)' do
+      say 'There\'s no such thing as human error, just flawed systems that include humans.' do
         p "If a human of good intent made a mistake, then the fault lies in the system that allowed him to make that mistake and then allowed that mistake to survive without being noticed or corrected."
         p do
           text "Playing the ", a("Five Whys", href: "http://en.wikipedia.org/wiki/5_Whys"), " game can help expose the root causes of these mistakes."
         end
+        p {
+          text "See also "
+          a "this twitter thread", href: "https://twitter.com/ReinH/status/952247767283392512"
+        }
       end
 
       say 'It\'s always a people problem. (Jerry Weinberg)'
@@ -100,6 +104,9 @@ class Alexisms < Index
       say 'I had a problem, so I used a Service Oriented Architecture. Now I have N² problems.'
 
       say "If you work longer than 6 hours in a row, you're basically just adding bugs."
+
+      say "Technology is anything that wasn't around when you were born. (Alan Kay)"
+
     end
   end
 end

@@ -7,7 +7,9 @@ GEM
     erector (0.10.0)
       treetop (>= 1.2.3)
     ffi (1.9.6)
+    ffi (1.9.6-x86-mingw32)
     hitimes (1.2.2)
+    hitimes (1.2.2-x86-mingw32)
     listen (2.8.5)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -39,9 +41,13 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   erector (= 0.10.0)
   rake
   rerun
   wrong (>= 0.6.2)
+
+BUNDLED WITH
+   1.15.3

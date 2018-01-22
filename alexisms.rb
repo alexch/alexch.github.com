@@ -28,7 +28,8 @@ class Alexisms < Index
         end
       end
 
-      say 'I had a problem, so I used a distributed system. Now I have N^2 problems.' do
+      say 'I had a problem, so I used microservices. Now I have N^2 problems.' do
+        p 'for "microservices" you may substitute "Service-Oriented Architecture" or "distributed system"'
         p {
           text 'We used to have a different name for microservices. We called them "objects" and they had encapsulation and interfaces and unit tests and exceptions and everything. They were pretty fast too, since they ran in-process! Give me a refactorable, hot-deployable, OO monolith over a million microservices any day.'
         }
@@ -39,6 +40,8 @@ class Alexisms < Index
           }
         }
       end
+
+      say "Technology is anything that wasn't around when you were born. (Alan Kay)"
 
       say '"Legacy" means any program that people are actually using.' do
         p '(Feathers: "Legacy" means "no tests.")'
@@ -113,11 +116,8 @@ class Alexisms < Index
 
       say '"Have strong opinions, weakly held." (Paul Saffo)'
 
-      say 'I had a problem, so I used a Service Oriented Architecture. Now I have N² problems.'
-
       say "If you work longer than 6 hours in a row, you're basically just adding bugs."
 
-      say "Technology is anything that wasn't around when you were born. (Alan Kay)"
 
     end
   end

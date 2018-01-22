@@ -28,6 +28,18 @@ class Alexisms < Index
         end
       end
 
+      say 'I had a problem, so I used a distributed system. Now I have N^2 problems.' do
+        p {
+          text 'We used to have a different name for microservices. We called them "objects" and they had encapsulation and interfaces and unit tests and exceptions and everything. They were pretty fast too, since they ran in-process! Give me a refactorable, hot-deployable, OO monolith over a million microservices any day.'
+        }
+        p {
+          ul {
+            li {url 'https://twitter.com/kev_bite/status/955108966727585793'}
+            li {url 'http://www.dwmkerr.com/the-death-of-microservice-madness-in-2018/'}
+          }
+        }
+      end
+
       say '"Legacy" means any program that people are actually using.' do
         p '(Feathers: "Legacy" means "no tests.")'
       end
@@ -74,7 +86,7 @@ class Alexisms < Index
       end
 
       say '"Never solve a general problem. There are no general problems." (William Pietri)' do
-        p { url "https://clarity.fm/questions/946/answers/2941" }
+        p {url "https://clarity.fm/questions/946/answers/2941"}
         p "Premature generalization is almost as bad as premature optimization."
       end
 
@@ -100,7 +112,7 @@ class Alexisms < Index
       end
 
       say '"Have strong opinions, weakly held." (Paul Saffo)'
-      
+
       say 'I had a problem, so I used a Service Oriented Architecture. Now I have N² problems.'
 
       say "If you work longer than 6 hours in a row, you're basically just adding bugs."

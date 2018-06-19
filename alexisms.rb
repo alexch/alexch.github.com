@@ -69,6 +69,15 @@ class Alexisms < Index
         }
       end
 
+      say 'every config file eventually becomes Turing-complete' do
+        p {
+            text 'see also '
+            url 'http://beza1e1.tuxen.de/articles/accidentally_turing_complete.html'
+            text ' '
+            url 'https://stackoverflow.com/questions/648246/at-what-point-does-a-config-file-become-a-programming-language'
+        }
+      end
+
       say 'It\'s always a people problem. (Jerry Weinberg)'
 
       say 'If you pay attention to something, it gets better.'
